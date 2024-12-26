@@ -1,815 +1,493 @@
-2024-12-26 14:20:39,217 - INFO - Vocabulary size: 2339
-2024-12-26 14:20:39,217 - INFO - Max index in vocab: 2340
-2024-12-26 14:20:39,218 - INFO - Vocabulary size: 471
-2024-12-26 14:20:39,218 - INFO - Max index in vocab: 472
-2024-12-26 14:20:39,231 - INFO - Using device: cuda:0
-2024-12-26 14:20:39,232 - INFO - GPU Device Name: NVIDIA GeForce RTX 4080 SUPER
-2024-12-26 14:20:39,312 - INFO - Model Embedding size: 2340
-2024-12-26 14:20:39,814 - INFO - Modèle chargé avec succès, certaines dimensions peuvent ne pas correspondre.
-2024-12-26 14:20:39,816 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:39,816 - INFO - Max index in src: 2302, Max index in trg: 2302
+2024-12-26 18:06:38,151 - INFO - Vocabulary size: 2339
+2024-12-26 18:06:38,151 - INFO - Max index in vocab: 2340
+2024-12-26 18:06:38,152 - INFO - Vocabulary size: 473
+2024-12-26 18:06:38,152 - INFO - Max index in vocab: 474
+2024-12-26 18:06:38,251 - INFO - Using device: cuda:0
+2024-12-26 18:06:38,255 - INFO - GPU Device Name: NVIDIA GeForce RTX 4080 SUPER
+2024-12-26 18:06:38,427 - INFO - Model Embedding size: 2340
+2024-12-26 18:06:39,277 - INFO - Modèle chargé avec succès, certaines dimensions peuvent ne pas correspondre.
+2024-12-26 18:06:39,283 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,285 - INFO - Max index in src: 2313, Max index in trg: 2313
 Batch 0:
-Max index in src: 2302
-Max index in trg: 2302
-2024-12-26 14:20:39,838 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:39,842 - INFO - Max src index: 2302, Max trg index: 2302
-2024-12-26 14:20:40,041 - INFO - Epoch 1/5, Batch 0/19, Loss: 0.0011
-2024-12-26 14:20:40,042 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,042 - INFO - Max index in src: 2330, Max index in trg: 2330
+Max index in src: 2313
+Max index in trg: 2313
+2024-12-26 18:06:39,362 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,362 - INFO - Max index in src: 2334, Max index in trg: 2334
 Batch 1:
-Max index in src: 2330
-Max index in trg: 2330
-2024-12-26 14:20:40,044 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,044 - INFO - Max src index: 2330, Max trg index: 2330
-2024-12-26 14:20:40,062 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,062 - INFO - Max index in src: 2184, Max index in trg: 2184
+Max index in src: 2334
+Max index in trg: 2334
+2024-12-26 18:06:39,364 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,364 - INFO - Max index in src: 2340, Max index in trg: 2340
 Batch 2:
-Max index in src: 2184
-Max index in trg: 2184
-2024-12-26 14:20:40,064 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,064 - INFO - Max src index: 2184, Max trg index: 2184
-2024-12-26 14:20:40,081 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,082 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 3:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 14:20:40,083 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,083 - INFO - Max src index: 2320, Max trg index: 2320
-2024-12-26 14:20:40,100 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,101 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 4:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 14:20:40,102 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,102 - INFO - Max src index: 2332, Max trg index: 2332
-2024-12-26 14:20:40,136 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:40,136 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 5:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 14:20:40,137 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:40,137 - INFO - Max src index: 2337, Max trg index: 2337
-2024-12-26 14:20:40,160 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,160 - INFO - Max index in src: 2321, Max index in trg: 2321
-Batch 6:
-Max index in src: 2321
-Max index in trg: 2321
-2024-12-26 14:20:40,161 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,161 - INFO - Max src index: 2321, Max trg index: 2321
-2024-12-26 14:20:40,193 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,193 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 7:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 14:20:40,194 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,195 - INFO - Max src index: 2339, Max trg index: 2339
-2024-12-26 14:20:40,222 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,222 - INFO - Max index in src: 2338, Max index in trg: 2338
-Batch 8:
-Max index in src: 2338
-Max index in trg: 2338
-2024-12-26 14:20:40,222 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,222 - INFO - Max src index: 2338, Max trg index: 2338
-2024-12-26 14:20:40,239 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:40,240 - INFO - Max index in src: 2329, Max index in trg: 2329
-Batch 9:
-Max index in src: 2329
-Max index in trg: 2329
-2024-12-26 14:20:40,240 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:40,241 - INFO - Max src index: 2329, Max trg index: 2329
-2024-12-26 14:20:40,258 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,258 - INFO - Max index in src: 2325, Max index in trg: 2325
-Batch 10:
-Max index in src: 2325
-Max index in trg: 2325
-2024-12-26 14:20:40,259 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,259 - INFO - Max src index: 2325, Max trg index: 2325
-2024-12-26 14:20:40,280 - INFO - Epoch 1/5, Batch 10/19, Loss: 0.0002
-2024-12-26 14:20:40,281 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,281 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 11:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 14:20:40,283 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,283 - INFO - Max src index: 2335, Max trg index: 2335
-2024-12-26 14:20:40,305 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,305 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 12:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 14:20:40,306 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,306 - INFO - Max src index: 2328, Max trg index: 2328
-2024-12-26 14:20:40,328 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 14:20:40,328 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 13:
 Max index in src: 2340
 Max index in trg: 2340
-Indices out of range detected!
-2024-12-26 14:20:40,330 - INFO - Source shape: torch.Size([128, 7]), Target shape: torch.Size([128, 6])
-2024-12-26 14:20:40,330 - INFO - Max src index: 2340, Max trg index: 2340
-2024-12-26 14:20:40,330 - ERROR - Error during training: Index out of range in input data
-2024-12-26 14:20:40,331 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,331 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 14:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 14:20:40,332 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,332 - INFO - Max src index: 2333, Max trg index: 2333
-2024-12-26 14:20:40,354 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,354 - INFO - Max index in src: 2327, Max index in trg: 2327
-Batch 15:
-Max index in src: 2327
-Max index in trg: 2327
-2024-12-26 14:20:40,355 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,355 - INFO - Max src index: 2327, Max trg index: 2327
-2024-12-26 14:20:40,378 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,378 - INFO - Max index in src: 2281, Max index in trg: 2281
-Batch 16:
-Max index in src: 2281
-Max index in trg: 2281
-2024-12-26 14:20:40,379 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,380 - INFO - Max src index: 2281, Max trg index: 2281
-2024-12-26 14:20:40,397 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,397 - INFO - Max index in src: 2303, Max index in trg: 2303
-Batch 17:
-Max index in src: 2303
-Max index in trg: 2303
-2024-12-26 14:20:40,398 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,398 - INFO - Max src index: 2303, Max trg index: 2303
-2024-12-26 14:20:40,417 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 14:20:40,417 - INFO - Max index in src: 2284, Max index in trg: 2284
-Batch 18:
-Max index in src: 2284
-Max index in trg: 2284
-2024-12-26 14:20:40,418 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 14:20:40,418 - INFO - Max src index: 2284, Max trg index: 2284
-2024-12-26 14:20:40,439 - INFO - Époque 1, Perte moyenne d'entraînement : 0.0240
-2024-12-26 14:20:40,440 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,441 - INFO - Max index in src: 466, Max index in trg: 466
-2024-12-26 14:20:40,441 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,441 - INFO - Max src index: 466, Max trg index: 466
-2024-12-26 14:20:40,457 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:40,458 - INFO - Max index in src: 469, Max index in trg: 469
-2024-12-26 14:20:40,458 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:40,458 - INFO - Max src index: 469, Max trg index: 469
-2024-12-26 14:20:40,465 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,466 - INFO - Max index in src: 472, Max index in trg: 472
-2024-12-26 14:20:40,466 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,466 - INFO - Max src index: 472, Max trg index: 472
-2024-12-26 14:20:40,472 - INFO - Padded src shape: torch.Size([82, 3]), Padded trg shape: torch.Size([82, 3])
-2024-12-26 14:20:40,472 - INFO - Max index in src: 471, Max index in trg: 471
-2024-12-26 14:20:40,472 - INFO - Source shape: torch.Size([82, 3]), Target shape: torch.Size([82, 2])
-2024-12-26 14:20:40,472 - INFO - Max src index: 471, Max trg index: 471
-2024-12-26 14:20:40,477 - INFO - Époque 1, Perte moyenne de validation : 0.0245
-2024-12-26 14:20:40,478 - INFO - Source shape: torch.Size([1, 5]), Target shape: torch.Size([1, 5])
-2024-12-26 14:20:40,478 - INFO - Max src index: 6, Max trg index: 0
-C:\Users\enzo0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\NestedTensorImpl.cpp:180.)
-  output = torch._nested_tensor_from_mask(
-2024-12-26 14:20:40,497 - INFO - Sample output at epoch 1: <EOS> <EOS> <EOS> <EOS> <EOS>
-2024-12-26 14:20:40,499 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,499 - INFO - Max index in src: 2302, Max index in trg: 2302
-Batch 0:
-Max index in src: 2302
-Max index in trg: 2302
-2024-12-26 14:20:40,500 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,500 - INFO - Max src index: 2302, Max trg index: 2302
-2024-12-26 14:20:40,519 - INFO - Epoch 2/5, Batch 0/19, Loss: 0.0002
-2024-12-26 14:20:40,520 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,520 - INFO - Max index in src: 2330, Max index in trg: 2330
-Batch 1:
-Max index in src: 2330
-Max index in trg: 2330
-2024-12-26 14:20:40,521 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,521 - INFO - Max src index: 2330, Max trg index: 2330
-2024-12-26 14:20:40,544 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,545 - INFO - Max index in src: 2184, Max index in trg: 2184
-Batch 2:
-Max index in src: 2184
-Max index in trg: 2184
-2024-12-26 14:20:40,546 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,546 - INFO - Max src index: 2184, Max trg index: 2184
-2024-12-26 14:20:40,567 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,568 - INFO - Max index in src: 2320, Max index in trg: 2320
+2024-12-26 18:06:39,367 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,367 - INFO - Max index in src: 2331, Max index in trg: 2331
 Batch 3:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 14:20:40,568 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,569 - INFO - Max src index: 2320, Max trg index: 2320
-2024-12-26 14:20:40,585 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,585 - INFO - Max index in src: 2332, Max index in trg: 2332
+Max index in src: 2331
+Max index in trg: 2331
+2024-12-26 18:06:39,368 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,369 - INFO - Max index in src: 2336, Max index in trg: 2336
 Batch 4:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 14:20:40,586 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,586 - INFO - Max src index: 2332, Max trg index: 2332
-2024-12-26 14:20:40,605 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:40,605 - INFO - Max index in src: 2337, Max index in trg: 2337
+Max index in src: 2336
+Max index in trg: 2336
+2024-12-26 18:06:39,370 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,370 - INFO - Max index in src: 2322, Max index in trg: 2322
 Batch 5:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 14:20:40,606 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:40,606 - INFO - Max src index: 2337, Max trg index: 2337
-2024-12-26 14:20:40,622 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,622 - INFO - Max index in src: 2321, Max index in trg: 2321
+Max index in src: 2322
+Max index in trg: 2322
+2024-12-26 18:06:39,372 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,372 - INFO - Max index in src: 2335, Max index in trg: 2335
 Batch 6:
-Max index in src: 2321
-Max index in trg: 2321
-2024-12-26 14:20:40,623 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,623 - INFO - Max src index: 2321, Max trg index: 2321
-2024-12-26 14:20:40,639 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,639 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 7:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 14:20:40,640 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,640 - INFO - Max src index: 2339, Max trg index: 2339
-2024-12-26 14:20:40,659 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,660 - INFO - Max index in src: 2338, Max index in trg: 2338
-Batch 8:
-Max index in src: 2338
-Max index in trg: 2338
-2024-12-26 14:20:40,661 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,662 - INFO - Max src index: 2338, Max trg index: 2338
-2024-12-26 14:20:40,682 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:40,682 - INFO - Max index in src: 2329, Max index in trg: 2329
-Batch 9:
-Max index in src: 2329
-Max index in trg: 2329
-2024-12-26 14:20:40,683 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:40,683 - INFO - Max src index: 2329, Max trg index: 2329
-2024-12-26 14:20:40,702 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,702 - INFO - Max index in src: 2325, Max index in trg: 2325
-Batch 10:
-Max index in src: 2325
-Max index in trg: 2325
-2024-12-26 14:20:40,703 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,703 - INFO - Max src index: 2325, Max trg index: 2325
-2024-12-26 14:20:40,720 - INFO - Epoch 2/5, Batch 10/19, Loss: 0.0001
-2024-12-26 14:20:40,721 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,721 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 11:
 Max index in src: 2335
 Max index in trg: 2335
-2024-12-26 14:20:40,722 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,722 - INFO - Max src index: 2335, Max trg index: 2335
-2024-12-26 14:20:40,742 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,742 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 12:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 14:20:40,743 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,743 - INFO - Max src index: 2328, Max trg index: 2328
-2024-12-26 14:20:40,766 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 14:20:40,766 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 13:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-2024-12-26 14:20:40,767 - INFO - Source shape: torch.Size([128, 7]), Target shape: torch.Size([128, 6])
-2024-12-26 14:20:40,767 - INFO - Max src index: 2340, Max trg index: 2340
-2024-12-26 14:20:40,768 - ERROR - Error during training: Index out of range in input data
-2024-12-26 14:20:40,769 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,769 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 14:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 14:20:40,769 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,770 - INFO - Max src index: 2333, Max trg index: 2333
-2024-12-26 14:20:40,788 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,788 - INFO - Max index in src: 2327, Max index in trg: 2327
-Batch 15:
-Max index in src: 2327
-Max index in trg: 2327
-2024-12-26 14:20:40,789 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,790 - INFO - Max src index: 2327, Max trg index: 2327
-2024-12-26 14:20:40,810 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,810 - INFO - Max index in src: 2281, Max index in trg: 2281
-Batch 16:
-Max index in src: 2281
-Max index in trg: 2281
-2024-12-26 14:20:40,811 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,811 - INFO - Max src index: 2281, Max trg index: 2281
-2024-12-26 14:20:40,835 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,835 - INFO - Max index in src: 2303, Max index in trg: 2303
-Batch 17:
-Max index in src: 2303
-Max index in trg: 2303
-2024-12-26 14:20:40,836 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,836 - INFO - Max src index: 2303, Max trg index: 2303
-2024-12-26 14:20:40,855 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 14:20:40,855 - INFO - Max index in src: 2284, Max index in trg: 2284
-Batch 18:
-Max index in src: 2284
-Max index in trg: 2284
-2024-12-26 14:20:40,856 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 14:20:40,856 - INFO - Max src index: 2284, Max trg index: 2284
-2024-12-26 14:20:40,875 - INFO - Époque 2, Perte moyenne d'entraînement : 0.0222
-2024-12-26 14:20:40,877 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,877 - INFO - Max index in src: 466, Max index in trg: 466
-2024-12-26 14:20:40,877 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,877 - INFO - Max src index: 466, Max trg index: 466
-2024-12-26 14:20:40,883 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:40,883 - INFO - Max index in src: 469, Max index in trg: 469
-2024-12-26 14:20:40,884 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:40,884 - INFO - Max src index: 469, Max trg index: 469
-2024-12-26 14:20:40,890 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,890 - INFO - Max index in src: 472, Max index in trg: 472
-2024-12-26 14:20:40,891 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,891 - INFO - Max src index: 472, Max trg index: 472
-2024-12-26 14:20:40,897 - INFO - Padded src shape: torch.Size([82, 3]), Padded trg shape: torch.Size([82, 3])
-2024-12-26 14:20:40,897 - INFO - Max index in src: 471, Max index in trg: 471
-2024-12-26 14:20:40,897 - INFO - Source shape: torch.Size([82, 3]), Target shape: torch.Size([82, 2])
-2024-12-26 14:20:40,897 - INFO - Max src index: 471, Max trg index: 471
-2024-12-26 14:20:40,904 - INFO - Époque 2, Perte moyenne de validation : 0.0218
-2024-12-26 14:20:40,904 - INFO - Source shape: torch.Size([1, 5]), Target shape: torch.Size([1, 5])
-2024-12-26 14:20:40,904 - INFO - Max src index: 6, Max trg index: 0
-2024-12-26 14:20:40,908 - INFO - Sample output at epoch 2: <EOS> <EOS> <EOS> <EOS> <EOS>
-2024-12-26 14:20:40,911 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,911 - INFO - Max index in src: 2302, Max index in trg: 2302
-Batch 0:
-Max index in src: 2302
-Max index in trg: 2302
-2024-12-26 14:20:40,912 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,912 - INFO - Max src index: 2302, Max trg index: 2302
-2024-12-26 14:20:40,929 - INFO - Epoch 3/5, Batch 0/19, Loss: 0.0001
-2024-12-26 14:20:40,930 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,930 - INFO - Max index in src: 2330, Max index in trg: 2330
-Batch 1:
-Max index in src: 2330
-Max index in trg: 2330
-2024-12-26 14:20:40,931 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,931 - INFO - Max src index: 2330, Max trg index: 2330
-2024-12-26 14:20:40,951 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,952 - INFO - Max index in src: 2184, Max index in trg: 2184
-Batch 2:
-Max index in src: 2184
-Max index in trg: 2184
-2024-12-26 14:20:40,952 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,952 - INFO - Max src index: 2184, Max trg index: 2184
-2024-12-26 14:20:40,970 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:40,971 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 3:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 14:20:40,971 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:40,971 - INFO - Max src index: 2320, Max trg index: 2320
-2024-12-26 14:20:40,992 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:40,992 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 4:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 14:20:40,992 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:40,993 - INFO - Max src index: 2332, Max trg index: 2332
-2024-12-26 14:20:41,014 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,014 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 5:
+2024-12-26 18:06:39,373 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,373 - INFO - Max index in src: 2337, Max index in trg: 2337
+Batch 7:
 Max index in src: 2337
 Max index in trg: 2337
-2024-12-26 14:20:41,015 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,016 - INFO - Max src index: 2337, Max trg index: 2337
-2024-12-26 14:20:41,037 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,037 - INFO - Max index in src: 2321, Max index in trg: 2321
-Batch 6:
-Max index in src: 2321
-Max index in trg: 2321
-2024-12-26 14:20:41,038 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,038 - INFO - Max src index: 2321, Max trg index: 2321
-2024-12-26 14:20:41,056 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,056 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 7:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 14:20:41,057 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,057 - INFO - Max src index: 2339, Max trg index: 2339
-2024-12-26 14:20:41,074 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,074 - INFO - Max index in src: 2338, Max index in trg: 2338
+2024-12-26 18:06:39,375 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,375 - INFO - Max index in src: 2332, Max index in trg: 2332
 Batch 8:
-Max index in src: 2338
-Max index in trg: 2338
-2024-12-26 14:20:41,075 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,075 - INFO - Max src index: 2338, Max trg index: 2338
-2024-12-26 14:20:41,097 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,098 - INFO - Max index in src: 2329, Max index in trg: 2329
-Batch 9:
-Max index in src: 2329
-Max index in trg: 2329
-2024-12-26 14:20:41,098 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,099 - INFO - Max src index: 2329, Max trg index: 2329
-2024-12-26 14:20:41,117 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,118 - INFO - Max index in src: 2325, Max index in trg: 2325
-Batch 10:
-Max index in src: 2325
-Max index in trg: 2325
-2024-12-26 14:20:41,118 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,118 - INFO - Max src index: 2325, Max trg index: 2325
-2024-12-26 14:20:41,136 - INFO - Epoch 3/5, Batch 10/19, Loss: 0.0001
-2024-12-26 14:20:41,138 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,138 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 11:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 14:20:41,138 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,139 - INFO - Max src index: 2335, Max trg index: 2335
-2024-12-26 14:20:41,160 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,160 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 12:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 14:20:41,161 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,161 - INFO - Max src index: 2328, Max trg index: 2328
-2024-12-26 14:20:41,182 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 14:20:41,182 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 13:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-2024-12-26 14:20:41,183 - INFO - Source shape: torch.Size([128, 7]), Target shape: torch.Size([128, 6])
-2024-12-26 14:20:41,183 - INFO - Max src index: 2340, Max trg index: 2340
-2024-12-26 14:20:41,183 - ERROR - Error during training: Index out of range in input data
-2024-12-26 14:20:41,184 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,184 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 14:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 14:20:41,185 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,185 - INFO - Max src index: 2333, Max trg index: 2333
-2024-12-26 14:20:41,208 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,208 - INFO - Max index in src: 2327, Max index in trg: 2327
-Batch 15:
-Max index in src: 2327
-Max index in trg: 2327
-2024-12-26 14:20:41,209 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,209 - INFO - Max src index: 2327, Max trg index: 2327
-2024-12-26 14:20:41,227 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,227 - INFO - Max index in src: 2281, Max index in trg: 2281
-Batch 16:
-Max index in src: 2281
-Max index in trg: 2281
-2024-12-26 14:20:41,228 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,229 - INFO - Max src index: 2281, Max trg index: 2281
-2024-12-26 14:20:41,254 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,254 - INFO - Max index in src: 2303, Max index in trg: 2303
-Batch 17:
-Max index in src: 2303
-Max index in trg: 2303
-2024-12-26 14:20:41,255 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,255 - INFO - Max src index: 2303, Max trg index: 2303
-2024-12-26 14:20:41,276 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 14:20:41,276 - INFO - Max index in src: 2284, Max index in trg: 2284
-Batch 18:
-Max index in src: 2284
-Max index in trg: 2284
-2024-12-26 14:20:41,276 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 14:20:41,277 - INFO - Max src index: 2284, Max trg index: 2284
-2024-12-26 14:20:41,291 - INFO - Époque 3, Perte moyenne d'entraînement : 0.0213
-2024-12-26 14:20:41,292 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,293 - INFO - Max index in src: 466, Max index in trg: 466
-2024-12-26 14:20:41,293 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,293 - INFO - Max src index: 466, Max trg index: 466
-2024-12-26 14:20:41,300 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,300 - INFO - Max index in src: 469, Max index in trg: 469
-2024-12-26 14:20:41,300 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,300 - INFO - Max src index: 469, Max trg index: 469
-2024-12-26 14:20:41,307 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,307 - INFO - Max index in src: 472, Max index in trg: 472
-2024-12-26 14:20:41,307 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,307 - INFO - Max src index: 472, Max trg index: 472
-2024-12-26 14:20:41,313 - INFO - Padded src shape: torch.Size([82, 3]), Padded trg shape: torch.Size([82, 3])
-2024-12-26 14:20:41,313 - INFO - Max index in src: 471, Max index in trg: 471
-2024-12-26 14:20:41,313 - INFO - Source shape: torch.Size([82, 3]), Target shape: torch.Size([82, 2])
-2024-12-26 14:20:41,313 - INFO - Max src index: 471, Max trg index: 471
-2024-12-26 14:20:41,319 - INFO - Époque 3, Perte moyenne de validation : 0.0254
-2024-12-26 14:20:41,319 - WARNING - Validation loss increasing. Possible overfitting.
-2024-12-26 14:20:41,319 - INFO - Source shape: torch.Size([1, 5]), Target shape: torch.Size([1, 5])
-2024-12-26 14:20:41,319 - INFO - Max src index: 6, Max trg index: 0
-2024-12-26 14:20:41,323 - INFO - Sample output at epoch 3: <EOS> <EOS> <EOS> <EOS> <EOS>
-2024-12-26 14:20:41,325 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,325 - INFO - Max index in src: 2302, Max index in trg: 2302
-Batch 0:
-Max index in src: 2302
-Max index in trg: 2302
-2024-12-26 14:20:41,326 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,326 - INFO - Max src index: 2302, Max trg index: 2302
-2024-12-26 14:20:41,350 - INFO - Epoch 4/5, Batch 0/19, Loss: 0.0001
-2024-12-26 14:20:41,351 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,351 - INFO - Max index in src: 2330, Max index in trg: 2330
-Batch 1:
-Max index in src: 2330
-Max index in trg: 2330
-2024-12-26 14:20:41,352 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,352 - INFO - Max src index: 2330, Max trg index: 2330
-2024-12-26 14:20:41,369 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,369 - INFO - Max index in src: 2184, Max index in trg: 2184
-Batch 2:
-Max index in src: 2184
-Max index in trg: 2184
-2024-12-26 14:20:41,370 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,370 - INFO - Max src index: 2184, Max trg index: 2184
-2024-12-26 14:20:41,393 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,394 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 3:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 14:20:41,394 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,395 - INFO - Max src index: 2320, Max trg index: 2320
-2024-12-26 14:20:41,414 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,415 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 4:
 Max index in src: 2332
 Max index in trg: 2332
-2024-12-26 14:20:41,416 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,416 - INFO - Max src index: 2332, Max trg index: 2332
-2024-12-26 14:20:41,437 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,437 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 5:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 14:20:41,438 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,438 - INFO - Max src index: 2337, Max trg index: 2337
-2024-12-26 14:20:41,456 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,456 - INFO - Max index in src: 2321, Max index in trg: 2321
-Batch 6:
-Max index in src: 2321
-Max index in trg: 2321
-2024-12-26 14:20:41,457 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,457 - INFO - Max src index: 2321, Max trg index: 2321
-2024-12-26 14:20:41,477 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,477 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 7:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 14:20:41,478 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,478 - INFO - Max src index: 2339, Max trg index: 2339
-2024-12-26 14:20:41,501 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,501 - INFO - Max index in src: 2338, Max index in trg: 2338
-Batch 8:
-Max index in src: 2338
-Max index in trg: 2338
-2024-12-26 14:20:41,502 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,502 - INFO - Max src index: 2338, Max trg index: 2338
-2024-12-26 14:20:41,519 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,519 - INFO - Max index in src: 2329, Max index in trg: 2329
+2024-12-26 18:06:39,377 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,377 - INFO - Max index in src: 2333, Max index in trg: 2333
 Batch 9:
-Max index in src: 2329
-Max index in trg: 2329
-2024-12-26 14:20:41,520 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,520 - INFO - Max src index: 2329, Max trg index: 2329
-2024-12-26 14:20:41,539 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,539 - INFO - Max index in src: 2325, Max index in trg: 2325
-Batch 10:
-Max index in src: 2325
-Max index in trg: 2325
-2024-12-26 14:20:41,540 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,540 - INFO - Max src index: 2325, Max trg index: 2325
-2024-12-26 14:20:41,555 - INFO - Epoch 4/5, Batch 10/19, Loss: 0.0001
-2024-12-26 14:20:41,556 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,556 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 11:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 14:20:41,557 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,557 - INFO - Max src index: 2335, Max trg index: 2335
-2024-12-26 14:20:41,584 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,584 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 12:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 14:20:41,585 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,585 - INFO - Max src index: 2328, Max trg index: 2328
-2024-12-26 14:20:41,601 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 14:20:41,601 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 13:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-2024-12-26 14:20:41,602 - INFO - Source shape: torch.Size([128, 7]), Target shape: torch.Size([128, 6])
-2024-12-26 14:20:41,602 - INFO - Max src index: 2340, Max trg index: 2340
-2024-12-26 14:20:41,602 - ERROR - Error during training: Index out of range in input data
-2024-12-26 14:20:41,603 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,603 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 14:
 Max index in src: 2333
 Max index in trg: 2333
-2024-12-26 14:20:41,604 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,604 - INFO - Max src index: 2333, Max trg index: 2333
-2024-12-26 14:20:41,628 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,628 - INFO - Max index in src: 2327, Max index in trg: 2327
-Batch 15:
-Max index in src: 2327
-Max index in trg: 2327
-2024-12-26 14:20:41,629 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,630 - INFO - Max src index: 2327, Max trg index: 2327
-2024-12-26 14:20:41,650 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,650 - INFO - Max index in src: 2281, Max index in trg: 2281
-Batch 16:
-Max index in src: 2281
-Max index in trg: 2281
-2024-12-26 14:20:41,651 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,651 - INFO - Max src index: 2281, Max trg index: 2281
-2024-12-26 14:20:41,669 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,669 - INFO - Max index in src: 2303, Max index in trg: 2303
-Batch 17:
-Max index in src: 2303
-Max index in trg: 2303
-2024-12-26 14:20:41,670 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,670 - INFO - Max src index: 2303, Max trg index: 2303
-2024-12-26 14:20:41,692 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 14:20:41,692 - INFO - Max index in src: 2284, Max index in trg: 2284
-Batch 18:
-Max index in src: 2284
-Max index in trg: 2284
-2024-12-26 14:20:41,693 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 14:20:41,693 - INFO - Max src index: 2284, Max trg index: 2284
-2024-12-26 14:20:41,709 - INFO - Époque 4, Perte moyenne d'entraînement : 0.0216
-2024-12-26 14:20:41,710 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,710 - INFO - Max index in src: 466, Max index in trg: 466
-2024-12-26 14:20:41,711 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,711 - INFO - Max src index: 466, Max trg index: 466
-2024-12-26 14:20:41,717 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,718 - INFO - Max index in src: 469, Max index in trg: 469
-2024-12-26 14:20:41,719 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,719 - INFO - Max src index: 469, Max trg index: 469
-2024-12-26 14:20:41,728 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,728 - INFO - Max index in src: 472, Max index in trg: 472
-2024-12-26 14:20:41,729 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,730 - INFO - Max src index: 472, Max trg index: 472
-2024-12-26 14:20:41,737 - INFO - Padded src shape: torch.Size([82, 3]), Padded trg shape: torch.Size([82, 3])
-2024-12-26 14:20:41,737 - INFO - Max index in src: 471, Max index in trg: 471
-2024-12-26 14:20:41,738 - INFO - Source shape: torch.Size([82, 3]), Target shape: torch.Size([82, 2])
-2024-12-26 14:20:41,738 - INFO - Max src index: 471, Max trg index: 471
-2024-12-26 14:20:41,745 - INFO - Époque 4, Perte moyenne de validation : 0.0226
-2024-12-26 14:20:41,745 - INFO - Source shape: torch.Size([1, 5]), Target shape: torch.Size([1, 5])
-2024-12-26 14:20:41,745 - INFO - Max src index: 6, Max trg index: 0
-2024-12-26 14:20:41,749 - INFO - Sample output at epoch 4: <EOS> <EOS> <EOS> <EOS> <EOS>
-2024-12-26 14:20:41,752 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,752 - INFO - Max index in src: 2302, Max index in trg: 2302
-Batch 0:
-Max index in src: 2302
-Max index in trg: 2302
-2024-12-26 14:20:41,753 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,753 - INFO - Max src index: 2302, Max trg index: 2302
-2024-12-26 14:20:41,776 - INFO - Epoch 5/5, Batch 0/19, Loss: 0.0001
-2024-12-26 14:20:41,777 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,777 - INFO - Max index in src: 2330, Max index in trg: 2330
-Batch 1:
+2024-12-26 18:06:39,378 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,378 - INFO - Max index in src: 2339, Max index in trg: 2339
+Batch 10:
+Max index in src: 2339
+Max index in trg: 2339
+2024-12-26 18:06:39,380 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,380 - INFO - Max index in src: 2316, Max index in trg: 2316
+Batch 11:
+Max index in src: 2316
+Max index in trg: 2316
+2024-12-26 18:06:39,382 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,382 - INFO - Max index in src: 2330, Max index in trg: 2330
+Batch 12:
 Max index in src: 2330
 Max index in trg: 2330
-2024-12-26 14:20:41,778 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,778 - INFO - Max src index: 2330, Max trg index: 2330
-2024-12-26 14:20:41,801 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,801 - INFO - Max index in src: 2184, Max index in trg: 2184
-Batch 2:
-Max index in src: 2184
-Max index in trg: 2184
-2024-12-26 14:20:41,802 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,802 - INFO - Max src index: 2184, Max trg index: 2184
-2024-12-26 14:20:41,821 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,821 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 3:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 14:20:41,822 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,822 - INFO - Max src index: 2320, Max trg index: 2320
-2024-12-26 14:20:41,841 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,841 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 4:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 14:20:41,842 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,842 - INFO - Max src index: 2332, Max trg index: 2332
-2024-12-26 14:20:41,867 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,867 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 5:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 14:20:41,868 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,868 - INFO - Max src index: 2337, Max trg index: 2337
-2024-12-26 14:20:41,888 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,888 - INFO - Max index in src: 2321, Max index in trg: 2321
-Batch 6:
-Max index in src: 2321
-Max index in trg: 2321
-2024-12-26 14:20:41,889 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,889 - INFO - Max src index: 2321, Max trg index: 2321
-2024-12-26 14:20:41,905 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,906 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 7:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 14:20:41,906 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,907 - INFO - Max src index: 2339, Max trg index: 2339
-2024-12-26 14:20:41,923 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,923 - INFO - Max index in src: 2338, Max index in trg: 2338
-Batch 8:
-Max index in src: 2338
-Max index in trg: 2338
-2024-12-26 14:20:41,924 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,924 - INFO - Max src index: 2338, Max trg index: 2338
-2024-12-26 14:20:41,945 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:41,946 - INFO - Max index in src: 2329, Max index in trg: 2329
-Batch 9:
-Max index in src: 2329
-Max index in trg: 2329
-2024-12-26 14:20:41,946 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:41,947 - INFO - Max src index: 2329, Max trg index: 2329
-2024-12-26 14:20:41,969 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:41,969 - INFO - Max index in src: 2325, Max index in trg: 2325
-Batch 10:
-Max index in src: 2325
-Max index in trg: 2325
-2024-12-26 14:20:41,970 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:41,970 - INFO - Max src index: 2325, Max trg index: 2325
-2024-12-26 14:20:41,987 - INFO - Epoch 5/5, Batch 10/19, Loss: 0.0001
-2024-12-26 14:20:41,988 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:41,988 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 11:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 14:20:41,988 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:41,990 - INFO - Max src index: 2335, Max trg index: 2335
-2024-12-26 14:20:42,011 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:42,011 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 12:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 14:20:42,012 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:42,012 - INFO - Max src index: 2328, Max trg index: 2328
-2024-12-26 14:20:42,034 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 14:20:42,034 - INFO - Max index in src: 2340, Max index in trg: 2340
+2024-12-26 18:06:39,384 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,384 - INFO - Max index in src: 2304, Max index in trg: 2304
 Batch 13:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-2024-12-26 14:20:42,035 - INFO - Source shape: torch.Size([128, 7]), Target shape: torch.Size([128, 6])
-2024-12-26 14:20:42,035 - INFO - Max src index: 2340, Max trg index: 2340
-2024-12-26 14:20:42,035 - ERROR - Error during training: Index out of range in input data
-2024-12-26 14:20:42,036 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 14:20:42,036 - INFO - Max index in src: 2333, Max index in trg: 2333
+Max index in src: 2304
+Max index in trg: 2304
+2024-12-26 18:06:39,386 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,386 - INFO - Max index in src: 2318, Max index in trg: 2318
 Batch 14:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 14:20:42,037 - INFO - Source shape: torch.Size([128, 6]), Target shape: torch.Size([128, 5])
-2024-12-26 14:20:42,037 - INFO - Max src index: 2333, Max trg index: 2333
-2024-12-26 14:20:42,055 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:42,055 - INFO - Max index in src: 2327, Max index in trg: 2327
+Max index in src: 2318
+Max index in trg: 2318
+2024-12-26 18:06:39,388 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,388 - INFO - Max index in src: 2308, Max index in trg: 2308
 Batch 15:
+Max index in src: 2308
+Max index in trg: 2308
+2024-12-26 18:06:39,390 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,390 - INFO - Max index in src: 2224, Max index in trg: 2224
+Batch 16:
+Max index in src: 2224
+Max index in trg: 2224
+2024-12-26 18:06:39,392 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,393 - INFO - Max index in src: 2327, Max index in trg: 2327
+Batch 17:
 Max index in src: 2327
 Max index in trg: 2327
-2024-12-26 14:20:42,056 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:42,056 - INFO - Max src index: 2327, Max trg index: 2327
-2024-12-26 14:20:42,074 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:42,074 - INFO - Max index in src: 2281, Max index in trg: 2281
-Batch 16:
-Max index in src: 2281
-Max index in trg: 2281
-2024-12-26 14:20:42,074 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:42,075 - INFO - Max src index: 2281, Max trg index: 2281
-2024-12-26 14:20:42,091 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:42,091 - INFO - Max index in src: 2303, Max index in trg: 2303
-Batch 17:
-Max index in src: 2303
-Max index in trg: 2303
-2024-12-26 14:20:42,092 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:42,092 - INFO - Max src index: 2303, Max trg index: 2303
-2024-12-26 14:20:42,109 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 14:20:42,109 - INFO - Max index in src: 2284, Max index in trg: 2284
+2024-12-26 18:06:39,393 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
+2024-12-26 18:06:39,393 - INFO - Max index in src: 2257, Max index in trg: 2257
 Batch 18:
-Max index in src: 2284
-Max index in trg: 2284
-2024-12-26 14:20:42,110 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 14:20:42,110 - INFO - Max src index: 2284, Max trg index: 2284
-2024-12-26 14:20:42,125 - INFO - Époque 5, Perte moyenne d'entraînement : 0.0205
-2024-12-26 14:20:42,126 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:42,126 - INFO - Max index in src: 466, Max index in trg: 466
-2024-12-26 14:20:42,127 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:42,127 - INFO - Max src index: 466, Max trg index: 466
-2024-12-26 14:20:42,134 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 14:20:42,134 - INFO - Max index in src: 469, Max index in trg: 469
-2024-12-26 14:20:42,134 - INFO - Source shape: torch.Size([128, 5]), Target shape: torch.Size([128, 4])
-2024-12-26 14:20:42,134 - INFO - Max src index: 469, Max trg index: 469
-2024-12-26 14:20:42,140 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 14:20:42,140 - INFO - Max index in src: 472, Max index in trg: 472
-2024-12-26 14:20:42,141 - INFO - Source shape: torch.Size([128, 3]), Target shape: torch.Size([128, 2])
-2024-12-26 14:20:42,141 - INFO - Max src index: 472, Max trg index: 472
-2024-12-26 14:20:42,146 - INFO - Padded src shape: torch.Size([82, 3]), Padded trg shape: torch.Size([82, 3])
-2024-12-26 14:20:42,146 - INFO - Max index in src: 471, Max index in trg: 471
-2024-12-26 14:20:42,147 - INFO - Source shape: torch.Size([82, 3]), Target shape: torch.Size([82, 2])
-2024-12-26 14:20:42,147 - INFO - Max src index: 471, Max trg index: 471
-2024-12-26 14:20:42,152 - INFO - Époque 5, Perte moyenne de validation : 0.0218
-2024-12-26 14:20:42,152 - INFO - Source shape: torch.Size([1, 5]), Target shape: torch.Size([1, 5])
-2024-12-26 14:20:42,153 - INFO - Max src index: 6, Max trg index: 0
-2024-12-26 14:20:42,156 - INFO - Sample output at epoch 5: <EOS> <EOS> <EOS> <EOS> <EOS>
-2024-12-26 14:20:42,171 - INFO - Modèle sauvegardé dans trained_model.pth
-2024-12-26 14:20:42,173 - INFO - Dataset nettoyé et sauvegardé.
-2024-12-26 14:20:42,173 - INFO - Training Loss History:
-2024-12-26 14:20:42,173 - INFO - Epoch 1: 0.0240
-2024-12-26 14:20:42,173 - INFO - Epoch 2: 0.0222
-2024-12-26 14:20:42,173 - INFO - Epoch 3: 0.0213
-2024-12-26 14:20:42,173 - INFO - Epoch 4: 0.0216
-2024-12-26 14:20:42,173 - INFO - Epoch 5: 0.0205
-2024-12-26 14:20:42,173 - INFO - Validation Loss History:
-2024-12-26 14:20:42,174 - INFO - Epoch 1: 0.0245
-2024-12-26 14:20:42,174 - INFO - Epoch 2: 0.0218
-2024-12-26 14:20:42,174 - INFO - Epoch 3: 0.0254
-2024-12-26 14:20:42,174 - INFO - Epoch 4: 0.0226
-2024-12-26 14:20:42,174 - INFO - Epoch 5: 0.0218
+Max index in src: 2257
+Max index in trg: 2257
+2024-12-26 18:06:39,394 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
+2024-12-26 18:06:39,405 - INFO - Max src index: 2257, Max trg index: 2257
+2024-12-26 18:06:39,835 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,835 - INFO - Max index in src: 2313, Max index in trg: 2313
+Batch 0:
+Max index in src: 2313
+Max index in trg: 2313
+2024-12-26 18:06:39,837 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,837 - INFO - Max index in src: 2334, Max index in trg: 2334
+Batch 1:
+Max index in src: 2334
+Max index in trg: 2334
+2024-12-26 18:06:39,838 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,839 - INFO - Max index in src: 2340, Max index in trg: 2340
+Batch 2:
+Max index in src: 2340
+Max index in trg: 2340
+2024-12-26 18:06:39,840 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,840 - INFO - Max index in src: 2331, Max index in trg: 2331
+Batch 3:
+Max index in src: 2331
+Max index in trg: 2331
+2024-12-26 18:06:39,842 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,842 - INFO - Max index in src: 2336, Max index in trg: 2336
+Batch 4:
+Max index in src: 2336
+Max index in trg: 2336
+2024-12-26 18:06:39,844 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,844 - INFO - Max index in src: 2322, Max index in trg: 2322
+Batch 5:
+Max index in src: 2322
+Max index in trg: 2322
+2024-12-26 18:06:39,847 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,847 - INFO - Max index in src: 2335, Max index in trg: 2335
+Batch 6:
+Max index in src: 2335
+Max index in trg: 2335
+2024-12-26 18:06:39,849 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,849 - INFO - Max index in src: 2337, Max index in trg: 2337
+Batch 7:
+Max index in src: 2337
+Max index in trg: 2337
+2024-12-26 18:06:39,850 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,851 - INFO - Max index in src: 2332, Max index in trg: 2332
+Batch 8:
+Max index in src: 2332
+Max index in trg: 2332
+2024-12-26 18:06:39,852 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,852 - INFO - Max index in src: 2333, Max index in trg: 2333
+Batch 9:
+Max index in src: 2333
+Max index in trg: 2333
+2024-12-26 18:06:39,854 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,854 - INFO - Max index in src: 2339, Max index in trg: 2339
+Batch 10:
+Max index in src: 2339
+Max index in trg: 2339
+2024-12-26 18:06:39,856 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,856 - INFO - Max index in src: 2316, Max index in trg: 2316
+Batch 11:
+Max index in src: 2316
+Max index in trg: 2316
+2024-12-26 18:06:39,858 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,858 - INFO - Max index in src: 2330, Max index in trg: 2330
+Batch 12:
+Max index in src: 2330
+Max index in trg: 2330
+2024-12-26 18:06:39,859 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,859 - INFO - Max index in src: 2304, Max index in trg: 2304
+Batch 13:
+Max index in src: 2304
+Max index in trg: 2304
+2024-12-26 18:06:39,861 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,861 - INFO - Max index in src: 2318, Max index in trg: 2318
+Batch 14:
+Max index in src: 2318
+Max index in trg: 2318
+2024-12-26 18:06:39,863 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,863 - INFO - Max index in src: 2308, Max index in trg: 2308
+Batch 15:
+Max index in src: 2308
+Max index in trg: 2308
+2024-12-26 18:06:39,864 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,864 - INFO - Max index in src: 2224, Max index in trg: 2224
+Batch 16:
+Max index in src: 2224
+Max index in trg: 2224
+2024-12-26 18:06:39,866 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,867 - INFO - Max index in src: 2327, Max index in trg: 2327
+Batch 17:
+Max index in src: 2327
+Max index in trg: 2327
+2024-12-26 18:06:39,868 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
+2024-12-26 18:06:39,868 - INFO - Max index in src: 2257, Max index in trg: 2257
+Batch 18:
+Max index in src: 2257
+Max index in trg: 2257
+2024-12-26 18:06:39,869 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
+2024-12-26 18:06:39,869 - INFO - Max src index: 2257, Max trg index: 2257
+2024-12-26 18:06:39,889 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,889 - INFO - Max index in src: 2313, Max index in trg: 2313
+Batch 0:
+Max index in src: 2313
+Max index in trg: 2313
+2024-12-26 18:06:39,891 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,891 - INFO - Max index in src: 2334, Max index in trg: 2334
+Batch 1:
+Max index in src: 2334
+Max index in trg: 2334
+2024-12-26 18:06:39,893 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,893 - INFO - Max index in src: 2340, Max index in trg: 2340
+Batch 2:
+Max index in src: 2340
+Max index in trg: 2340
+2024-12-26 18:06:39,894 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,894 - INFO - Max index in src: 2331, Max index in trg: 2331
+Batch 3:
+Max index in src: 2331
+Max index in trg: 2331
+2024-12-26 18:06:39,896 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,896 - INFO - Max index in src: 2336, Max index in trg: 2336
+Batch 4:
+Max index in src: 2336
+Max index in trg: 2336
+2024-12-26 18:06:39,897 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,898 - INFO - Max index in src: 2322, Max index in trg: 2322
+Batch 5:
+Max index in src: 2322
+Max index in trg: 2322
+2024-12-26 18:06:39,899 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,899 - INFO - Max index in src: 2335, Max index in trg: 2335
+Batch 6:
+Max index in src: 2335
+Max index in trg: 2335
+2024-12-26 18:06:39,900 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,900 - INFO - Max index in src: 2337, Max index in trg: 2337
+Batch 7:
+Max index in src: 2337
+Max index in trg: 2337
+2024-12-26 18:06:39,903 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,903 - INFO - Max index in src: 2332, Max index in trg: 2332
+Batch 8:
+Max index in src: 2332
+Max index in trg: 2332
+2024-12-26 18:06:39,905 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,905 - INFO - Max index in src: 2333, Max index in trg: 2333
+Batch 9:
+Max index in src: 2333
+Max index in trg: 2333
+2024-12-26 18:06:39,906 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,906 - INFO - Max index in src: 2339, Max index in trg: 2339
+Batch 10:
+Max index in src: 2339
+Max index in trg: 2339
+2024-12-26 18:06:39,908 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,908 - INFO - Max index in src: 2316, Max index in trg: 2316
+Batch 11:
+Max index in src: 2316
+Max index in trg: 2316
+2024-12-26 18:06:39,910 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,910 - INFO - Max index in src: 2330, Max index in trg: 2330
+Batch 12:
+Max index in src: 2330
+Max index in trg: 2330
+2024-12-26 18:06:39,911 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,911 - INFO - Max index in src: 2304, Max index in trg: 2304
+Batch 13:
+Max index in src: 2304
+Max index in trg: 2304
+2024-12-26 18:06:39,913 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,913 - INFO - Max index in src: 2318, Max index in trg: 2318
+Batch 14:
+Max index in src: 2318
+Max index in trg: 2318
+2024-12-26 18:06:39,914 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,914 - INFO - Max index in src: 2308, Max index in trg: 2308
+Batch 15:
+Max index in src: 2308
+Max index in trg: 2308
+2024-12-26 18:06:39,916 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,916 - INFO - Max index in src: 2224, Max index in trg: 2224
+Batch 16:
+Max index in src: 2224
+Max index in trg: 2224
+2024-12-26 18:06:39,918 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,918 - INFO - Max index in src: 2327, Max index in trg: 2327
+Batch 17:
+Max index in src: 2327
+Max index in trg: 2327
+2024-12-26 18:06:39,919 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
+2024-12-26 18:06:39,919 - INFO - Max index in src: 2257, Max index in trg: 2257
+Batch 18:
+Max index in src: 2257
+Max index in trg: 2257
+2024-12-26 18:06:39,921 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
+2024-12-26 18:06:39,921 - INFO - Max src index: 2257, Max trg index: 2257
+2024-12-26 18:06:39,938 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,938 - INFO - Max index in src: 2313, Max index in trg: 2313
+Batch 0:
+Max index in src: 2313
+Max index in trg: 2313
+2024-12-26 18:06:39,940 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,940 - INFO - Max index in src: 2334, Max index in trg: 2334
+Batch 1:
+Max index in src: 2334
+Max index in trg: 2334
+2024-12-26 18:06:39,941 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,941 - INFO - Max index in src: 2340, Max index in trg: 2340
+Batch 2:
+Max index in src: 2340
+Max index in trg: 2340
+2024-12-26 18:06:39,943 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,943 - INFO - Max index in src: 2331, Max index in trg: 2331
+Batch 3:
+Max index in src: 2331
+Max index in trg: 2331
+2024-12-26 18:06:39,945 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,945 - INFO - Max index in src: 2336, Max index in trg: 2336
+Batch 4:
+Max index in src: 2336
+Max index in trg: 2336
+2024-12-26 18:06:39,946 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,946 - INFO - Max index in src: 2322, Max index in trg: 2322
+Batch 5:
+Max index in src: 2322
+Max index in trg: 2322
+2024-12-26 18:06:39,948 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,948 - INFO - Max index in src: 2335, Max index in trg: 2335
+Batch 6:
+Max index in src: 2335
+Max index in trg: 2335
+2024-12-26 18:06:39,950 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,950 - INFO - Max index in src: 2337, Max index in trg: 2337
+Batch 7:
+Max index in src: 2337
+Max index in trg: 2337
+2024-12-26 18:06:39,952 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,952 - INFO - Max index in src: 2332, Max index in trg: 2332
+Batch 8:
+Max index in src: 2332
+Max index in trg: 2332
+2024-12-26 18:06:39,953 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,953 - INFO - Max index in src: 2333, Max index in trg: 2333
+Batch 9:
+Max index in src: 2333
+Max index in trg: 2333
+2024-12-26 18:06:39,955 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,955 - INFO - Max index in src: 2339, Max index in trg: 2339
+Batch 10:
+Max index in src: 2339
+Max index in trg: 2339
+2024-12-26 18:06:39,957 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,957 - INFO - Max index in src: 2316, Max index in trg: 2316
+Batch 11:
+Max index in src: 2316
+Max index in trg: 2316
+2024-12-26 18:06:39,958 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,959 - INFO - Max index in src: 2330, Max index in trg: 2330
+Batch 12:
+Max index in src: 2330
+Max index in trg: 2330
+2024-12-26 18:06:39,960 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:39,960 - INFO - Max index in src: 2304, Max index in trg: 2304
+Batch 13:
+Max index in src: 2304
+Max index in trg: 2304
+2024-12-26 18:06:39,962 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,962 - INFO - Max index in src: 2318, Max index in trg: 2318
+Batch 14:
+Max index in src: 2318
+Max index in trg: 2318
+2024-12-26 18:06:39,964 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,964 - INFO - Max index in src: 2308, Max index in trg: 2308
+Batch 15:
+Max index in src: 2308
+Max index in trg: 2308
+2024-12-26 18:06:39,965 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:39,965 - INFO - Max index in src: 2224, Max index in trg: 2224
+Batch 16:
+Max index in src: 2224
+Max index in trg: 2224
+2024-12-26 18:06:39,967 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,967 - INFO - Max index in src: 2327, Max index in trg: 2327
+Batch 17:
+Max index in src: 2327
+Max index in trg: 2327
+2024-12-26 18:06:39,968 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
+2024-12-26 18:06:39,968 - INFO - Max index in src: 2257, Max index in trg: 2257
+Batch 18:
+Max index in src: 2257
+Max index in trg: 2257
+2024-12-26 18:06:39,969 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
+2024-12-26 18:06:39,970 - INFO - Max src index: 2257, Max trg index: 2257
+2024-12-26 18:06:39,986 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,986 - INFO - Max index in src: 2313, Max index in trg: 2313
+Batch 0:
+Max index in src: 2313
+Max index in trg: 2313
+2024-12-26 18:06:39,988 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,988 - INFO - Max index in src: 2334, Max index in trg: 2334
+Batch 1:
+Max index in src: 2334
+Max index in trg: 2334
+2024-12-26 18:06:39,990 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:39,990 - INFO - Max index in src: 2340, Max index in trg: 2340
+Batch 2:
+Max index in src: 2340
+Max index in trg: 2340
+2024-12-26 18:06:39,992 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,992 - INFO - Max index in src: 2331, Max index in trg: 2331
+Batch 3:
+Max index in src: 2331
+Max index in trg: 2331
+2024-12-26 18:06:39,993 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,993 - INFO - Max index in src: 2336, Max index in trg: 2336
+Batch 4:
+Max index in src: 2336
+Max index in trg: 2336
+2024-12-26 18:06:39,995 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,995 - INFO - Max index in src: 2322, Max index in trg: 2322
+Batch 5:
+Max index in src: 2322
+Max index in trg: 2322
+2024-12-26 18:06:39,997 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,997 - INFO - Max index in src: 2335, Max index in trg: 2335
+Batch 6:
+Max index in src: 2335
+Max index in trg: 2335
+2024-12-26 18:06:39,998 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:39,998 - INFO - Max index in src: 2337, Max index in trg: 2337
+Batch 7:
+Max index in src: 2337
+Max index in trg: 2337
+2024-12-26 18:06:40,000 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:40,000 - INFO - Max index in src: 2332, Max index in trg: 2332
+Batch 8:
+Max index in src: 2332
+Max index in trg: 2332
+2024-12-26 18:06:40,003 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:40,003 - INFO - Max index in src: 2333, Max index in trg: 2333
+Batch 9:
+Max index in src: 2333
+Max index in trg: 2333
+2024-12-26 18:06:40,004 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:40,004 - INFO - Max index in src: 2339, Max index in trg: 2339
+Batch 10:
+Max index in src: 2339
+Max index in trg: 2339
+2024-12-26 18:06:40,006 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:40,006 - INFO - Max index in src: 2316, Max index in trg: 2316
+Batch 11:
+Max index in src: 2316
+Max index in trg: 2316
+2024-12-26 18:06:40,007 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:40,007 - INFO - Max index in src: 2330, Max index in trg: 2330
+Batch 12:
+Max index in src: 2330
+Max index in trg: 2330
+2024-12-26 18:06:40,009 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
+2024-12-26 18:06:40,009 - INFO - Max index in src: 2304, Max index in trg: 2304
+Batch 13:
+Max index in src: 2304
+Max index in trg: 2304
+2024-12-26 18:06:40,010 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
+2024-12-26 18:06:40,011 - INFO - Max index in src: 2318, Max index in trg: 2318
+Batch 14:
+Max index in src: 2318
+Max index in trg: 2318
+2024-12-26 18:06:40,012 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:40,012 - INFO - Max index in src: 2308, Max index in trg: 2308
+Batch 15:
+Max index in src: 2308
+Max index in trg: 2308
+2024-12-26 18:06:40,014 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
+2024-12-26 18:06:40,014 - INFO - Max index in src: 2224, Max index in trg: 2224
+Batch 16:
+Max index in src: 2224
+Max index in trg: 2224
+2024-12-26 18:06:40,015 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
+2024-12-26 18:06:40,015 - INFO - Max index in src: 2327, Max index in trg: 2327
+Batch 17:
+Max index in src: 2327
+Max index in trg: 2327
+2024-12-26 18:06:40,016 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
+2024-12-26 18:06:40,016 - INFO - Max index in src: 2257, Max index in trg: 2257
+Batch 18:
+Max index in src: 2257
+Max index in trg: 2257
+2024-12-26 18:06:40,017 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
+2024-12-26 18:06:40,017 - INFO - Max src index: 2257, Max trg index: 2257

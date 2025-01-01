@@ -1,548 +1,398 @@
-2024-12-26 18:57:28,901 - INFO - Vocabulary size: 2339
-2024-12-26 18:57:28,901 - INFO - Max index in vocab: 2340
-2024-12-26 18:57:28,903 - INFO - Vocabulary size: 475
-2024-12-26 18:57:28,903 - INFO - Max index in vocab: 476
-2024-12-26 18:57:28,918 - INFO - Using device: cuda:0
-2024-12-26 18:57:28,919 - INFO - GPU Device Name: NVIDIA GeForce RTX 4080 SUPER
-2024-12-26 18:57:28,986 - INFO - Model Embedding size: 2340
-2024-12-26 18:57:29,497 - INFO - Modèle chargé avec succès, certaines dimensions peuvent ne pas correspondre.
-2024-12-26 18:57:29,499 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,499 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 0:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 18:57:29,521 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,522 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 1:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 18:57:29,523 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,523 - INFO - Max index in src: 2317, Max index in trg: 2317
-Batch 2:
-Max index in src: 2317
-Max index in trg: 2317
-2024-12-26 18:57:29,525 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,525 - INFO - Max index in src: 2331, Max index in trg: 2331
-Batch 3:
-Max index in src: 2331
-Max index in trg: 2331
-2024-12-26 18:57:29,527 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,527 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 4:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 18:57:29,529 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,529 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 5:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 18:57:29,531 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,531 - INFO - Max index in src: 2310, Max index in trg: 2310
-Batch 6:
-Max index in src: 2310
-Max index in trg: 2310
-2024-12-26 18:57:29,532 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,533 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 7:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 18:57:29,534 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,534 - INFO - Max index in src: 2318, Max index in trg: 2318
-Batch 8:
-Max index in src: 2318
-Max index in trg: 2318
-2024-12-26 18:57:29,536 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,536 - INFO - Max index in src: 2280, Max index in trg: 2280
-Batch 9:
-Max index in src: 2280
-Max index in trg: 2280
-2024-12-26 18:57:29,538 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,538 - INFO - Max index in src: 2336, Max index in trg: 2336
-Batch 10:
-Max index in src: 2336
-Max index in trg: 2336
-2024-12-26 18:57:29,540 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,540 - INFO - Max index in src: 2275, Max index in trg: 2275
-Batch 11:
-Max index in src: 2275
-Max index in trg: 2275
-2024-12-26 18:57:29,541 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,542 - INFO - Max index in src: 2314, Max index in trg: 2314
-Batch 12:
-Max index in src: 2314
-Max index in trg: 2314
-2024-12-26 18:57:29,543 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,543 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 13:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 18:57:29,545 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,545 - INFO - Max index in src: 2315, Max index in trg: 2315
-Batch 14:
-Max index in src: 2315
-Max index in trg: 2315
-2024-12-26 18:57:29,547 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,547 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 15:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 18:57:29,548 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,548 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 16:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-Sequence 0: ['<SOS>', 'https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Target 0: ['https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Sequence 1: ['<SOS>', 'https://peps.python.org/pep-3115/', '<EOS>']
-Target 1: ['https://peps.python.org/pep-3115/', '<EOS>']
-Sequence 2: ['<SOS>', 'https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Target 2: ['https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Sequence 3: ['<SOS>', 'https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Target 3: ['https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Sequence 4: ['<SOS>', 'https://realpython.com/defining-your-own-python-function/', '<EOS>']
-Target 4: ['https://realpython.com/defining-your-own-python-function/', '<EOS>']
-2024-12-26 18:57:29,552 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,552 - INFO - Max index in src: 2334, Max index in trg: 2334
-Batch 17:
-Max index in src: 2334
-Max index in trg: 2334
-2024-12-26 18:57:29,553 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 18:57:29,553 - INFO - Max index in src: 2324, Max index in trg: 2324
-Batch 18:
-Max index in src: 2324
-Max index in trg: 2324
-2024-12-26 18:57:29,554 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 18:57:29,558 - INFO - Max src index: 2324, Max trg index: 2324
-2024-12-26 18:57:29,741 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,742 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 0:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 18:57:29,744 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,744 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 1:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 18:57:29,746 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,746 - INFO - Max index in src: 2317, Max index in trg: 2317
-Batch 2:
-Max index in src: 2317
-Max index in trg: 2317
-2024-12-26 18:57:29,747 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,747 - INFO - Max index in src: 2331, Max index in trg: 2331
-Batch 3:
-Max index in src: 2331
-Max index in trg: 2331
-2024-12-26 18:57:29,749 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,749 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 4:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 18:57:29,751 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,751 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 5:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 18:57:29,753 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,753 - INFO - Max index in src: 2310, Max index in trg: 2310
-Batch 6:
-Max index in src: 2310
-Max index in trg: 2310
-2024-12-26 18:57:29,755 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,755 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 7:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 18:57:29,756 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,756 - INFO - Max index in src: 2318, Max index in trg: 2318
-Batch 8:
-Max index in src: 2318
-Max index in trg: 2318
-2024-12-26 18:57:29,758 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,758 - INFO - Max index in src: 2280, Max index in trg: 2280
-Batch 9:
-Max index in src: 2280
-Max index in trg: 2280
-2024-12-26 18:57:29,760 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,760 - INFO - Max index in src: 2336, Max index in trg: 2336
-Batch 10:
-Max index in src: 2336
-Max index in trg: 2336
-2024-12-26 18:57:29,762 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,762 - INFO - Max index in src: 2275, Max index in trg: 2275
-Batch 11:
-Max index in src: 2275
-Max index in trg: 2275
-2024-12-26 18:57:29,763 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,764 - INFO - Max index in src: 2314, Max index in trg: 2314
-Batch 12:
-Max index in src: 2314
-Max index in trg: 2314
-2024-12-26 18:57:29,765 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,765 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 13:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 18:57:29,766 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,766 - INFO - Max index in src: 2315, Max index in trg: 2315
-Batch 14:
-Max index in src: 2315
-Max index in trg: 2315
-2024-12-26 18:57:29,769 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,769 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 15:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 18:57:29,770 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,771 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 16:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-Sequence 0: ['<SOS>', 'https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Target 0: ['https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Sequence 1: ['<SOS>', 'https://peps.python.org/pep-3115/', '<EOS>']
-Target 1: ['https://peps.python.org/pep-3115/', '<EOS>']
-Sequence 2: ['<SOS>', 'https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Target 2: ['https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Sequence 3: ['<SOS>', 'https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Target 3: ['https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Sequence 4: ['<SOS>', 'https://realpython.com/defining-your-own-python-function/', '<EOS>']
-Target 4: ['https://realpython.com/defining-your-own-python-function/', '<EOS>']
-2024-12-26 18:57:29,774 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,774 - INFO - Max index in src: 2334, Max index in trg: 2334
-Batch 17:
-Max index in src: 2334
-Max index in trg: 2334
-2024-12-26 18:57:29,775 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 18:57:29,775 - INFO - Max index in src: 2324, Max index in trg: 2324
-Batch 18:
-Max index in src: 2324
-Max index in trg: 2324
-2024-12-26 18:57:29,775 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 18:57:29,776 - INFO - Max src index: 2324, Max trg index: 2324
-2024-12-26 18:57:29,793 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,793 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 0:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 18:57:29,794 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,795 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 1:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 18:57:29,796 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,796 - INFO - Max index in src: 2317, Max index in trg: 2317
-Batch 2:
-Max index in src: 2317
-Max index in trg: 2317
-2024-12-26 18:57:29,798 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,798 - INFO - Max index in src: 2331, Max index in trg: 2331
-Batch 3:
-Max index in src: 2331
-Max index in trg: 2331
-2024-12-26 18:57:29,800 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,800 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 4:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 18:57:29,802 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,802 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 5:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 18:57:29,804 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,804 - INFO - Max index in src: 2310, Max index in trg: 2310
-Batch 6:
-Max index in src: 2310
-Max index in trg: 2310
-2024-12-26 18:57:29,806 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,806 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 7:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 18:57:29,808 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,808 - INFO - Max index in src: 2318, Max index in trg: 2318
-Batch 8:
-Max index in src: 2318
-Max index in trg: 2318
-2024-12-26 18:57:29,809 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,809 - INFO - Max index in src: 2280, Max index in trg: 2280
-Batch 9:
-Max index in src: 2280
-Max index in trg: 2280
-2024-12-26 18:57:29,811 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,811 - INFO - Max index in src: 2336, Max index in trg: 2336
-Batch 10:
-Max index in src: 2336
-Max index in trg: 2336
-2024-12-26 18:57:29,813 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,813 - INFO - Max index in src: 2275, Max index in trg: 2275
-Batch 11:
-Max index in src: 2275
-Max index in trg: 2275
-2024-12-26 18:57:29,814 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,814 - INFO - Max index in src: 2314, Max index in trg: 2314
-Batch 12:
-Max index in src: 2314
-Max index in trg: 2314
-2024-12-26 18:57:29,816 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,816 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 13:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 18:57:29,818 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,818 - INFO - Max index in src: 2315, Max index in trg: 2315
-Batch 14:
-Max index in src: 2315
-Max index in trg: 2315
-2024-12-26 18:57:29,820 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,820 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 15:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 18:57:29,822 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,822 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 16:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-Sequence 0: ['<SOS>', 'https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Target 0: ['https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Sequence 1: ['<SOS>', 'https://peps.python.org/pep-3115/', '<EOS>']
-Target 1: ['https://peps.python.org/pep-3115/', '<EOS>']
-Sequence 2: ['<SOS>', 'https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Target 2: ['https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Sequence 3: ['<SOS>', 'https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Target 3: ['https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Sequence 4: ['<SOS>', 'https://realpython.com/defining-your-own-python-function/', '<EOS>']
-Target 4: ['https://realpython.com/defining-your-own-python-function/', '<EOS>']
-2024-12-26 18:57:29,825 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,825 - INFO - Max index in src: 2334, Max index in trg: 2334
-Batch 17:
-Max index in src: 2334
-Max index in trg: 2334
-2024-12-26 18:57:29,826 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 18:57:29,826 - INFO - Max index in src: 2324, Max index in trg: 2324
-Batch 18:
-Max index in src: 2324
-Max index in trg: 2324
-2024-12-26 18:57:29,827 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 18:57:29,827 - INFO - Max src index: 2324, Max trg index: 2324
-2024-12-26 18:57:29,843 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,843 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 0:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 18:57:29,845 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,845 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 1:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 18:57:29,847 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,847 - INFO - Max index in src: 2317, Max index in trg: 2317
-Batch 2:
-Max index in src: 2317
-Max index in trg: 2317
-2024-12-26 18:57:29,849 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,849 - INFO - Max index in src: 2331, Max index in trg: 2331
-Batch 3:
-Max index in src: 2331
-Max index in trg: 2331
-2024-12-26 18:57:29,851 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,851 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 4:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 18:57:29,853 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,853 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 5:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 18:57:29,854 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,855 - INFO - Max index in src: 2310, Max index in trg: 2310
-Batch 6:
-Max index in src: 2310
-Max index in trg: 2310
-2024-12-26 18:57:29,856 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,856 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 7:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 18:57:29,858 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,858 - INFO - Max index in src: 2318, Max index in trg: 2318
-Batch 8:
-Max index in src: 2318
-Max index in trg: 2318
-2024-12-26 18:57:29,860 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,860 - INFO - Max index in src: 2280, Max index in trg: 2280
-Batch 9:
-Max index in src: 2280
-Max index in trg: 2280
-2024-12-26 18:57:29,861 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,861 - INFO - Max index in src: 2336, Max index in trg: 2336
-Batch 10:
-Max index in src: 2336
-Max index in trg: 2336
-2024-12-26 18:57:29,863 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,863 - INFO - Max index in src: 2275, Max index in trg: 2275
-Batch 11:
-Max index in src: 2275
-Max index in trg: 2275
-2024-12-26 18:57:29,865 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,865 - INFO - Max index in src: 2314, Max index in trg: 2314
-Batch 12:
-Max index in src: 2314
-Max index in trg: 2314
-2024-12-26 18:57:29,866 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,866 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 13:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 18:57:29,869 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,869 - INFO - Max index in src: 2315, Max index in trg: 2315
-Batch 14:
-Max index in src: 2315
-Max index in trg: 2315
-2024-12-26 18:57:29,871 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,871 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 15:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 18:57:29,873 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,873 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 16:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-Sequence 0: ['<SOS>', 'https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Target 0: ['https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Sequence 1: ['<SOS>', 'https://peps.python.org/pep-3115/', '<EOS>']
-Target 1: ['https://peps.python.org/pep-3115/', '<EOS>']
-Sequence 2: ['<SOS>', 'https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Target 2: ['https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Sequence 3: ['<SOS>', 'https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Target 3: ['https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Sequence 4: ['<SOS>', 'https://realpython.com/defining-your-own-python-function/', '<EOS>']
-Target 4: ['https://realpython.com/defining-your-own-python-function/', '<EOS>']
-2024-12-26 18:57:29,876 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,876 - INFO - Max index in src: 2334, Max index in trg: 2334
-Batch 17:
-Max index in src: 2334
-Max index in trg: 2334
-2024-12-26 18:57:29,877 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 18:57:29,877 - INFO - Max index in src: 2324, Max index in trg: 2324
-Batch 18:
-Max index in src: 2324
-Max index in trg: 2324
-2024-12-26 18:57:29,878 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 18:57:29,878 - INFO - Max src index: 2324, Max trg index: 2324
-2024-12-26 18:57:29,895 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,895 - INFO - Max index in src: 2333, Max index in trg: 2333
-Batch 0:
-Max index in src: 2333
-Max index in trg: 2333
-2024-12-26 18:57:29,897 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,897 - INFO - Max index in src: 2332, Max index in trg: 2332
-Batch 1:
-Max index in src: 2332
-Max index in trg: 2332
-2024-12-26 18:57:29,899 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,899 - INFO - Max index in src: 2317, Max index in trg: 2317
-Batch 2:
-Max index in src: 2317
-Max index in trg: 2317
-2024-12-26 18:57:29,901 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,901 - INFO - Max index in src: 2331, Max index in trg: 2331
-Batch 3:
-Max index in src: 2331
-Max index in trg: 2331
-2024-12-26 18:57:29,902 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,903 - INFO - Max index in src: 2337, Max index in trg: 2337
-Batch 4:
-Max index in src: 2337
-Max index in trg: 2337
-2024-12-26 18:57:29,904 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,904 - INFO - Max index in src: 2339, Max index in trg: 2339
-Batch 5:
-Max index in src: 2339
-Max index in trg: 2339
-2024-12-26 18:57:29,906 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,906 - INFO - Max index in src: 2310, Max index in trg: 2310
-Batch 6:
-Max index in src: 2310
-Max index in trg: 2310
-2024-12-26 18:57:29,908 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,908 - INFO - Max index in src: 2335, Max index in trg: 2335
-Batch 7:
-Max index in src: 2335
-Max index in trg: 2335
-2024-12-26 18:57:29,909 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,909 - INFO - Max index in src: 2318, Max index in trg: 2318
-Batch 8:
-Max index in src: 2318
-Max index in trg: 2318
-2024-12-26 18:57:29,911 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,911 - INFO - Max index in src: 2280, Max index in trg: 2280
-Batch 9:
-Max index in src: 2280
-Max index in trg: 2280
-2024-12-26 18:57:29,914 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,914 - INFO - Max index in src: 2336, Max index in trg: 2336
-Batch 10:
-Max index in src: 2336
-Max index in trg: 2336
-2024-12-26 18:57:29,917 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,918 - INFO - Max index in src: 2275, Max index in trg: 2275
-Batch 11:
-Max index in src: 2275
-Max index in trg: 2275
-2024-12-26 18:57:29,920 - INFO - Padded src shape: torch.Size([128, 7]), Padded trg shape: torch.Size([128, 7])
-2024-12-26 18:57:29,921 - INFO - Max index in src: 2314, Max index in trg: 2314
-Batch 12:
-Max index in src: 2314
-Max index in trg: 2314
-2024-12-26 18:57:29,924 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,924 - INFO - Max index in src: 2328, Max index in trg: 2328
-Batch 13:
-Max index in src: 2328
-Max index in trg: 2328
-2024-12-26 18:57:29,927 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,927 - INFO - Max index in src: 2315, Max index in trg: 2315
-Batch 14:
-Max index in src: 2315
-Max index in trg: 2315
-2024-12-26 18:57:29,929 - INFO - Padded src shape: torch.Size([128, 6]), Padded trg shape: torch.Size([128, 6])
-2024-12-26 18:57:29,929 - INFO - Max index in src: 2320, Max index in trg: 2320
-Batch 15:
-Max index in src: 2320
-Max index in trg: 2320
-2024-12-26 18:57:29,931 - INFO - Padded src shape: torch.Size([128, 5]), Padded trg shape: torch.Size([128, 5])
-2024-12-26 18:57:29,932 - INFO - Max index in src: 2340, Max index in trg: 2340
-Batch 16:
-Max index in src: 2340
-Max index in trg: 2340
-Indices out of range detected!
-Sequence 0: ['<SOS>', 'https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Target 0: ['https://realpython.com/videos/ordereddict-python-overview/', '<EOS>']
-Sequence 1: ['<SOS>', 'https://peps.python.org/pep-3115/', '<EOS>']
-Target 1: ['https://peps.python.org/pep-3115/', '<EOS>']
-Sequence 2: ['<SOS>', 'https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Target 2: ['https://realpython.com/videos/what-is-lambda-function/', '<EOS>']
-Sequence 3: ['<SOS>', 'https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Target 3: ['https://realpython.com/lessons/introduction-requirements-files/', '<EOS>']
-Sequence 4: ['<SOS>', 'https://realpython.com/defining-your-own-python-function/', '<EOS>']
-Target 4: ['https://realpython.com/defining-your-own-python-function/', '<EOS>']
-2024-12-26 18:57:29,936 - INFO - Padded src shape: torch.Size([128, 3]), Padded trg shape: torch.Size([128, 3])
-2024-12-26 18:57:29,937 - INFO - Max index in src: 2334, Max index in trg: 2334
-Batch 17:
-Max index in src: 2334
-Max index in trg: 2334
-2024-12-26 18:57:29,938 - INFO - Padded src shape: torch.Size([23, 3]), Padded trg shape: torch.Size([23, 3])
-2024-12-26 18:57:29,938 - INFO - Max index in src: 2324, Max index in trg: 2324
-Batch 18:
-Max index in src: 2324
-Max index in trg: 2324
-2024-12-26 18:57:29,938 - INFO - Source shape: torch.Size([23, 3]), Target shape: torch.Size([23, 2])
-2024-12-26 18:57:29,939 - INFO - Max src index: 2324, Max trg index: 2324
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:1111:2: erreur : #error Must define a target architecture.
+ #error Must define a target architecture.
+  ^~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:1493:1: erreur : « EXCEPTION_DISPOSITION » does not name a type
+ EXCEPTION_DISPOSITION
+ ^~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:1502:9: erreur : « EXCEPTION_ROUTINE » does not name a type
+ typedef EXCEPTION_ROUTINE *PEXCEPTION_ROUTINE;
+         ^~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:7136:5: erreur : « PEXCEPTION_ROUTINE » does not name a type
+     PEXCEPTION_ROUTINE LanguageHandler;
+     ^~~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadUCharAcquire(const volatile BYTE*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9140:45: erreur : « ReadAcquire8 » was not declared in this scope
+     return (BYTE )ReadAcquire8((PCHAR)Source);
+                                             ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadUCharNoFence(const volatile BYTE*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9151:45: erreur : « ReadNoFence8 » was not declared in this scope
+     return (BYTE )ReadNoFence8((PCHAR)Source);
+                                             ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadBooleanAcquire(const volatile BOOLEAN*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9162:47: erreur : « ReadAcquire8 » was not declared in this scope
+     return (BOOLEAN)ReadAcquire8((PCHAR)Source);
+                                               ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadBooleanNoFence(const volatile BOOLEAN*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9173:47: erreur : « ReadNoFence8 » was not declared in this scope
+     return (BOOLEAN)ReadNoFence8((PCHAR)Source);
+                                               ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUCharRelease(volatile BYTE*, BYTE) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9206:50: erreur : « WriteRelease8 » was not declared in this scope
+     WriteRelease8((PCHAR)Destination, (CHAR)Value);
+                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUCharNoFence(volatile BYTE*, BYTE) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9219:50: erreur : « WriteNoFence8 » was not declared in this scope
+     WriteNoFence8((PCHAR)Destination, (CHAR)Value);
+                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteBooleanRelease(volatile BOOLEAN*, BOOLEAN) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9232:50: erreur : « WriteRelease8 » was not declared in this scope
+     WriteRelease8((PCHAR)Destination, (CHAR)Value);
+                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteBooleanNoFence(volatile BOOLEAN*, BOOLEAN) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9245:50: erreur : « WriteNoFence8 » was not declared in this scope
+     WriteNoFence8((PCHAR)Destination, (CHAR)Value);
+                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « WORD ReadUShortAcquire(const volatile WORD*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9270:48: erreur : « ReadAcquire16 » was not declared in this scope
+     return (WORD  )ReadAcquire16((PSHORT)Source);
+                                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « WORD ReadUShortNoFence(const volatile WORD*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9281:48: erreur : « ReadNoFence16 » was not declared in this scope
+     return (WORD  )ReadNoFence16((PSHORT)Source);
+                                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUShortRelease(volatile WORD*, WORD) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9304:53: erreur : « WriteRelease16 » was not declared in this scope
+     WriteRelease16((PSHORT)Destination, (SHORT)Value);
+                                                     ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUShortNoFence(volatile WORD*, WORD) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9317:53: erreur : « WriteNoFence16 » was not declared in this scope
+     WriteNoFence16((PSHORT)Destination, (SHORT)Value);
+                                                     ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD ReadULongAcquire(const volatile DWORD*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9342:44: erreur : « ReadAcquire » was not declared in this scope
+     return (DWORD)ReadAcquire((PLONG)Source);
+                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD ReadULongNoFence(const volatile DWORD*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9353:44: erreur : « ReadNoFence » was not declared in this scope
+     return (DWORD)ReadNoFence((PLONG)Source);
+                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULongRelease(volatile DWORD*, DWORD) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9376:49: erreur : « WriteRelease » was not declared in this scope
+     WriteRelease((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULongNoFence(volatile DWORD*, DWORD) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9389:49: erreur : « WriteNoFence » was not declared in this scope
+     WriteNoFence((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « INT32 ReadInt32Acquire(const volatile INT32*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9414:44: erreur : « ReadAcquire » was not declared in this scope
+     return (INT32)ReadAcquire((PLONG)Source);
+                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « INT32 ReadInt32NoFence(const volatile INT32*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9425:44: erreur : « ReadNoFence » was not declared in this scope
+     return (INT32)ReadNoFence((PLONG)Source);
+                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteInt32Release(volatile INT32*, INT32) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9448:49: erreur : « WriteRelease » was not declared in this scope
+     WriteRelease((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteInt32NoFence(volatile INT32*, INT32) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9461:49: erreur : « WriteNoFence » was not declared in this scope
+     WriteNoFence((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « UINT32 ReadUInt32Acquire(const volatile UINT32*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9486:45: erreur : « ReadAcquire » was not declared in this scope
+     return (UINT32)ReadAcquire((PLONG)Source);
+                                             ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « UINT32 ReadUInt32NoFence(const volatile UINT32*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9497:45: erreur : « ReadNoFence » was not declared in this scope
+     return (UINT32)ReadNoFence((PLONG)Source);
+                                             ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUInt32Release(volatile UINT32*, UINT32) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9520:49: erreur : « WriteRelease » was not declared in this scope
+     WriteRelease((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUInt32NoFence(volatile UINT32*, UINT32) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9533:49: erreur : « WriteNoFence » was not declared in this scope
+     WriteNoFence((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD64 ReadULong64Acquire(const volatile DWORD64*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9558:50: erreur : « ReadAcquire64 » was not declared in this scope
+     return (DWORD64)ReadAcquire64((PLONG64)Source);
+                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD64 ReadULong64NoFence(const volatile DWORD64*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9569:50: erreur : « ReadNoFence64 » was not declared in this scope
+     return (DWORD64)ReadNoFence64((PLONG64)Source);
+                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULong64Release(volatile DWORD64*, DWORD64) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9592:55: erreur : « WriteRelease64 » was not declared in this scope
+     WriteRelease64((PLONG64)Destination, (LONG64)Value);
+                                                       ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULong64NoFence(volatile DWORD64*, DWORD64) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9605:55: erreur : « WriteNoFence64 » was not declared in this scope
+     WriteNoFence64((PLONG64)Destination, (LONG64)Value);
+                                                       ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void* ReadPointerAcquire(void* const volatile*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9692:44: erreur : « ReadAcquire » was not declared in this scope
+     return (PVOID)ReadAcquire((PLONG)Source);
+                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void* ReadPointerNoFence(void* const volatile*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9703:44: erreur : « ReadNoFence » was not declared in this scope
+     return (PVOID)ReadNoFence((PLONG)Source);
+                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WritePointerRelease(void* volatile*, PVOID) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9726:49: erreur : « WriteRelease » was not declared in this scope
+     WriteRelease((PLONG)Destination, (LONG)Value);
+                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WritePointerNoFence(void* volatile*, PVOID) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9739:49: erreur : « WriteNoFence » was not declared in this scope
+     WriteNoFence((PLONG)Destination, (LONG)Value);
+                                                 ^
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Au niveau global:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:12759:5: erreur : « PEXCEPTION_ROUTINE » does not name a type
+     PEXCEPTION_ROUTINE Handler;
+     ^~~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+           ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:33: erreur : unable to find numeric literal operator « operator""ui64 »
+ C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
+                                 ^
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void TpInitializeCallbackEnviron(PTP_CALLBACK_ENVIRON) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25478:33: erreur : expected primary-expression before « ; » token
+     CallbackEnviron->Pool = NULL;
+                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25479:41: erreur : expected primary-expression before « ; » token
+     CallbackEnviron->CleanupGroup = NULL;
+                                         ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25480:55: erreur : expected primary-expression before « ; » token
+     CallbackEnviron->CleanupGroupCancelCallback = NULL;
+                                                       ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25481:36: erreur : expected primary-expression before « ; » token
+     CallbackEnviron->RaceDll = NULL;
+                                    ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25482:46: erreur : expected primary-expression before « ; » token
+     CallbackEnviron->ActivationContext = NULL;
+                                              ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25483:49: erreur : expected primary-expression before « ; » token
+     CallbackEnviron->FinalizationCallback = NULL;
+                                                 ^
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+c:\mingw\include\excpt.h: Au niveau global:
+c:\mingw\include\excpt.h:100:32: erreur : conflicting declaration « typedef EXCEPTION_REGISTRATION EXCEPTION_REGISTRATION_RECORD »
+ typedef EXCEPTION_REGISTRATION EXCEPTION_REGISTRATION_RECORD;
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:12760:3: note : previous declaration as « typedef struct _EXCEPTION_REGISTRATION_RECORD EXCEPTION_REGISTRATION_RECORD »
+ } EXCEPTION_REGISTRATION_RECORD;
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+c:\mingw\include\excpt.h:101:33: erreur : conflicting declaration « typedef struct _EXCEPTION_REGISTRATION* PEXCEPTION_REGISTRATION_RECORD »
+ typedef PEXCEPTION_REGISTRATION PEXCEPTION_REGISTRATION_RECORD;
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
+                 from c:\mingw\include\excpt.h:54,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:12762:40: note : previous declaration as « typedef EXCEPTION_REGISTRATION_RECORD* PEXCEPTION_REGISTRATION_RECORD »
+ typedef EXCEPTION_REGISTRATION_RECORD *PEXCEPTION_REGISTRATION_RECORD;
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:176:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedIncrement(volatile unsigned int*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9855:68: erreur : « _InterlockedIncrement » was not declared in this scope
+     return (unsigned) _InterlockedIncrement((volatile long*) Addend);
+                                                                    ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedIncrement(volatile long unsigned int*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9864:73: erreur : « _InterlockedIncrement » was not declared in this scope
+     return (unsigned long) _InterlockedIncrement((volatile long*) Addend);
+                                                                         ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedIncrement(volatile long long unsigned int*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9876:32: erreur : « InterlockedIncrement64 » was not declared in this scope
+     return (unsigned __int64) (InterlockedIncrement64)((volatile __int64*) Addend);
+                                ^~~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedDecrement(volatile unsigned int*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9887:73: erreur : « _InterlockedDecrement » was not declared in this scope
+     return (unsigned long) _InterlockedDecrement((volatile long*) Addend);
+                                                                         ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedDecrement(volatile long unsigned int*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9896:73: erreur : « _InterlockedDecrement » was not declared in this scope
+     return (unsigned long) _InterlockedDecrement((volatile long*) Addend);
+                                                                         ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedDecrement(volatile long long unsigned int*) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9908:32: erreur : « InterlockedDecrement64 » was not declared in this scope
+     return (unsigned __int64) (InterlockedDecrement64)((volatile __int64*) Addend);
+                                ^~~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedExchange(volatile unsigned int*, unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9922:81: erreur : « _InterlockedExchange » was not declared in this scope
+     return (unsigned) _InterlockedExchange((volatile long*) Target, (long) Value);
+                                                                                 ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedExchange(volatile long unsigned int*, long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9932:86: erreur : « _InterlockedExchange » was not declared in this scope
+     return (unsigned long) _InterlockedExchange((volatile long*) Target, (long) Value);
+                                                                                      ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedExchange(volatile long long unsigned int*, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9944:96: erreur : « InterlockedExchange64 » was not declared in this scope
+     return (unsigned __int64) InterlockedExchange64((volatile __int64*) Target, (__int64) Value);
+                                                                                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedExchangeAdd(volatile unsigned int*, unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9956:84: erreur : « _InterlockedExchangeAdd » was not declared in this scope
+     return (unsigned) _InterlockedExchangeAdd((volatile long*) Addend, (long) Value);
+                                                                                    ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedExchangeSubtract(volatile unsigned int*, unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9966:87: erreur : « _InterlockedExchangeAdd » was not declared in this scope
+     return (unsigned) _InterlockedExchangeAdd((volatile long*) Addend,  - (long) Value);
+                                                                                       ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedExchangeAdd(volatile long unsigned int*, long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9976:89: erreur : « _InterlockedExchangeAdd » was not declared in this scope
+     return (unsigned long) _InterlockedExchangeAdd((volatile long*) Addend, (long) Value);
+                                                                                         ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedExchangeSubtract(volatile long unsigned int*, long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9986:92: erreur : « _InterlockedExchangeAdd » was not declared in this scope
+     return (unsigned long) _InterlockedExchangeAdd((volatile long*) Addend,  - (long) Value);
+                                                                                            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedExchangeAdd(volatile long long unsigned int*, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9998:100: erreur : « InterlockedExchangeAdd64 » was not declared in this scope
+     return (unsigned __int64) InterlockedExchangeAdd64((volatile __int64*) Addend,  (__int64) Value);
+                                                                                                    ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedExchangeSubtract(volatile long long unsigned int*, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10008:102: erreur : « InterlockedExchangeAdd64 » was not declared in this scope
+     return (unsigned __int64) InterlockedExchangeAdd64((volatile __int64*) Addend,  - (__int64) Value);
+                                                                                                      ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedCompareExchange(volatile unsigned int*, unsigned int, unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10021:114: erreur : « _InterlockedCompareExchange » was not declared in this scope
+     return (unsigned) _InterlockedCompareExchange((volatile long*) Destination, (long) Exchange, (long) Comperand);
+                                                                                                                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedCompareExchange(volatile long unsigned int*, long unsigned int, long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10032:119: erreur : « _InterlockedCompareExchange » was not declared in this scope
+     return (unsigned long) _InterlockedCompareExchange((volatile long*) Destination, (long) Exchange, (long) Comperand);
+                                                                                                                       ^
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:176:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedCompareExchange(volatile long long unsigned int*, long long unsigned int, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10045:133: erreur : « _InterlockedCompareExchange64 » was not declared in this scope
+     return (unsigned __int64) _InterlockedCompareExchange64((volatile __int64*) Destination, (__int64) Exchange, (__int64) Comperand);
+
+             ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedAnd(volatile long long unsigned int*, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10055:96: erreur : « InterlockedAnd64 » was not declared in this scope
+     return (unsigned __int64) InterlockedAnd64((volatile __int64*) Destination, (__int64) Value);
+                                                                                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedOr(volatile long long unsigned int*, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10065:95: erreur : « InterlockedOr64 » was not declared in this scope
+     return (unsigned __int64) InterlockedOr64((volatile __int64*) Destination, (__int64) Value);
+                                                                                               ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedXor(volatile long long unsigned int*, long long unsigned int) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10075:96: erreur : « InterlockedXor64 » was not declared in this scope
+     return (unsigned __int64) InterlockedXor64((volatile __int64*) Destination, (__int64) Value);
+                                                                                                ^
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winscard.h:31:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:212,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winioctl.h: Dans la fonction « BOOLEAN DeviceDsmAddDataSetRange(PDEVICE_DSM_INPUT, DWORD, LONGLONG, DWORDLONG) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winioctl.h:5036:36: erreur : expected primary-expression before « ; » token
+     PDEVICE_DSM_RANGE Ranges = NULL;
+                                    ^
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/combaseapi.h:364:0,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objbase.h:27,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/ole2.h:37,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:221,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
+                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
+                 from test.cpp:2:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h: Dans la fonction membre « HRESULT IAgileReference::Resolve(Q**) »:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h:8116:42: erreur : expected primary-expression before « ) » token
+                 return Resolve(__uuidof(Q), (void **)pp);
+                                          ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h:8116:42: erreur : there are no arguments to « __uuidof » that depend on a template parameter, so a declaration of « __uuidof » must be available [-fpermissive]
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h:8116:42: note : (if you use « -fpermissive », G++ will accept your code, but allowing the use of an undeclared name is deprecated)

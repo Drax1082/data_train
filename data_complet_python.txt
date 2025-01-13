@@ -2859,6 +2859,545 @@ nouvelle_liste = [expression for élément in iterable if condition]
 
 Les listes sont une structure de données puissante et polyvalente en Python. Grâce à leurs nombreuses méthodes et à la possibilité d'utiliser les compréhensions, elles permettent de manipuler les données de manière efficace. Apprendre à maîtriser les listes est un pas essentiel pour progresser en Python.
 
+### Chap 20 **Introduction aux Types de Collections Avancées en Python**
+
+Le module **`collections`** de Python propose plusieurs types de collections avancées qui étendent les fonctionnalités des structures de données de base comme les listes et les dictionnaires. Parmi ces outils, les **`deque`**, **`Counter`**, et **`defaultdict`** sont particulièrement utiles pour résoudre des problèmes spécifiques de manière efficace.
+
+---
+
+### **1. `deque` (Double-Ended Queue)**
+
+La **`deque`** est une structure de données optimisée pour ajouter ou retirer des éléments à ses deux extrémités (gauche ou droite). Elle est plus performante que les listes pour ce type d'opérations grâce à son implémentation basée sur des blocs de mémoire.
+
+#### **Caractéristiques principales :**
+- Accès rapide pour les opérations en **O(1)** (ajout/suppression) aux deux extrémités.
+- Peut être utilisée comme une pile, une file d'attente ou une file d'attente circulaire.
+
+#### **Exemple d'utilisation :**
+
+```python
+from collections import deque
+
+# Création d'une deque
+d = deque(["pomme", "banane", "cerise"])
+
+# Ajouter à droite et à gauche
+d.append("orange")       # ["pomme", "banane", "cerise", "orange"]
+d.appendleft("kiwi")     # ["kiwi", "pomme", "banane", "cerise", "orange"]
+
+# Supprimer à droite et à gauche
+d.pop()                  # ["kiwi", "pomme", "banane", "cerise"]
+d.popleft()              # ["pomme", "banane", "cerise"]
+
+# Rotation des éléments
+d.rotate(1)              # ["cerise", "pomme", "banane"] (rotation à droite)
+d.rotate(-2)             # ["banane", "cerise", "pomme"] (rotation à gauche)
+```
+
+---
+
+### **2. `Counter`**
+
+Le **`Counter`** est une collection spécialisée pour compter les occurrences des éléments dans un iterable. Il fonctionne comme un dictionnaire où les clés sont les éléments et les valeurs sont leurs fréquences.
+
+#### **Exemple d'utilisation :**
+
+```python
+from collections import Counter
+
+# Compter les occurrences dans une liste
+fruits = ["pomme", "banane", "pomme", "orange", "banane", "pomme"]
+compteur = Counter(fruits)
+
+# Résultat : Counter({'pomme': 3, 'banane': 2, 'orange': 1})
+print(compteur)
+
+# Méthodes utiles
+print(compteur.most_common(1))  # Élément le plus fréquent : [('pomme', 3)]
+print(list(compteur.elements()))  # Liste des éléments répétés selon leur fréquence
+
+# Mise à jour des comptes
+compteur.update(["pomme", "kiwi"])  # Ajoute 1 pour chaque élément de la liste
+print(compteur)  # Counter({'pomme': 4, 'banane': 2, 'orange': 1, 'kiwi': 1})
+```
+
+#### **Applications courantes :**
+- Analyse de texte (compter les mots ou caractères).
+- Recherche des éléments les plus fréquents dans des données.
+
+---
+
+### **3. `defaultdict`**
+
+Le **`defaultdict`** est une sous-classe de `dict` qui fournit une valeur par défaut pour une clé inexistante. Cela évite d'avoir à vérifier si une clé est présente avant d'ajouter ou de modifier sa valeur.
+
+#### **Exemple d'utilisation :**
+
+```python
+from collections import defaultdict
+
+# Création d'un defaultdict avec une valeur par défaut (ici, une liste vide)
+d = defaultdict(list)
+
+# Ajouter des éléments sans vérifier l'existence de la clé
+d["fruits"].append("pomme")
+d["fruits"].append("banane")
+d["légumes"].append("carotte")
+
+print(d)
+# Résultat : defaultdict(<class 'list'>, {'fruits': ['pomme', 'banane'], 'légumes': ['carotte']})
+```
+
+#### **Valeurs par défaut courantes :**
+
+- **`int`** : Pour compter les occurrences.
+  ```python
+  compteur = defaultdict(int)
+  compteur["pomme"] += 1  # Ajoute automatiquement 1 à une clé inexistante
+  print(compteur)  # {'pomme': 1}
+  ```
+
+- **`set`** : Pour stocker des éléments uniques.
+
+  ```python
+  groupes = defaultdict(set)
+  groupes["groupe1"].add("Alice")
+  groupes["groupe1"].add("Bob")
+  print(groupes)  # {'groupe1': {'Alice', 'Bob'}}
+  ```
+
+---
+
+### **Comparaison des Trois Collections**
+
+| **Type**         | **Usage Principal**                          | **Avantages**                                     |
+|-------------------|---------------------------------------------|--------------------------------------------------|
+| `deque`          | Ajouter/supprimer aux deux extrémités        | Performances optimales pour files d'attente/piles|
+| `Counter`        | Compter les occurrences d'éléments           | Syntaxe simple pour statistiques et analyses     |
+| `defaultdict`    | Associer des valeurs par défaut aux clés      | Évite les vérifications explicites des clés      |
+
+---
+
+### **Conclusion**
+
+Les types de collections avancées du module **`collections`** offrent des solutions élégantes et performantes pour des problèmes spécifiques. En intégrant ces outils dans vos programmes Python, vous pouvez simplifier votre code tout en améliorant son efficacité. Ces structures sont particulièrement utiles dans le traitement des données, les algorithmes, et la manipulation de grandes collections.
+
+### Chap 21 **Chaînes de Caractères Avancées en Python**
+
+Les chaînes de caractères (**`str`**) en Python offrent de nombreuses fonctionnalités avancées pour manipuler, rechercher, et formater du texte. Ces outils permettent de travailler de manière efficace avec des données textuelles.
+
+---
+
+### **1. Méthodes Avancées sur les Chaînes**
+
+#### **Méthodes pour vérifier le début ou la fin d'une chaîne :**
+
+- **`startswith(substring)`** : Vérifie si la chaîne commence par un sous-texte spécifique.
+
+  ```python
+  texte = "Bonjour tout le monde"
+  print(texte.startswith("Bonjour"))  # True
+  print(texte.startswith("tout"))     # False
+  ```
+
+- **`endswith(substring)`** : Vérifie si la chaîne se termine par un sous-texte spécifique.
+
+  ```python
+  print(texte.endswith("monde"))      # True
+  print(texte.endswith("tout"))       # False
+  ```
+
+#### **Méthodes pour rechercher dans une chaîne :**
+
+- **`find(substring)`** : Retourne l'index de la première occurrence d'une sous-chaîne. Si elle n'existe pas, retourne `-1`.
+
+  ```python
+  texte = "Python est un langage puissant"
+  print(texte.find("langage"))  # 12 (l'index où commence "langage")
+  print(texte.find("Java"))     # -1 (non trouvé)
+  ```
+
+- **`rfind(substring)`** : Comme `find`, mais recherche la dernière occurrence.
+
+  ```python
+  texte = "Le soleil se lève à l'est"
+  print(texte.rfind("e"))  # 23 (dernière occurrence de "e")
+  ```
+
+#### **Méthodes pour vérifier le contenu :**
+
+- **`isalpha()`** : Vérifie si la chaîne contient uniquement des lettres.
+- **`isdigit()`** : Vérifie si la chaîne contient uniquement des chiffres.
+- **`isspace()`** : Vérifie si la chaîne contient uniquement des espaces.
+  ```python
+  print("123".isdigit())   # True
+  print("Hello".isalpha()) # True
+  print("   ".isspace())   # True
+  ```
+
+---
+
+### **2. Formatage Avancé des Chaînes**
+
+Le formatage des chaînes permet de créer du texte dynamique en y insérant des variables ou des résultats de calculs.
+
+#### **`f-strings` (Formatage Littéral)**
+
+Introduites dans Python 3.6, les **`f-strings`** sont une manière concise et efficace de formater des chaînes.
+
+- **Exemple de base :**
+
+  ```python
+  nom = "Alice"
+  age = 25
+  print(f"Je m'appelle {nom} et j'ai {age} ans.")  # Je m'appelle Alice et j'ai 25 ans.
+  ```
+
+- **Expressions dans les f-strings :**
+
+  ```python
+  print(f"Dans 5 ans, j'aurai {age + 5} ans.")  # Calcul dans une f-string
+  ```
+
+- **Formatage de nombres :**
+
+  ```python
+  pi = 3.14159
+  print(f"La valeur de pi est {pi:.2f}")  # La valeur de pi est 3.14 (2 décimales)
+  ```
+
+#### **`str.format()`**
+
+
+Une méthode plus ancienne mais toujours utilisée pour formater des chaînes.
+
+- **Exemple de base :**
+
+  ```python
+  texte = "Je m'appelle {} et j'ai {} ans.".format("Alice", 25)
+  print(texte)  # Je m'appelle Alice et j'ai 25 ans.
+  ```
+
+- **Références par position ou nom :**
+
+  ```python
+  print("Bonjour {1}, {0} ans.".format(25, "Alice"))  # Bonjour Alice, 25 ans.
+  print("Nom : {nom}, Âge : {age}".format(nom="Alice", age=25))
+  ```
+
+#### **Comparaison entre `f-strings` et `str.format` :**
+
+- **`f-strings`** : Plus lisibles et performantes.
+- **`str.format`** : Plus flexibles dans certains cas (par exemple, dans des configurations dynamiques).
+
+---
+
+### **3. Cas d'Utilisation Courants**
+
+#### **Concaténation de chaînes :**
+
+Combinez plusieurs chaînes en une seule.
+
+```python
+nom = "Python"
+version = "3.10"
+chaine = "Langage: " + nom + ", Version: " + version
+print(chaine)  # Langage: Python, Version: 3.10
+```
+
+#### **Découpe de chaînes (`split`) et assemblage (`join`) :**
+
+- Découper une chaîne en une liste de mots :
+
+  ```python
+  texte = "Un texte avec plusieurs mots"
+  mots = texte.split()  # ['Un', 'texte', 'avec', 'plusieurs', 'mots']
+  ```
+- Réassembler une liste en chaîne :
+
+  ```python
+  nouvelle_chaine = " ".join(mots)
+  print(nouvelle_chaine)  # Un texte avec plusieurs mots
+  ```
+
+#### **Nettoyage de chaînes (`strip`) :**
+
+- Supprimer les espaces inutiles au début ou à la fin :
+
+  ```python
+  chaine = "   Python   "
+  print(chaine.strip())  # "Python"
+  ```
+
+---
+
+### **Conclusion**
+
+Les chaînes de caractères en Python sont extrêmement puissantes et flexibles grâce à leurs nombreuses méthodes intégrées. En combinant des techniques comme la recherche, le formatage, et la manipulation, vous pouvez gérer efficacement des données textuelles pour une large gamme d'applications, du traitement de texte simple à l'analyse de données avancée.
+
+### Chap 22 **Modules Standards Courants en Python**
+
+Python propose une vaste bibliothèque standard contenant des modules qui simplifient le développement de nombreuses tâches courantes. Voici une présentation des modules **`math`**, **`random`**, et **`os`**, accompagnée de leurs principales fonctionnalités.
+
+---
+
+### **1. Module `math` : Opérations Mathématiques**
+
+Le module **`math`** fournit des fonctions pour effectuer des calculs mathématiques avancés.
+
+#### **Fonctionnalités principales :**
+
+- **Opérations de base :**
+  - **`math.sqrt(x)`** : Racine carrée de `x`.
+  - **`math.pow(x, y)`** : Exponentiation, retourne `x^y`.
+- **Constantes mathématiques :**
+  - **`math.pi`** : Approximation de π.
+  - **`math.e`** : Base du logarithme naturel.
+- **Trigonométrie :**
+  - **`math.sin(x)`, `math.cos(x)`, `math.tan(x)`** : Fonctions trigonométriques (en radians).
+  - **`math.radians(x)`** : Convertit des degrés en radians.
+  - **`math.degrees(x)`** : Convertit des radians en degrés.
+- **Arrondi et manipulation :**
+  - **`math.ceil(x)`** : Arrondi au supérieur.
+  - **`math.floor(x)`** : Arrondi à l'inférieur.
+
+#### **Exemple d'utilisation :**
+
+```python
+import math
+
+angle = 45
+radians = math.radians(angle)
+print(f"Sinus de {angle}° : {math.sin(radians)}")
+print(f"Valeur de pi : {math.pi}")
+```
+
+---
+
+### **2. Module `random` : Génération Aléatoire**
+
+Le module **`random`** permet de générer des nombres aléatoires ou de manipuler des séquences de manière aléatoire.
+
+#### **Fonctionnalités principales :**
+
+- **Nombres aléatoires :**
+  - **`random.random()`** : Retourne un nombre flottant entre 0.0 et 1.0.
+  - **`random.randint(a, b)`** : Retourne un entier aléatoire entre `a` et `b` inclus.
+  - **`random.uniform(a, b)`** : Retourne un flottant aléatoire entre `a` et `b`.
+- **Manipulation de séquences :**
+  - **`random.choice(seq)`** : Retourne un élément aléatoire d'une séquence (liste, chaîne, etc.).
+  - **`random.shuffle(seq)`** : Mélange les éléments d'une liste.
+  - **`random.sample(seq, k)`** : Sélectionne aléatoirement `k` éléments d'une séquence.
+- **Fonctions avancées :**
+  - **`random.seed(x)`** : Définit une graine pour obtenir des résultats reproductibles.
+
+#### **Exemple d'utilisation :**
+
+```python
+import random
+
+# Génération d'un nombre aléatoire
+print(f"Nombre entier aléatoire entre 1 et 10 : {random.randint(1, 10)}")
+
+# Mélange d'une liste
+liste = [1, 2, 3, 4, 5]
+random.shuffle(liste)
+print(f"Liste mélangée : {liste}")
+```
+
+---
+
+### **3. Module `os` : Interaction avec le Système d'Exploitation**
+
+Le module **`os`** fournit des outils pour interagir avec le système d'exploitation, tels que la gestion des fichiers, des dossiers, et des variables d'environnement.
+
+#### **Fonctionnalités principales :**
+
+- **Informations système :**
+  - **`os.name`** : Retourne le nom du système d'exploitation (par exemple, `'posix'` pour Linux/Mac et `'nt'` pour Windows).
+  - **`os.getcwd()`** : Retourne le répertoire de travail actuel.
+- **Gestion des répertoires :**
+  - **`os.mkdir(path)`** : Crée un nouveau répertoire.
+  - **`os.listdir(path)`** : Liste le contenu d'un répertoire.
+  - **`os.chdir(path)`** : Change le répertoire de travail actuel.
+- **Manipulation des fichiers :**
+  - **`os.remove(path)`** : Supprime un fichier.
+  - **`os.rename(old, new)`** : Renomme un fichier ou un répertoire.
+- **Variables d'environnement :**
+  - **`os.environ`** : Accède aux variables d'environnement.
+
+#### **Exemple d'utilisation :**
+
+```python
+import os
+
+# Obtenir le répertoire actuel
+print(f"Répertoire actuel : {os.getcwd()}")
+
+# Créer un répertoire
+os.mkdir("NouveauDossier")
+print(f"Contenu du répertoire : {os.listdir()}")
+```
+
+---
+
+### **Conclusion**
+
+Ces modules standard sont essentiels pour résoudre des problèmes courants en Python. En maîtrisant des modules comme **`math`**, **`random`**, et **`os`**, vous pouvez effectuer des calculs avancés, manipuler des données aléatoires, et interagir avec le système d'exploitation de manière simple et efficace.
+
+### Chap 23 **Gestion des Erreurs Simples en Python**
+
+La gestion des erreurs est une compétence essentielle en programmation. Elle permet de capturer des situations imprévues, d'éviter des interruptions brusques du programme et de fournir des messages d'erreur informatifs.
+
+---
+
+### **1. Pourquoi gérer les erreurs ?**
+
+Lorsqu'une erreur survient dans un programme Python, celui-ci s'interrompt par défaut et affiche un message d'erreur (exception). Exemple :
+
+```python
+print(10 / 0)  # Provoque une ZeroDivisionError
+```
+
+Pour éviter de tels arrêts brutaux, Python propose une structure pour gérer ces erreurs : **`try`** et **`except`**.
+
+---
+
+### **2. Syntaxe de base de la gestion d'erreurs**
+
+La gestion d'erreurs en Python suit une structure simple :
+
+```python
+try:
+    # Code susceptible de provoquer une erreur
+    opération_risqueuse
+except TypeErreur:
+    # Code exécuté si l'erreur spécifique survient
+    action_corrigée
+```
+
+#### **Étapes :**
+1. **`try`** : Contient le code qui pourrait générer une erreur.
+2. **`except`** : Capture l'erreur si elle survient.
+3. (Facultatif) **`else`** : Contient le code à exécuter si aucune erreur n'est levée.
+4. (Facultatif) **`finally`** : Contient le code qui s'exécute dans tous les cas, qu'une erreur soit levée ou non.
+
+---
+
+### **3. Gestion des erreurs courantes**
+
+#### **Exemple 1 : Division par zéro**
+
+```python
+try:
+    résultat = 10 / 0
+except ZeroDivisionError:
+    print("Erreur : Division par zéro non permise.")
+```
+
+#### **Exemple 2 : Conversion invalide**
+
+```python
+try:
+    nombre = int("abc")  # Tentative de conversion invalide
+except ValueError:
+    print("Erreur : Impossible de convertir la chaîne en entier.")
+```
+
+#### **Exemple 3 : Accès à une clé manquante dans un dictionnaire**
+
+```python
+mon_dict = {"clé1": "valeur1"}
+try:
+    print(mon_dict["clé2"])
+except KeyError:
+    print("Erreur : La clé demandée n'existe pas dans le dictionnaire.")
+```
+
+---
+
+### **4. Gestion multiple d'erreurs**
+
+Vous pouvez capturer différents types d'erreurs dans le même bloc **`try`**.
+
+```python
+try:
+    x = int(input("Entrez un nombre : "))
+    résultat = 10 / x
+except ValueError:
+    print("Erreur : Vous devez entrer un nombre.")
+except ZeroDivisionError:
+    print("Erreur : Division par zéro non permise.")
+```
+
+---
+
+### **5. Blocs `else` et `finally`**
+
+#### **`else`** : Exécuté uniquement si aucune erreur n'est survenue dans le bloc `try`.
+
+```python
+try:
+    x = int(input("Entrez un nombre : "))
+except ValueError:
+    print("Erreur : Entrée invalide.")
+else:
+    print(f"Vous avez entré : {x}")
+```
+
+#### **`finally`** : Exécuté dans tous les cas (utilisé pour les tâches de nettoyage, comme fermer un fichier).
+
+```python
+try:
+    fichier = open("test.txt", "r")
+    contenu = fichier.read()
+except FileNotFoundError:
+    print("Erreur : Fichier non trouvé.")
+finally:
+    print("Bloc finally exécuté.")
+    fichier.close()
+```
+
+---
+
+### **6. Erreurs courantes et leurs significations**
+
+- **`ValueError`** : Tentative d'utiliser une valeur incorrecte pour une opération (exemple : conversion).
+- **`ZeroDivisionError`** : Division par zéro.
+- **`KeyError`** : Accès à une clé inexistante dans un dictionnaire.
+- **`IndexError`** : Tentative d'accéder à un index en dehors des limites d'une liste.
+- **`TypeError`** : Utilisation d'un type de données incorrect dans une opération.
+- **`FileNotFoundError`** : Tentative d'ouvrir un fichier inexistant.
+
+---
+
+### **7. Bonnes pratiques**
+
+1. **Spécifiez les types d'erreurs :** Évitez les **`except`** génériques, qui masquent les erreurs imprévues.
+
+   ```python
+   try:
+       résultat = 10 / "abc"
+   except Exception:  # Mauvaise pratique
+       print("Erreur.")
+   ```
+
+   Préférez capturer des erreurs spécifiques :
+
+   ```python
+   except TypeError:
+       print("Erreur de type détectée.")
+   ```
+
+2. **Messages d'erreur informatifs :** Fournissez des explications claires à l'utilisateur.
+3. **Limitez la portée des blocs `try`:** Placez uniquement le code potentiellement risqué dans le bloc `try`.
+
+---
+
+### **Conclusion**
+
+La gestion des erreurs avec **`try`** et **`except`** est indispensable pour rendre un programme robuste et facile à déboguer. En capturant des exceptions courantes comme **`ValueError`** ou **`KeyError`**, vous pouvez prévenir des comportements imprévus et améliorer l'expérience utilisateur.
+
 Niveau Intermédiaire 
 
 ### Chap 1 **Compréhension de liste (List Comprehension)**
@@ -7978,6 +8517,667 @@ Pour des tâches intensives en calcul (comme le traitement de données), le GIL 
 - Utilisez **`Lock`** pour synchroniser les accès à des ressources partagées.
 - Le threading est particulièrement utile pour les tâches I/O, mais pour les tâches intensives en calcul, privilégiez le **multiprocessing**.
 
+### Chap 32 **Fonctions Anonymes et Programmation Fonctionnelle de Base en Python**
+
+Python propose des outils puissants pour la **programmation fonctionnelle**, un paradigme qui se concentre sur l’utilisation de fonctions comme blocs de construction du programme. Les fonctions **anonymes (`lambda`)** et des outils comme **`map()`**, **`filter()`**, et **`reduce()`** permettent de manipuler efficacement des données sans écrire de boucles explicites.
+
+---
+
+### **1. Fonctions Anonymes (`lambda`)**
+Une **fonction lambda** est une fonction anonyme définie en une seule ligne. Elle est souvent utilisée pour des fonctions simples ou temporaires.
+
+#### **Syntaxe :**
+
+```python
+lambda arguments: expression
+```
+
+#### **Exemple :**
+
+Additionner deux nombres :
+
+```python
+addition = lambda x, y: x + y
+print(addition(3, 5))  # Sortie : 8
+```
+
+#### **Cas d'utilisation :**
+Les fonctions lambda sont souvent utilisées avec d'autres fonctions comme `map()`, `filter()`, ou des fonctions de tri.
+
+---
+
+### **2. La fonction `map()`**
+**`map()`** applique une fonction donnée à chaque élément d'une séquence (liste, tuple, etc.) et retourne un **itérable**.
+
+#### **Syntaxe :**
+
+```python
+map(function, iterable)
+```
+
+#### **Exemple : Conversion de températures Celsius en Fahrenheit**
+
+```python
+celsius = [0, 20, 30, 40]
+fahrenheit = list(map(lambda x: (x * 9/5) + 32, celsius))
+print(fahrenheit)  # Sortie : [32.0, 68.0, 86.0, 104.0]
+```
+
+---
+
+### **3. La fonction `filter()`**
+**`filter()`** retourne les éléments d'un itérable qui satisfont une condition (fonction renvoyant `True`).
+
+#### **Syntaxe :**
+
+```python
+filter(function, iterable)
+```
+
+#### **Exemple : Filtrer les nombres pairs**
+
+```python
+nombres = [1, 2, 3, 4, 5, 6]
+pairs = list(filter(lambda x: x % 2 == 0, nombres))
+print(pairs)  # Sortie : [2, 4, 6]
+```
+
+---
+
+### **4. La fonction `reduce()`**
+**`reduce()`** (dans le module `functools`) applique une fonction cumulativement à une séquence pour réduire cette dernière à une seule valeur.
+
+#### **Syntaxe :**
+
+```python
+from functools import reduce
+reduce(function, iterable)
+```
+
+#### **Exemple : Calcul du produit de tous les nombres**
+
+```python
+from functools import reduce
+
+nombres = [1, 2, 3, 4]
+produit = reduce(lambda x, y: x * y, nombres)
+print(produit)  # Sortie : 24
+```
+
+---
+
+### **5. Cas Pratiques**
+
+#### **Exemple 1 : Trier une liste de dictionnaires par une clé**
+
+Trier des étudiants par leurs notes :
+
+```python
+etudiants = [{'nom': 'Alice', 'note': 85}, {'nom': 'Bob', 'note': 92}, {'nom': 'Charlie', 'note': 78}]
+tri = sorted(etudiants, key=lambda x: x['note'], reverse=True)
+print(tri)
+# Sortie : [{'nom': 'Bob', 'note': 92}, {'nom': 'Alice', 'note': 85}, {'nom': 'Charlie', 'note': 78}]
+```
+
+#### **Exemple 2 : Calculer la somme des carrés des nombres pairs**
+
+```python
+nombres = [1, 2, 3, 4, 5, 6]
+somme_carre_pairs = reduce(lambda x, y: x + y, map(lambda x: x**2, filter(lambda x: x % 2 == 0, nombres)))
+print(somme_carre_pairs)  # Sortie : 56 (2² + 4² + 6²)
+```
+
+#### **Exemple 3 : Trouver le mot le plus long dans une liste**
+
+```python
+mots = ["chat", "éléphant", "chien", "oiseau"]
+mot_plus_long = reduce(lambda x, y: x if len(x) > len(y) else y, mots)
+print(mot_plus_long)  # Sortie : "éléphant"
+```
+
+---
+
+### **6. Comparaison avec des Boucles**
+
+Les fonctions comme `map()` et `filter()` rendent le code plus concis et lisible, mais elles ne remplacent pas toujours les boucles, surtout pour des logiques complexes. Comparez :
+
+#### **Avec `map()` :**
+
+```python
+nombres = [1, 2, 3, 4]
+carres = list(map(lambda x: x**2, nombres))
+print(carres)  # Sortie : [1, 4, 9, 16]
+```
+
+#### **Avec une boucle :**
+
+```python
+nombres = [1, 2, 3, 4]
+carres = [x**2 for x in nombres]
+print(carres)  # Sortie : [1, 4, 9, 16]
+```
+
+---
+
+### **Résumé**
+- Les **fonctions anonymes (`lambda`)** sont pratiques pour des opérations simples et temporaires.
+- **`map()`** et **`filter()`** offrent une manière concise de transformer ou filtrer des itérables.
+- **`reduce()`** est utile pour combiner tous les éléments d'une séquence en une seule valeur.
+- Ces outils conviennent particulièrement aux tâches fonctionnelles et aux pipelines de traitement de données.
+
+### Chap 33 **Itérateurs et Générateurs en Python**
+
+Les **itérateurs** et **générateurs** permettent de manipuler des séquences de données efficacement. Ils sont particulièrement utiles pour gérer de grandes quantités de données ou pour créer des flux de données en temps réel, tout en réduisant l'utilisation de la mémoire.
+
+---
+
+### **1. Itérateurs**
+
+Un **itérateur** est un objet qui implémente les méthodes spéciales **`__iter__()`** et **`__next__()`**, permettant de parcourir une séquence un élément à la fois.
+
+#### **Création d'un itérateur personnalisé**
+
+Voici un exemple simple pour créer un itérateur qui génère les nombres d'une séquence jusqu'à une limite donnée.
+
+```python
+class Compteur:
+    def __init__(self, limite):
+        self.limite = limite
+        self.courant = 0
+
+    def __iter__(self):
+        return self  # Un itérateur doit retourner lui-même.
+
+    def __next__(self):
+        if self.courant < self.limite:
+            valeur = self.courant
+            self.courant += 1
+            return valeur
+        else:
+            raise StopIteration  # Indique que l'itération est terminée.
+
+# Utilisation
+compteur = Compteur(5)
+for nombre in compteur:
+    print(nombre)  # Sortie : 0, 1, 2, 3, 4
+```
+
+---
+
+### **2. Générateurs**
+
+Un **générateur** est une fonction spéciale qui produit un itérateur sans avoir besoin d'implémenter manuellement les méthodes `__iter__()` et `__next__()`. Au lieu d'utiliser `return`, un générateur utilise **`yield`**, ce qui permet de suspendre et reprendre son exécution.
+
+#### **Création d'un générateur**
+
+Un générateur pour produire une séquence de Fibonacci :
+
+```python
+def fibonacci(limite):
+    a, b = 0, 1
+    while a < limite:
+        yield a  # Génère la valeur actuelle et suspend l'exécution.
+        a, b = b, a + b
+
+# Utilisation
+for nombre in fibonacci(10):
+    print(nombre)  # Sortie : 0, 1, 1, 2, 3, 5, 8
+```
+
+---
+
+### **3. Différences entre itérateurs et générateurs**
+
+| **Aspect**         | **Itérateur**                                                  | **Générateur**                     |
+|---------------------|---------------------------------------------------------------|-------------------------------------|
+| **Création**        | Implémentation manuelle avec `__iter__()` et `__next__()`.     | Utilisation d'une fonction avec `yield`. |
+| **Mémoire**         | Les données peuvent être stockées en mémoire.                 | Génère les valeurs à la demande (lazy evaluation). |
+| **Complexité**      | Peut être plus complexe à implémenter.                        | Plus simple et concis.              |
+
+---
+
+### **4. Générateurs vs Listes**
+
+Un générateur **ne stocke pas tous les éléments en mémoire**, contrairement à une liste. Cela permet de gérer des flux de données infinis ou de très grandes séquences.
+
+#### **Exemple : Liste vs Générateur**
+
+Avec une liste :
+
+```python
+nombres = [x**2 for x in range(10)]
+print(nombres)  # Sortie : [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+Avec un générateur :
+
+```python
+nombres = (x**2 for x in range(10))
+print(list(nombres))  # Sortie : [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+Le générateur ne calcule les valeurs qu'au moment où elles sont demandées.
+
+---
+
+### **5. Utilisation Avancée : Générateurs Infinis**
+
+Un générateur infini qui génère des nombres pairs :
+
+```python
+def nombres_pairs():
+    n = 0
+    while True:
+        yield n
+        n += 2
+
+# Utilisation
+pairs = nombres_pairs()
+for _ in range(5):
+    print(next(pairs))  # Sortie : 0, 2, 4, 6, 8
+```
+
+---
+
+### **6. Cas Pratiques**
+
+#### **Exemple 1 : Lecture de fichiers ligne par ligne**
+
+Les générateurs sont très utiles pour traiter de grands fichiers sans les charger entièrement en mémoire.
+
+```python
+def lire_fichier_en_lignes(nom_fichier):
+    with open(nom_fichier, 'r') as fichier:
+        for ligne in fichier:
+            yield ligne.strip()
+
+# Utilisation
+for ligne in lire_fichier_en_lignes("example.txt"):
+    print(ligne)
+```
+
+#### **Exemple 2 : Pipeline de traitement de données**
+				
+Créer des générateurs pour chaque étape d'un pipeline de traitement.
+
+```python
+def charger_donnees():
+    for i in range(10):
+        yield i
+
+def transformer_donnees(donnees):
+    for valeur in donnees:
+        yield valeur**2
+
+def filtrer_donnees(donnees):
+    for valeur in donnees:
+        if valeur % 2 == 0:
+            yield valeur
+
+# Chaînage des générateurs
+pipeline = filtrer_donnees(transformer_donnees(charger_donnees()))
+print(list(pipeline))  # Sortie : [0, 4, 16, 36, 64]
+```
+
+---
+
+### **Résumé**
+- Les **itérateurs** offrent un contrôle manuel sur l'itération.
+- Les **générateurs**, grâce à `yield`, fournissent une alternative simple pour créer des séquences paresseuses.
+- Ces outils sont essentiels pour **gérer efficacement la mémoire** et **traiter des flux de données** en temps réel.
+
+### Chap 34 **Manipulation des fichiers avancée en Python**
+
+La manipulation avancée des fichiers implique le travail avec différents formats de données courants (CSV, JSON, etc.) et des opérations sur le système de fichiers (par exemple, gestion des répertoires, copie de fichiers). Python offre des modules puissants comme **os**, **shutil**, **csv**, et **json** pour accomplir ces tâches.
+
+---
+
+### **1. Travail avec des fichiers CSV**
+
+Le module **`csv`** facilite la lecture et l'écriture de fichiers au format CSV (Comma-Separated Values).
+
+#### **Lecture d'un fichier CSV**
+
+```python
+import csv
+
+# Lecture d'un fichier CSV
+with open('exemple.csv', mode='r') as fichier:
+    lecteur_csv = csv.reader(fichier)
+    for ligne in lecteur_csv:
+        print(ligne)
+```
+
+#### **Écriture dans un fichier CSV**
+
+```python
+# Écriture dans un fichier CSV
+with open('sortie.csv', mode='w', newline='') as fichier:
+    ecrivain_csv = csv.writer(fichier)
+    ecrivain_csv.writerow(['Nom', 'Âge', 'Ville'])
+    ecrivain_csv.writerow(['Alice', 30, 'Paris'])
+    ecrivain_csv.writerow(['Bob', 25, 'Lyon'])
+```
+
+#### **Utilisation de `DictReader` et `DictWriter`**
+
+```python
+# Lecture avec DictReader
+with open('exemple.csv', mode='r') as fichier:
+    lecteur_csv = csv.DictReader(fichier)
+    for ligne in lecteur_csv:
+        print(ligne)
+
+# Écriture avec DictWriter
+with open('sortie.csv', mode='w', newline='') as fichier:
+    colonnes = ['Nom', 'Âge', 'Ville']
+    ecrivain_csv = csv.DictWriter(fichier, fieldnames=colonnes)
+    ecrivain_csv.writeheader()
+    ecrivain_csv.writerow({'Nom': 'Alice', 'Âge': 30, 'Ville': 'Paris'})
+    ecrivain_csv.writerow({'Nom': 'Bob', 'Âge': 25, 'Ville': 'Lyon'})
+```
+
+---
+
+### **2. Travail avec des fichiers JSON**
+
+Le module **`json`** permet de travailler avec des données au format JSON (JavaScript Object Notation).
+
+#### **Lecture d'un fichier JSON**
+
+```python
+import json
+
+# Lecture d'un fichier JSON
+with open('exemple.json', mode='r') as fichier:
+    donnees = json.load(fichier)
+    print(donnees)
+```
+
+#### **Écriture dans un fichier JSON**
+
+```python
+# Écriture dans un fichier JSON
+donnees = {
+    "Nom": "Alice",
+    "Âge": 30,
+    "Ville": "Paris"
+}
+
+with open('sortie.json', mode='w') as fichier:
+    json.dump(donnees, fichier, indent=4)  # `indent=4` pour une écriture lisible
+```
+
+---
+
+### **3. Utilisation des modules `os` et `shutil`**
+
+Ces modules permettent de manipuler le système de fichiers : création de répertoires, copie, déplacement, suppression de fichiers, etc.
+
+#### **Module `os`**
+
+- **Liste des fichiers dans un répertoire**
+```python
+import os
+
+# Liste des fichiers
+repertoire = './'
+fichiers = os.listdir(repertoire)
+print(fichiers)
+```
+
+- **Création et suppression de répertoires**
+
+```python
+# Création
+os.mkdir('nouveau_dossier')
+
+# Suppression
+os.rmdir('nouveau_dossier')
+```
+
+- **Manipulation des chemins**
+
+```python
+chemin = os.path.join('dossier', 'fichier.txt')
+print(chemin)  # Sortie : 'dossier/fichier.txt' (ou adapté selon l'OS)
+
+# Vérification si un fichier ou un répertoire existe
+print(os.path.exists(chemin))
+```
+
+#### **Module `shutil`**
+
+- **Copie et déplacement de fichiers**
+
+```python
+import shutil
+
+# Copie de fichier
+shutil.copy('source.txt', 'destination.txt')
+
+# Déplacement de fichier
+shutil.move('fichier.txt', 'nouveau_repertoire/')
+```
+
+- **Suppression de fichiers ou répertoires**
+
+```python
+# Suppression d'un fichier
+os.remove('fichier.txt')
+
+# Suppression d'un répertoire non vide
+shutil.rmtree('dossier_non_vide')
+```
+
+---
+
+### **4. Travail avec d'autres formats de fichiers**
+
+#### **Manipulation de fichiers texte**
+
+```python
+# Lecture
+with open('exemple.txt', mode='r') as fichier:
+    contenu = fichier.read()
+    print(contenu)
+
+# Écriture
+with open('exemple.txt', mode='w') as fichier:
+    fichier.write('Bonjour, monde!')
+```
+
+#### **Manipulation de fichiers XML**
+
+Pour les fichiers XML, utilisez le module **`xml.etree.ElementTree`**.
+
+```python
+import xml.etree.ElementTree as ET
+
+# Lecture d'un fichier XML
+arbre = ET.parse('exemple.xml')
+racine = arbre.getroot()
+print(racine.tag)
+
+# Écriture d'un fichier XML
+nouvel_element = ET.Element('note')
+nouvel_element.text = 'Ceci est un test'
+ET.ElementTree(nouvel_element).write('nouveau.xml')
+```
+
+---
+
+### **5. Conseils pratiques**
+1. Toujours utiliser `with` pour ouvrir des fichiers afin de s'assurer qu'ils sont correctement fermés.
+2. Vérifier l'existence des fichiers avant d'y accéder pour éviter des erreurs (`os.path.exists`).
+3. Utiliser des modules spécifiques comme **`pandas`** pour des manipulations complexes de données CSV ou JSON.
+
+---
+
+### **Résumé**
+- Le module **`csv`** facilite le travail avec des fichiers tabulaires.
+- Le module **`json`** permet de manipuler des structures complexes de données au format JSON.
+- Les modules **`os`** et **`shutil`** permettent une gestion avancée des fichiers et répertoires.
+- Python prend en charge de nombreux formats courants et offre une API intuitive pour leur manipulation.
+
+### Chap 35 **Expressions régulières (module `re`)**
+
+Les **expressions régulières (regex)** permettent de rechercher, valider, et manipuler des chaînes de caractères grâce à des motifs complexes. Python fournit le module **`re`** pour exploiter ces fonctionnalités.
+
+---
+
+### **1. Concepts de base des expressions régulières**
+
+- **Recherche** : Identifier des motifs spécifiques dans une chaîne.
+- **Substitution** : Remplacer des motifs par d'autres valeurs.
+- **Validation** : Vérifier si une chaîne correspond à un motif donné.
+
+---
+
+### **2. Fonctions principales du module `re`**
+
+#### **`re.search()`**
+
+Recherche le **premier** motif correspondant dans une chaîne.
+
+```python
+import re
+
+texte = "Bonjour, mon numéro est 123-456-7890."
+resultat = re.search(r'\d{3}-\d{3}-\d{4}', texte)  # Motif : numéro de téléphone
+if resultat:
+    print("Numéro trouvé :", resultat.group())
+```
+
+#### **`re.findall()`**
+
+Renvoie **toutes les occurrences** du motif sous forme de liste.
+
+```python
+texte = "Voici deux dates : 12/05/2023 et 14/06/2024."
+resultats = re.findall(r'\d{2}/\d{2}/\d{4}', texte)  # Motif : dates au format DD/MM/YYYY
+print("Dates trouvées :", resultats)
+```
+
+#### **`re.sub()`**
+
+Remplace toutes les occurrences d'un motif par une autre chaîne.
+
+```python
+texte = "Prix : 10$, 20$, 30$"
+nouveau_texte = re.sub(r'\$\d+', 'XX€', texte)  # Remplace les prix en dollars par "XX€"
+print(nouveau_texte)
+```
+
+#### **`re.match()`**
+
+Teste si un motif correspond au **début** d'une chaîne.
+
+```python
+texte = "abc123"
+if re.match(r'abc', texte):
+    print("Motif trouvé au début de la chaîne !")
+```
+
+#### **`re.split()`**
+
+Divise une chaîne en fonction d'un motif.
+
+```python
+texte = "Nom: Alice; Âge: 30; Ville: Paris"
+resultats = re.split(r';\s*', texte)  # Séparateurs : point-virgule suivi d'espaces
+print(resultats)
+```
+
+---
+
+### **3. Métacaractères courants et leurs significations**
+
+| Métacaractère | Signification                              | Exemple                       |
+|---------------|--------------------------------------------|-------------------------------|
+| `.`           | N'importe quel caractère sauf une nouvelle ligne | `a.b` correspond à "acb", "a0b" |
+| `^`           | Début de la chaîne                        | `^Bonjour` correspond à "Bonjour, monde" |
+| `$`           | Fin de la chaîne                          | `monde$` correspond à "Bonjour, monde" |
+| `*`           | 0 ou plusieurs occurrences                | `ab*` correspond à "a", "ab", "abb" |
+| `+`           | 1 ou plusieurs occurrences                | `ab+` correspond à "ab", "abb" |
+| `?`           | 0 ou 1 occurrence                         | `ab?` correspond à "a", "ab" |
+| `{n}`         | Exactement `n` occurrences                | `a{3}` correspond à "aaa" |
+| `{n,}`        | Au moins `n` occurrences                  | `a{2,}` correspond à "aa", "aaa" |
+| `{n,m}`       | Entre `n` et `m` occurrences              | `a{2,4}` correspond à "aa", "aaa", "aaaa" |
+| `[]`          | Classe de caractères                      | `[abc]` correspond à "a", "b", "c" |
+| `|`           | OU logique                                | `a|b` correspond à "a" ou "b" |
+| `\`           | Échappement des caractères spéciaux       | `\.` correspond à un point littéral |
+
+---
+
+### **4. Cas pratiques**
+
+#### **Validation d'une adresse e-mail**
+
+```python
+email = "exemple@mail.com"
+motif = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+if re.match(motif, email):
+    print("Adresse e-mail valide !")
+else:
+    print("Adresse e-mail invalide.")
+```
+
+#### **Recherche de mots commençant par une lettre spécifique**
+
+```python
+texte = "Python est puissant, précis, et performant."
+mots = re.findall(r'\bp\w*', texte, re.IGNORECASE)  # Mots commençant par "p" (non sensible à la casse)
+print("Mots trouvés :", mots)
+```
+
+#### **Extraire les numéros de téléphone**
+
+```python
+texte = "Contacts : +33-6-12345678, +33-7-98765432."
+motif = r'\+33-\d{1}-\d{8}'
+numeros = re.findall(motif, texte)
+print("Numéros extraits :", numeros)
+```
+
+#### **Remplacement de mots spécifiques**
+
+```python
+texte = "Le chat dort. Le chat mange. Le chat joue."
+nouveau_texte = re.sub(r'\bchat\b', 'chien', texte)
+print(nouveau_texte)
+```
+
+---
+
+### **5. Flags utiles dans `re`**
+
+- **`re.IGNORECASE` ou `re.I`** : Rend la recherche insensible à la casse.
+- **`re.DOTALL` ou `re.S`** : Permet à `.` de correspondre aux nouvelles lignes.
+- **`re.MULTILINE` ou `re.M`** : Permet à `^` et `$` de fonctionner sur chaque ligne.
+
+```python
+texte = """Bonjour.
+Bienvenue au tutoriel regex."""
+resultats = re.findall(r'^.+$', texte, re.MULTILINE)
+print(resultats)  # Chaque ligne est traitée individuellement
+```
+
+---
+
+### **6. Conseils pratiques**
+1. **Tester les motifs** : Utilisez des outils en ligne comme [regex101](https://regex101.com/) pour construire et tester vos expressions régulières.
+2. **Documenter vos motifs** : Les regex complexes deviennent rapidement difficiles à lire. Ajoutez des commentaires ou utilisez des motifs lisibles.
+3. **Éviter les cas d'utilisation abusifs** : Les regex ne sont pas adaptées pour tout (ex. : analyse syntaxique de HTML/XML).
+
+---
+
+### **Résumé**
+- Les expressions régulières sont puissantes pour manipuler et analyser des chaînes.
+- Les fonctions principales incluent `search`, `findall`, `sub`, `match`, et `split`.
+- Bien comprendre les métacaractères et utiliser les flags selon le besoin.
+- Les regex bien écrites permettent d'automatiser des tâches complexes avec efficacité.
+
 Niveau expert
 
 ### Chap 1. **Gestion de la mémoire et optimisation**
@@ -11123,3 +12323,681 @@ pip install pyspark
 #### **Conclusion**
 
 Ces outils permettent de construire des solutions avancées, allant des modèles simples à l’analyse de données massives en temps réel. Les frameworks comme TensorFlow, PyTorch, et PySpark offrent une flexibilité et une puissance inégalées pour relever les défis des projets de Machine Learning et de Big Data.
+
+### Chap 20 ** Optimisation et Mémoire en Python**
+
+L'optimisation de l'utilisation mémoire est essentielle, surtout pour des applications manipulant des grandes quantités de données ou nécessitant une performance élevée. Python offre des outils intégrés comme `__slots__`, `cProfile`, et `tracemalloc` pour réduire la consommation de mémoire et identifier les goulets d'étranglement.
+
+---
+
+### **1. Utilisation de `__slots__` pour réduire l'utilisation mémoire dans les classes**
+
+Par défaut, les objets Python utilisent un **dictionnaire interne** (`__dict__`) pour stocker leurs attributs. Ce mécanisme, bien que flexible, consomme plus de mémoire. L'utilisation de `__slots__` permet de limiter les attributs à un ensemble prédéfini, supprimant ainsi le besoin d'un dictionnaire et réduisant la mémoire consommée.
+
+#### **Fonctionnement de `__slots__` :**
+- `__slots__` est une liste ou un tuple d'attributs autorisés dans une classe.
+- Lorsque `__slots__` est défini, Python n'alloue plus de dictionnaire pour chaque instance de la classe.
+- Cela rend les classes moins dynamiques mais beaucoup plus économes en mémoire.
+
+---
+
+##### **Exemple d’utilisation de `__slots__` :**
+
+```python
+class WithoutSlots:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class WithSlots:
+    __slots__ = ['name', 'age']  # Attributs autorisés
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Création d'instances
+obj1 = WithoutSlots("Alice", 30)
+obj2 = WithSlots("Bob", 25)
+
+# Comparaison de mémoire
+import sys
+print(f"Sans __slots__ : {sys.getsizeof(obj1.__dict__)} octets")
+print(f"Avec __slots__ : {sys.getsizeof(obj2)} octets")
+```
+
+#### **Avantages :**
+- Réduction significative de la mémoire utilisée.
+- Performances légèrement améliorées pour l'accès aux attributs.
+
+#### **Limitations :**
+- Les classes avec `__slots__` ne peuvent pas avoir d'attributs dynamiques (ajoutés après l'initialisation).
+- Ne fonctionne pas avec l'héritage multiple.
+
+---
+
+### **2. Analyse des performances avec `cProfile` et `tracemalloc`**
+
+---
+
+#### **2.1 Analyse des performances avec `cProfile`**
+
+**`cProfile`** est un outil intégré dans Python pour profiler un programme, c'est-à-dire identifier quelles parties du code consomment le plus de temps. Cela est utile pour optimiser les performances en détectant les fonctions les plus coûteuses.
+
+---
+
+##### **Exemple simple d’utilisation :**
+
+```python
+import cProfile
+
+def calcul_intensif():
+    total = 0
+    for i in range(1000000):
+        total += i
+    return total
+
+def programme_principal():
+    calcul_intensif()
+    print("Programme terminé.")
+
+# Profilage
+cProfile.run('programme_principal()')
+```
+
+---
+
+##### **Interprétation des résultats :**
+- **ncalls** : Nombre d’appels pour chaque fonction.
+- **tottime** : Temps total passé dans la fonction (sans inclure les appels aux autres fonctions).
+- **cumtime** : Temps cumulé (temps passé dans la fonction + temps des sous-appels).
+
+---
+
+#### **2.2 Analyse de l’utilisation mémoire avec `tracemalloc`**
+
+**`tracemalloc`** est une bibliothèque Python permettant de suivre l’utilisation mémoire en identifiant où la mémoire a été allouée. Il est particulièrement utile pour détecter des fuites mémoire ou des allocations excessives.
+
+---
+
+##### **Exemple d’utilisation de `tracemalloc` :**
+
+```python
+import tracemalloc
+
+def fonction_qui_utilise_memoire():
+    x = [i ** 2 for i in range(10000)]  # Grande liste en mémoire
+    return x
+
+# Activer tracemalloc
+tracemalloc.start()
+
+# Exécuter le code à profiler
+fonction_qui_utilise_memoire()
+
+# Afficher les statistiques mémoire
+snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('lineno')
+
+print("[ Top 10 allocations mémoire ]")
+for stat in top_stats[:10]:
+    print(stat)
+```
+
+---
+
+##### **Interprétation des résultats :**
+- `statistics('lineno')` : Classe les allocations mémoire par ligne de code.
+- Vous pouvez repérer les lignes de code consommant le plus de mémoire et optimiser ces sections.
+
+---
+
+### **3. Combinaison des outils**
+
+En combinant `cProfile` pour le temps d'exécution et `tracemalloc` pour l’utilisation mémoire, vous obtenez une vue complète des performances et des ressources utilisées par votre programme.
+
+---
+
+#### **Exemple complet :**
+
+```python
+import cProfile
+import tracemalloc
+
+def fonction_optimisable():
+    total = sum(i ** 2 for i in range(10000))  # Consomme beaucoup de ressources
+    return total
+
+# Activer tracemalloc
+tracemalloc.start()
+
+# Profilage de la fonction
+cProfile.run('fonction_optimisable()')
+
+# Capture des allocations mémoire
+snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('lineno')
+
+print("[ Statistiques mémoire ]")
+for stat in top_stats[:5]:
+    print(stat)
+```
+
+---
+
+### **4. Conseils pratiques pour l'optimisation**
+
+1. **Éviter les structures inutiles** :
+   - Utiliser des tuples au lieu des listes pour les données immuables.
+   - Privilégier les compréhensions de liste/générateur.
+
+2. **Utiliser des bibliothèques externes** :
+   - Pour les calculs intensifs, utiliser `NumPy` qui est optimisé pour la performance.
+
+3. **Optimiser les algorithmes** :
+   - Identifier les fonctions les plus lentes avec `cProfile`.
+   - Améliorer les performances en réduisant la complexité algorithmique.
+
+---
+
+### **Conclusion**
+
+- L’utilisation de `__slots__` peut réduire considérablement la mémoire des classes tout en améliorant les performances.
+- `cProfile` et `tracemalloc` sont des outils indispensables pour profiler les performances temporelles et l’utilisation mémoire d’un programme.
+- En combinant ces techniques avec des bonnes pratiques d’optimisation, il est possible de concevoir des applications Python plus performantes et plus efficaces.
+
+### Chap 21 ** Interopérabilité avancée en Python**
+
+L’interopérabilité permet à Python de collaborer efficacement avec d’autres langages de programmation, comme C et C++, afin d’améliorer les performances ou d’exploiter des bibliothèques externes. Voici deux techniques avancées : **l’utilisation de `ctypes` et `CFFI` pour appeler des bibliothèques externes**, et **Cython** pour optimiser les parties critiques du code.
+
+---
+
+### **1. Appels à des bibliothèques externes avec `ctypes` et `CFFI`**
+
+#### **1.1 Utilisation de `ctypes`**
+
+`ctypes` est une bibliothèque standard Python qui permet de charger des bibliothèques C dynamiques (DLL sous Windows ou `.so` sous Linux) et d’appeler leurs fonctions.
+
+---
+
+##### **Exemple : Appel d'une bibliothèque C avec `ctypes`**
+
+1. **Créer une bibliothèque C** :
+
+   ```c
+   // mathlib.c
+   #include <stdio.h>
+
+   int add(int a, int b) {
+       return a + b;
+   }
+   ```
+
+2. **Compiler la bibliothèque** :
+
+   Sous Linux :
+
+   ```bash
+   gcc -shared -o libmathlib.so -fPIC mathlib.c
+   ```
+
+   Sous Windows :
+
+   ```bash
+   gcc -shared -o mathlib.dll -fPIC mathlib.c
+   ```
+
+3. **Utiliser `ctypes` en Python** :
+
+   ```python
+   import ctypes
+
+   # Charger la bibliothèque partagée
+   lib = ctypes.CDLL('./libmathlib.so')  # .dll sous Windows
+
+   # Définir les types des arguments et du retour de la fonction
+   lib.add.argtypes = [ctypes.c_int, ctypes.c_int]
+   lib.add.restype = ctypes.c_int
+
+   # Appeler la fonction
+   result = lib.add(3, 5)
+   print(f"Résultat : {result}")  # Résultat : 8
+   ```
+
+---
+
+##### **Avantages de `ctypes`** :
+- Inclus dans la bibliothèque standard Python.
+- Facile à utiliser pour des bibliothèques simples.
+
+##### **Limitations** :
+- Moins adapté pour les bibliothèques complexes nécessitant des structures ou des callbacks.
+
+---
+
+#### **1.2 Utilisation de `CFFI`**
+
+`CFFI` (C Foreign Function Interface) est une alternative à `ctypes`, offrant une interface plus intuitive pour interagir avec du code C. Il est particulièrement utile pour les bibliothèques avec des structures complexes.
+
+---
+
+##### **Exemple avec `CFFI`** :
+
+1. **Créer une bibliothèque C** :
+
+   (Utilisez le même fichier C et compilez comme dans l'exemple précédent.)
+
+2. **Utiliser `CFFI` en Python** :
+
+   ```python
+   from cffi import FFI
+
+   ffi = FFI()
+
+   # Déclarer la signature des fonctions
+   ffi.cdef("""
+       int add(int a, int b);
+   """)
+
+   # Charger la bibliothèque
+   lib = ffi.dlopen("./libmathlib.so")
+
+   # Appeler la fonction
+   result = lib.add(3, 5)
+   print(f"Résultat avec CFFI : {result}")  # Résultat : 8
+   ```
+
+---
+
+##### **Avantages de `CFFI`** :
+- Plus puissant que `ctypes` pour des bibliothèques complexes.
+- Compatible avec des structures C.
+
+##### **Limitations** :
+- Nécessite une installation (`pip install cffi`).
+
+---
+
+### **2. Introduction à Cython**
+
+**Cython** est un outil qui transforme le code Python en C pour des gains significatifs en termes de performance. Il est souvent utilisé pour accélérer les parties critiques des programmes Python.
+
+---
+
+#### **2.1 Principes de base**
+
+- Cython permet d'ajouter des annotations de types (`cdef`) pour compiler du code Python en C.
+- Cela réduit l'interprétation à l’exécution, augmentant la vitesse d’exécution.
+
+---
+
+#### **Exemple simple avec Cython**
+
+1. **Créer un fichier `example.pyx`** :
+
+   ```python
+   def somme(int n):
+       cdef int i, total = 0
+       for i in range(n):
+           total += i
+       return total
+   ```
+
+2. **Créer un fichier `setup.py`** :
+
+   ```python
+   from setuptools import setup
+   from Cython.Build import cythonize
+
+   setup(
+       ext_modules=cythonize("example.pyx"),
+   )
+   ```
+
+3. **Compiler le code** :
+
+   ```bash
+   python setup.py build_ext --inplace
+   ```
+
+4. **Utiliser le fichier compilé** :
+
+   ```python
+   import example
+
+   print(example.somme(1000000))  # Somme rapide grâce à Cython
+   ```
+
+---
+
+#### **2.2 Avantages de Cython** :
+- Accélère les boucles lourdes et les calculs intensifs.
+- Intègre facilement des bibliothèques C existantes.
+
+#### **Limitations** :
+- Nécessite des connaissances en C pour les optimisations avancées.
+- Augmente la complexité du processus de développement.
+
+---
+
+### **Résumé Comparatif**
+
+| **Méthode**         | **Avantages**                             | **Limites**                            |
+|----------------------|-------------------------------------------|----------------------------------------|
+| `ctypes`            | Inclus dans Python, simple à utiliser     | Moins adapté pour des structures complexes |
+| `CFFI`              | Intuitif, gère bien les structures C      | Besoin d'une installation supplémentaire |
+| **Cython**          | Optimisation puissante des performances   | Complexité accrue pour le développement |
+
+---
+
+### **Conclusion**
+
+L'interopérabilité avancée avec des bibliothèques externes est une compétence essentielle pour les développeurs Python travaillant sur des applications nécessitant des performances élevées. Selon les besoins, `ctypes`, `CFFI`, ou **Cython** offrent des solutions adaptées, allant de l'accès simple à des bibliothèques C à l'optimisation des calculs lourds via des compilations C.
+
+### Chap 22 ** Programmation réseau avancée**
+
+La programmation réseau avancée en Python permet de développer des applications capables de gérer des communications TCP, UDP, ou WebSocket de manière performante. Python offre des bibliothèques modernes comme **`asyncio`** pour la programmation asynchrone et **`websockets`** pour des connexions WebSocket bidirectionnelles.
+
+---
+
+### **1. Création de serveurs TCP/UDP avec `asyncio`**
+
+`asyncio` est une bibliothèque native de Python pour gérer des entrées/sorties asynchrones, particulièrement utile dans des scénarios réseau.
+
+---
+
+#### **1.1 Serveur TCP avec `asyncio`**
+
+Un serveur TCP (Transmission Control Protocol) garantit une communication fiable entre client et serveur.
+
+##### **Exemple : Serveur TCP avec `asyncio`**
+
+```python
+import asyncio
+
+async def handle_client(reader, writer):
+    addr = writer.get_extra_info('peername')
+    print(f"Connexion établie avec {addr}")
+
+    while True:
+        data = await reader.read(100)
+        if not data:
+            break  # Fin de connexion
+        print(f"Données reçues : {data.decode()}")
+        writer.write(data)  # Echo
+        await writer.drain()  # Assurez-vous que les données sont envoyées
+
+    print(f"Connexion terminée avec {addr}")
+    writer.close()
+    await writer.wait_closed()
+
+async def main():
+    server = await asyncio.start_server(handle_client, '127.0.0.1', 8888)
+    addr = server.sockets[0].getsockname()
+    print(f"Serveur TCP démarré sur {addr}")
+
+    async with server:
+        await server.serve_forever()
+
+asyncio.run(main())
+```
+
+##### **Points clés** :
+- Le serveur écoute sur `127.0.0.1:8888`.
+- Les données reçues sont renvoyées au client (serveur echo).
+
+---
+
+#### **1.2 Serveur UDP avec `asyncio`**
+
+UDP (User Datagram Protocol) est plus léger que TCP mais ne garantit pas la fiabilité des transmissions.
+
+##### **Exemple : Serveur UDP avec `asyncio`**
+
+```python
+import asyncio
+
+async def handle_udp(reader, writer):
+    while True:
+        data, addr = await reader.read()
+        print(f"Données reçues de {addr}: {data.decode()}")
+        writer.sendto(b"Message reçu!", addr)
+
+async def main():
+    loop = asyncio.get_event_loop()
+    transport, protocol = await loop.create_datagram_endpoint(
+        lambda: asyncio.DatagramProtocol(),
+        local_addr=('127.0.0.1', 9999),
+    )
+    print("Serveur UDP démarré sur 127.0.0.1:9999")
+
+    try:
+        await asyncio.sleep(3600)  # Garder le serveur actif
+    finally:
+        transport.close()
+
+asyncio.run(main())
+```
+
+##### **Points clés** :
+- Un serveur UDP ne maintient pas de connexion persistante.
+- Utilisez `reader.read()` et `writer.sendto()` pour recevoir et envoyer des messages.
+
+---
+
+### **2. Gestion des connexions WebSocket avec le module `websockets`**
+
+Le module **`websockets`** fournit une API simple pour créer des serveurs et des clients WebSocket. Les WebSockets permettent une communication bidirectionnelle et en temps réel, souvent utilisée pour des chats, des tableaux de bord en direct ou des jeux.
+
+---
+
+#### **2.1 Serveur WebSocket avec `websockets`**
+
+##### **Exemple : Serveur WebSocket**
+
+1. **Installation** :
+
+   ```bash
+   pip install websockets
+   ```
+
+2. **Code du serveur** :
+
+   ```python
+   import asyncio
+   import websockets
+
+   async def echo(websocket, path):
+       print(f"Client connecté : {path}")
+       async for message in websocket:
+           print(f"Message reçu : {message}")
+           await websocket.send(f"Echo : {message}")
+
+   # Lancer le serveur
+   async def main():
+       async with websockets.serve(echo, "127.0.0.1", 8765):
+           print("Serveur WebSocket démarré sur ws://127.0.0.1:8765")
+           await asyncio.Future()  # Garde le serveur actif
+
+   asyncio.run(main())
+   ```
+
+3. **Points clés** :
+   - Le serveur écoute sur `ws://127.0.0.1:8765`.
+   - Il renvoie un message "echo" pour chaque message reçu.
+
+---
+
+#### **2.2 Client WebSocket avec `websockets`**
+
+##### **Exemple : Client WebSocket**
+
+```python
+import asyncio
+import websockets
+
+async def communicate():
+    async with websockets.connect("ws://127.0.0.1:8765") as websocket:
+        await websocket.send("Salut serveur!")
+        response = await websocket.recv()
+        print(f"Réponse du serveur : {response}")
+
+asyncio.run(communicate())
+```
+
+---
+
+### **3. Points importants sur `asyncio` et `websockets`**
+
+- **Avantages de l'approche asynchrone** :
+  - Les serveurs peuvent gérer plusieurs connexions simultanées sans bloquer les autres.
+  - Les WebSockets permettent une communication en temps réel, idéale pour les applications interactives.
+
+- **Limites** :
+  - L’approche asynchrone nécessite une gestion soignée des exceptions pour éviter les blocages ou les erreurs silencieuses.
+  - Les WebSockets ne sont pas toujours compatibles avec des environnements fortement contraints en ressources réseau.
+
+---
+
+### **Résumé**
+
+| **Protocole**       | **Utilisation**                               | **Cas d’usage**                     |
+|----------------------|-----------------------------------------------|--------------------------------------|
+| **TCP**             | Connexions fiables et persistantes            | Serveurs d’applications, jeux en ligne |
+| **UDP**             | Connexions rapides, non fiables               | Vidéos en streaming, DNS            |
+| **WebSockets**      | Communication bidirectionnelle en temps réel | Chats, tableaux de bord, jeux       |
+
+Avec `asyncio` et `websockets`, Python offre une solution robuste et performante pour développer des applications réseau avancées.
+
+### Chap 23 ** Cryptographie avancée**
+
+La cryptographie est essentielle pour garantir la confidentialité, l'intégrité et l'authenticité des données dans les systèmes modernes. Cette section explore deux concepts avancés : **l'utilisation des courbes elliptiques (ECC)** pour la signature et le chiffrement, et **la gestion sécurisée des clés** avec des modules comme `cryptography`.
+
+---
+
+### **1. Utilisation des courbes elliptiques (ECC)**
+
+Les **courbes elliptiques (ECC)** sont une méthode de cryptographie asymétrique offrant une sécurité équivalente à des clés beaucoup plus courtes que RSA. Cela les rend idéales pour les systèmes où les ressources (bande passante, stockage) sont limitées.
+
+#### **1.1 Concepts fondamentaux**
+- **Chiffrement ECC** : Utilise des points sur une courbe elliptique pour établir une clé publique et privée.
+- **Signature ECC (ECDSA)** : Permet de signer des messages avec une clé privée et de vérifier la signature avec une clé publique.
+- **Échange de clés ECC (ECDH)** : Établit une clé secrète partagée entre deux parties.
+
+#### **1.2 Exemple d'utilisation avec `cryptography`**
+
+##### **Installation**
+
+```bash
+pip install cryptography
+```
+
+##### **Signature numérique avec ECDSA**
+
+```python
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives import hashes
+
+# Générer une clé privée
+private_key = ec.generate_private_key(ec.SECP256R1())
+
+# Signer un message
+message = b"Message à signer"
+signature = private_key.sign(message, ec.ECDSA(hashes.SHA256()))
+
+# Vérifier la signature avec la clé publique
+public_key = private_key.public_key()
+try:
+    public_key.verify(signature, message, ec.ECDSA(hashes.SHA256()))
+    print("Signature valide.")
+except Exception as e:
+    print("Signature invalide:", e)
+```
+
+##### **Échange de clés avec ECDH**
+
+```python
+# Génération de deux paires de clés
+private_key_1 = ec.generate_private_key(ec.SECP256R1())
+private_key_2 = ec.generate_private_key(ec.SECP256R1())
+
+# Génération d'une clé partagée
+shared_key_1 = private_key_1.exchange(ec.ECDH(), private_key_2.public_key())
+shared_key_2 = private_key_2.exchange(ec.ECDH(), private_key_1.public_key())
+
+print(shared_key_1 == shared_key_2)  # Affiche True : la clé partagée est identique
+```
+
+---
+
+### **2. Gestion sécurisée des clés avec `cryptography`**
+
+La gestion des clés est essentielle pour garantir la sécurité des systèmes cryptographiques. Les clés doivent être générées, stockées et utilisées de manière sécurisée pour éviter les fuites ou les compromissions.
+
+#### **2.1 Génération et stockage des clés**
+
+##### **Sérialisation des clés**
+Le module `cryptography` permet de sérialiser (sauvegarder) les clés dans des fichiers, protégés ou non par un mot de passe.
+
+###### **Exemple : Sauvegarde et chargement d'une clé privée**
+
+```python
+from cryptography.hazmat.primitives.serialization import Encoding, PrivateFormat, NoEncryption
+from cryptography.hazmat.primitives.asymmetric import rsa
+
+# Générer une clé privée RSA
+private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+
+# Sauvegarder la clé privée sans mot de passe
+pem = private_key.private_bytes(
+    encoding=Encoding.PEM,
+    format=PrivateFormat.PKCS8,
+    encryption_algorithm=NoEncryption()
+)
+
+with open("private_key.pem", "wb") as f:
+    f.write(pem)
+
+# Charger la clé privée
+from cryptography.hazmat.primitives.serialization import load_pem_private_key
+
+with open("private_key.pem", "rb") as f:
+    loaded_private_key = load_pem_private_key(f.read(), password=None)
+```
+
+---
+
+#### **2.2 Gestion des clés avec services externes**
+- **HashiCorp Vault** ou **AWS KMS** : Gèrent les clés et effectuent les opérations cryptographiques sur des environnements sécurisés.
+- **HSM (Hardware Security Module)** : Stocke et protège les clés sur du matériel dédié.
+
+---
+
+#### **2.3 Protection contre les fuites**
+Utilisez les bonnes pratiques suivantes pour protéger vos clés :
+1. **Ne jamais stocker de clés en clair** dans le code source.
+2. **Limiter les accès** en utilisant des permissions restrictives sur les fichiers contenant les clés.
+3. **Appliquer des rotations régulières** pour réduire les impacts en cas de compromission.
+
+---
+
+### **3. Avantages des courbes elliptiques et de la gestion sécurisée des clés**
+
+#### **Courbes elliptiques :**
+- **Efficacité** : Clés plus courtes pour une sécurité équivalente (par exemple, une clé ECC de 256 bits offre une sécurité similaire à une clé RSA de 3072 bits).
+- **Rapidité** : Moins d'opérations coûteuses comparées à RSA.
+
+#### **Gestion sécurisée des clés :**
+- Réduction des risques d’exfiltration grâce à un stockage sécurisé.
+- Conformité avec les réglementations comme **GDPR** ou **PCI DSS**.
+
+---
+
+### **Résumé**
+
+| **Aspect**                 | **Description**                                                          |
+|----------------------------|--------------------------------------------------------------------------|
+| **ECC (courbes elliptiques)** | Utilisées pour les signatures numériques (ECDSA) et l’échange de clés (ECDH). |
+| **Gestion des clés**        | Inclut la sérialisation, la protection et l’utilisation sécurisée.      |
+| **Modules Python**          | Utilisation de `cryptography` pour des opérations simples et efficaces. |
+
+Ces techniques permettent de sécuriser les communications et les données dans des applications modernes, tout en respectant les contraintes de performance et de mémoire.

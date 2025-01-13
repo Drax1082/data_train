@@ -1,3 +1,5 @@
+Niveau expert
+
 ### Chap 1. **Gestion de la mémoire et optimisation**
 
 La gestion de la mémoire et l’optimisation des performances sont des aspects cruciaux pour les applications Python de grande envergure, notamment dans le contexte de traitement de données, de calculs intensifs ou de services web. Ces concepts sont abordés sous différents angles, allant de la gestion de la mémoire par le garbage collector à la mesure des performances du code.
@@ -3141,3 +3143,681 @@ pip install pyspark
 #### **Conclusion**
 
 Ces outils permettent de construire des solutions avancées, allant des modèles simples à l’analyse de données massives en temps réel. Les frameworks comme TensorFlow, PyTorch, et PySpark offrent une flexibilité et une puissance inégalées pour relever les défis des projets de Machine Learning et de Big Data.
+
+### Chap 20 ** Optimisation et Mémoire en Python**
+
+L'optimisation de l'utilisation mémoire est essentielle, surtout pour des applications manipulant des grandes quantités de données ou nécessitant une performance élevée. Python offre des outils intégrés comme `__slots__`, `cProfile`, et `tracemalloc` pour réduire la consommation de mémoire et identifier les goulets d'étranglement.
+
+---
+
+### **1. Utilisation de `__slots__` pour réduire l'utilisation mémoire dans les classes**
+
+Par défaut, les objets Python utilisent un **dictionnaire interne** (`__dict__`) pour stocker leurs attributs. Ce mécanisme, bien que flexible, consomme plus de mémoire. L'utilisation de `__slots__` permet de limiter les attributs à un ensemble prédéfini, supprimant ainsi le besoin d'un dictionnaire et réduisant la mémoire consommée.
+
+#### **Fonctionnement de `__slots__` :**
+- `__slots__` est une liste ou un tuple d'attributs autorisés dans une classe.
+- Lorsque `__slots__` est défini, Python n'alloue plus de dictionnaire pour chaque instance de la classe.
+- Cela rend les classes moins dynamiques mais beaucoup plus économes en mémoire.
+
+---
+
+##### **Exemple d’utilisation de `__slots__` :**
+
+```python
+class WithoutSlots:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class WithSlots:
+    __slots__ = ['name', 'age']  # Attributs autorisés
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Création d'instances
+obj1 = WithoutSlots("Alice", 30)
+obj2 = WithSlots("Bob", 25)
+
+# Comparaison de mémoire
+import sys
+print(f"Sans __slots__ : {sys.getsizeof(obj1.__dict__)} octets")
+print(f"Avec __slots__ : {sys.getsizeof(obj2)} octets")
+```
+
+#### **Avantages :**
+- Réduction significative de la mémoire utilisée.
+- Performances légèrement améliorées pour l'accès aux attributs.
+
+#### **Limitations :**
+- Les classes avec `__slots__` ne peuvent pas avoir d'attributs dynamiques (ajoutés après l'initialisation).
+- Ne fonctionne pas avec l'héritage multiple.
+
+---
+
+### **2. Analyse des performances avec `cProfile` et `tracemalloc`**
+
+---
+
+#### **2.1 Analyse des performances avec `cProfile`**
+
+**`cProfile`** est un outil intégré dans Python pour profiler un programme, c'est-à-dire identifier quelles parties du code consomment le plus de temps. Cela est utile pour optimiser les performances en détectant les fonctions les plus coûteuses.
+
+---
+
+##### **Exemple simple d’utilisation :**
+
+```python
+import cProfile
+
+def calcul_intensif():
+    total = 0
+    for i in range(1000000):
+        total += i
+    return total
+
+def programme_principal():
+    calcul_intensif()
+    print("Programme terminé.")
+
+# Profilage
+cProfile.run('programme_principal()')
+```
+
+---
+
+##### **Interprétation des résultats :**
+- **ncalls** : Nombre d’appels pour chaque fonction.
+- **tottime** : Temps total passé dans la fonction (sans inclure les appels aux autres fonctions).
+- **cumtime** : Temps cumulé (temps passé dans la fonction + temps des sous-appels).
+
+---
+
+#### **2.2 Analyse de l’utilisation mémoire avec `tracemalloc`**
+
+**`tracemalloc`** est une bibliothèque Python permettant de suivre l’utilisation mémoire en identifiant où la mémoire a été allouée. Il est particulièrement utile pour détecter des fuites mémoire ou des allocations excessives.
+
+---
+
+##### **Exemple d’utilisation de `tracemalloc` :**
+
+```python
+import tracemalloc
+
+def fonction_qui_utilise_memoire():
+    x = [i ** 2 for i in range(10000)]  # Grande liste en mémoire
+    return x
+
+# Activer tracemalloc
+tracemalloc.start()
+
+# Exécuter le code à profiler
+fonction_qui_utilise_memoire()
+
+# Afficher les statistiques mémoire
+snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('lineno')
+
+print("[ Top 10 allocations mémoire ]")
+for stat in top_stats[:10]:
+    print(stat)
+```
+
+---
+
+##### **Interprétation des résultats :**
+- `statistics('lineno')` : Classe les allocations mémoire par ligne de code.
+- Vous pouvez repérer les lignes de code consommant le plus de mémoire et optimiser ces sections.
+
+---
+
+### **3. Combinaison des outils**
+
+En combinant `cProfile` pour le temps d'exécution et `tracemalloc` pour l’utilisation mémoire, vous obtenez une vue complète des performances et des ressources utilisées par votre programme.
+
+---
+
+#### **Exemple complet :**
+
+```python
+import cProfile
+import tracemalloc
+
+def fonction_optimisable():
+    total = sum(i ** 2 for i in range(10000))  # Consomme beaucoup de ressources
+    return total
+
+# Activer tracemalloc
+tracemalloc.start()
+
+# Profilage de la fonction
+cProfile.run('fonction_optimisable()')
+
+# Capture des allocations mémoire
+snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('lineno')
+
+print("[ Statistiques mémoire ]")
+for stat in top_stats[:5]:
+    print(stat)
+```
+
+---
+
+### **4. Conseils pratiques pour l'optimisation**
+
+1. **Éviter les structures inutiles** :
+   - Utiliser des tuples au lieu des listes pour les données immuables.
+   - Privilégier les compréhensions de liste/générateur.
+
+2. **Utiliser des bibliothèques externes** :
+   - Pour les calculs intensifs, utiliser `NumPy` qui est optimisé pour la performance.
+
+3. **Optimiser les algorithmes** :
+   - Identifier les fonctions les plus lentes avec `cProfile`.
+   - Améliorer les performances en réduisant la complexité algorithmique.
+
+---
+
+### **Conclusion**
+
+- L’utilisation de `__slots__` peut réduire considérablement la mémoire des classes tout en améliorant les performances.
+- `cProfile` et `tracemalloc` sont des outils indispensables pour profiler les performances temporelles et l’utilisation mémoire d’un programme.
+- En combinant ces techniques avec des bonnes pratiques d’optimisation, il est possible de concevoir des applications Python plus performantes et plus efficaces.
+
+### Chap 21 ** Interopérabilité avancée en Python**
+
+L’interopérabilité permet à Python de collaborer efficacement avec d’autres langages de programmation, comme C et C++, afin d’améliorer les performances ou d’exploiter des bibliothèques externes. Voici deux techniques avancées : **l’utilisation de `ctypes` et `CFFI` pour appeler des bibliothèques externes**, et **Cython** pour optimiser les parties critiques du code.
+
+---
+
+### **1. Appels à des bibliothèques externes avec `ctypes` et `CFFI`**
+
+#### **1.1 Utilisation de `ctypes`**
+
+`ctypes` est une bibliothèque standard Python qui permet de charger des bibliothèques C dynamiques (DLL sous Windows ou `.so` sous Linux) et d’appeler leurs fonctions.
+
+---
+
+##### **Exemple : Appel d'une bibliothèque C avec `ctypes`**
+
+1. **Créer une bibliothèque C** :
+
+   ```c
+   // mathlib.c
+   #include <stdio.h>
+
+   int add(int a, int b) {
+       return a + b;
+   }
+   ```
+
+2. **Compiler la bibliothèque** :
+
+   Sous Linux :
+
+   ```bash
+   gcc -shared -o libmathlib.so -fPIC mathlib.c
+   ```
+
+   Sous Windows :
+
+   ```bash
+   gcc -shared -o mathlib.dll -fPIC mathlib.c
+   ```
+
+3. **Utiliser `ctypes` en Python** :
+
+   ```python
+   import ctypes
+
+   # Charger la bibliothèque partagée
+   lib = ctypes.CDLL('./libmathlib.so')  # .dll sous Windows
+
+   # Définir les types des arguments et du retour de la fonction
+   lib.add.argtypes = [ctypes.c_int, ctypes.c_int]
+   lib.add.restype = ctypes.c_int
+
+   # Appeler la fonction
+   result = lib.add(3, 5)
+   print(f"Résultat : {result}")  # Résultat : 8
+   ```
+
+---
+
+##### **Avantages de `ctypes`** :
+- Inclus dans la bibliothèque standard Python.
+- Facile à utiliser pour des bibliothèques simples.
+
+##### **Limitations** :
+- Moins adapté pour les bibliothèques complexes nécessitant des structures ou des callbacks.
+
+---
+
+#### **1.2 Utilisation de `CFFI`**
+
+`CFFI` (C Foreign Function Interface) est une alternative à `ctypes`, offrant une interface plus intuitive pour interagir avec du code C. Il est particulièrement utile pour les bibliothèques avec des structures complexes.
+
+---
+
+##### **Exemple avec `CFFI`** :
+
+1. **Créer une bibliothèque C** :
+
+   (Utilisez le même fichier C et compilez comme dans l'exemple précédent.)
+
+2. **Utiliser `CFFI` en Python** :
+
+   ```python
+   from cffi import FFI
+
+   ffi = FFI()
+
+   # Déclarer la signature des fonctions
+   ffi.cdef("""
+       int add(int a, int b);
+   """)
+
+   # Charger la bibliothèque
+   lib = ffi.dlopen("./libmathlib.so")
+
+   # Appeler la fonction
+   result = lib.add(3, 5)
+   print(f"Résultat avec CFFI : {result}")  # Résultat : 8
+   ```
+
+---
+
+##### **Avantages de `CFFI`** :
+- Plus puissant que `ctypes` pour des bibliothèques complexes.
+- Compatible avec des structures C.
+
+##### **Limitations** :
+- Nécessite une installation (`pip install cffi`).
+
+---
+
+### **2. Introduction à Cython**
+
+**Cython** est un outil qui transforme le code Python en C pour des gains significatifs en termes de performance. Il est souvent utilisé pour accélérer les parties critiques des programmes Python.
+
+---
+
+#### **2.1 Principes de base**
+
+- Cython permet d'ajouter des annotations de types (`cdef`) pour compiler du code Python en C.
+- Cela réduit l'interprétation à l’exécution, augmentant la vitesse d’exécution.
+
+---
+
+#### **Exemple simple avec Cython**
+
+1. **Créer un fichier `example.pyx`** :
+
+   ```python
+   def somme(int n):
+       cdef int i, total = 0
+       for i in range(n):
+           total += i
+       return total
+   ```
+
+2. **Créer un fichier `setup.py`** :
+
+   ```python
+   from setuptools import setup
+   from Cython.Build import cythonize
+
+   setup(
+       ext_modules=cythonize("example.pyx"),
+   )
+   ```
+
+3. **Compiler le code** :
+
+   ```bash
+   python setup.py build_ext --inplace
+   ```
+
+4. **Utiliser le fichier compilé** :
+
+   ```python
+   import example
+
+   print(example.somme(1000000))  # Somme rapide grâce à Cython
+   ```
+
+---
+
+#### **2.2 Avantages de Cython** :
+- Accélère les boucles lourdes et les calculs intensifs.
+- Intègre facilement des bibliothèques C existantes.
+
+#### **Limitations** :
+- Nécessite des connaissances en C pour les optimisations avancées.
+- Augmente la complexité du processus de développement.
+
+---
+
+### **Résumé Comparatif**
+
+| **Méthode**         | **Avantages**                             | **Limites**                            |
+|----------------------|-------------------------------------------|----------------------------------------|
+| `ctypes`            | Inclus dans Python, simple à utiliser     | Moins adapté pour des structures complexes |
+| `CFFI`              | Intuitif, gère bien les structures C      | Besoin d'une installation supplémentaire |
+| **Cython**          | Optimisation puissante des performances   | Complexité accrue pour le développement |
+
+---
+
+### **Conclusion**
+
+L'interopérabilité avancée avec des bibliothèques externes est une compétence essentielle pour les développeurs Python travaillant sur des applications nécessitant des performances élevées. Selon les besoins, `ctypes`, `CFFI`, ou **Cython** offrent des solutions adaptées, allant de l'accès simple à des bibliothèques C à l'optimisation des calculs lourds via des compilations C.
+
+### Chap 22 ** Programmation réseau avancée**
+
+La programmation réseau avancée en Python permet de développer des applications capables de gérer des communications TCP, UDP, ou WebSocket de manière performante. Python offre des bibliothèques modernes comme **`asyncio`** pour la programmation asynchrone et **`websockets`** pour des connexions WebSocket bidirectionnelles.
+
+---
+
+### **1. Création de serveurs TCP/UDP avec `asyncio`**
+
+`asyncio` est une bibliothèque native de Python pour gérer des entrées/sorties asynchrones, particulièrement utile dans des scénarios réseau.
+
+---
+
+#### **1.1 Serveur TCP avec `asyncio`**
+
+Un serveur TCP (Transmission Control Protocol) garantit une communication fiable entre client et serveur.
+
+##### **Exemple : Serveur TCP avec `asyncio`**
+
+```python
+import asyncio
+
+async def handle_client(reader, writer):
+    addr = writer.get_extra_info('peername')
+    print(f"Connexion établie avec {addr}")
+
+    while True:
+        data = await reader.read(100)
+        if not data:
+            break  # Fin de connexion
+        print(f"Données reçues : {data.decode()}")
+        writer.write(data)  # Echo
+        await writer.drain()  # Assurez-vous que les données sont envoyées
+
+    print(f"Connexion terminée avec {addr}")
+    writer.close()
+    await writer.wait_closed()
+
+async def main():
+    server = await asyncio.start_server(handle_client, '127.0.0.1', 8888)
+    addr = server.sockets[0].getsockname()
+    print(f"Serveur TCP démarré sur {addr}")
+
+    async with server:
+        await server.serve_forever()
+
+asyncio.run(main())
+```
+
+##### **Points clés** :
+- Le serveur écoute sur `127.0.0.1:8888`.
+- Les données reçues sont renvoyées au client (serveur echo).
+
+---
+
+#### **1.2 Serveur UDP avec `asyncio`**
+
+UDP (User Datagram Protocol) est plus léger que TCP mais ne garantit pas la fiabilité des transmissions.
+
+##### **Exemple : Serveur UDP avec `asyncio`**
+
+```python
+import asyncio
+
+async def handle_udp(reader, writer):
+    while True:
+        data, addr = await reader.read()
+        print(f"Données reçues de {addr}: {data.decode()}")
+        writer.sendto(b"Message reçu!", addr)
+
+async def main():
+    loop = asyncio.get_event_loop()
+    transport, protocol = await loop.create_datagram_endpoint(
+        lambda: asyncio.DatagramProtocol(),
+        local_addr=('127.0.0.1', 9999),
+    )
+    print("Serveur UDP démarré sur 127.0.0.1:9999")
+
+    try:
+        await asyncio.sleep(3600)  # Garder le serveur actif
+    finally:
+        transport.close()
+
+asyncio.run(main())
+```
+
+##### **Points clés** :
+- Un serveur UDP ne maintient pas de connexion persistante.
+- Utilisez `reader.read()` et `writer.sendto()` pour recevoir et envoyer des messages.
+
+---
+
+### **2. Gestion des connexions WebSocket avec le module `websockets`**
+
+Le module **`websockets`** fournit une API simple pour créer des serveurs et des clients WebSocket. Les WebSockets permettent une communication bidirectionnelle et en temps réel, souvent utilisée pour des chats, des tableaux de bord en direct ou des jeux.
+
+---
+
+#### **2.1 Serveur WebSocket avec `websockets`**
+
+##### **Exemple : Serveur WebSocket**
+
+1. **Installation** :
+
+   ```bash
+   pip install websockets
+   ```
+
+2. **Code du serveur** :
+
+   ```python
+   import asyncio
+   import websockets
+
+   async def echo(websocket, path):
+       print(f"Client connecté : {path}")
+       async for message in websocket:
+           print(f"Message reçu : {message}")
+           await websocket.send(f"Echo : {message}")
+
+   # Lancer le serveur
+   async def main():
+       async with websockets.serve(echo, "127.0.0.1", 8765):
+           print("Serveur WebSocket démarré sur ws://127.0.0.1:8765")
+           await asyncio.Future()  # Garde le serveur actif
+
+   asyncio.run(main())
+   ```
+
+3. **Points clés** :
+   - Le serveur écoute sur `ws://127.0.0.1:8765`.
+   - Il renvoie un message "echo" pour chaque message reçu.
+
+---
+
+#### **2.2 Client WebSocket avec `websockets`**
+
+##### **Exemple : Client WebSocket**
+
+```python
+import asyncio
+import websockets
+
+async def communicate():
+    async with websockets.connect("ws://127.0.0.1:8765") as websocket:
+        await websocket.send("Salut serveur!")
+        response = await websocket.recv()
+        print(f"Réponse du serveur : {response}")
+
+asyncio.run(communicate())
+```
+
+---
+
+### **3. Points importants sur `asyncio` et `websockets`**
+
+- **Avantages de l'approche asynchrone** :
+  - Les serveurs peuvent gérer plusieurs connexions simultanées sans bloquer les autres.
+  - Les WebSockets permettent une communication en temps réel, idéale pour les applications interactives.
+
+- **Limites** :
+  - L’approche asynchrone nécessite une gestion soignée des exceptions pour éviter les blocages ou les erreurs silencieuses.
+  - Les WebSockets ne sont pas toujours compatibles avec des environnements fortement contraints en ressources réseau.
+
+---
+
+### **Résumé**
+
+| **Protocole**       | **Utilisation**                               | **Cas d’usage**                     |
+|----------------------|-----------------------------------------------|--------------------------------------|
+| **TCP**             | Connexions fiables et persistantes            | Serveurs d’applications, jeux en ligne |
+| **UDP**             | Connexions rapides, non fiables               | Vidéos en streaming, DNS            |
+| **WebSockets**      | Communication bidirectionnelle en temps réel | Chats, tableaux de bord, jeux       |
+
+Avec `asyncio` et `websockets`, Python offre une solution robuste et performante pour développer des applications réseau avancées.
+
+### Chap 23 ** Cryptographie avancée**
+
+La cryptographie est essentielle pour garantir la confidentialité, l'intégrité et l'authenticité des données dans les systèmes modernes. Cette section explore deux concepts avancés : **l'utilisation des courbes elliptiques (ECC)** pour la signature et le chiffrement, et **la gestion sécurisée des clés** avec des modules comme `cryptography`.
+
+---
+
+### **1. Utilisation des courbes elliptiques (ECC)**
+
+Les **courbes elliptiques (ECC)** sont une méthode de cryptographie asymétrique offrant une sécurité équivalente à des clés beaucoup plus courtes que RSA. Cela les rend idéales pour les systèmes où les ressources (bande passante, stockage) sont limitées.
+
+#### **1.1 Concepts fondamentaux**
+- **Chiffrement ECC** : Utilise des points sur une courbe elliptique pour établir une clé publique et privée.
+- **Signature ECC (ECDSA)** : Permet de signer des messages avec une clé privée et de vérifier la signature avec une clé publique.
+- **Échange de clés ECC (ECDH)** : Établit une clé secrète partagée entre deux parties.
+
+#### **1.2 Exemple d'utilisation avec `cryptography`**
+
+##### **Installation**
+
+```bash
+pip install cryptography
+```
+
+##### **Signature numérique avec ECDSA**
+
+```python
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives import hashes
+
+# Générer une clé privée
+private_key = ec.generate_private_key(ec.SECP256R1())
+
+# Signer un message
+message = b"Message à signer"
+signature = private_key.sign(message, ec.ECDSA(hashes.SHA256()))
+
+# Vérifier la signature avec la clé publique
+public_key = private_key.public_key()
+try:
+    public_key.verify(signature, message, ec.ECDSA(hashes.SHA256()))
+    print("Signature valide.")
+except Exception as e:
+    print("Signature invalide:", e)
+```
+
+##### **Échange de clés avec ECDH**
+
+```python
+# Génération de deux paires de clés
+private_key_1 = ec.generate_private_key(ec.SECP256R1())
+private_key_2 = ec.generate_private_key(ec.SECP256R1())
+
+# Génération d'une clé partagée
+shared_key_1 = private_key_1.exchange(ec.ECDH(), private_key_2.public_key())
+shared_key_2 = private_key_2.exchange(ec.ECDH(), private_key_1.public_key())
+
+print(shared_key_1 == shared_key_2)  # Affiche True : la clé partagée est identique
+```
+
+---
+
+### **2. Gestion sécurisée des clés avec `cryptography`**
+
+La gestion des clés est essentielle pour garantir la sécurité des systèmes cryptographiques. Les clés doivent être générées, stockées et utilisées de manière sécurisée pour éviter les fuites ou les compromissions.
+
+#### **2.1 Génération et stockage des clés**
+
+##### **Sérialisation des clés**
+Le module `cryptography` permet de sérialiser (sauvegarder) les clés dans des fichiers, protégés ou non par un mot de passe.
+
+###### **Exemple : Sauvegarde et chargement d'une clé privée**
+
+```python
+from cryptography.hazmat.primitives.serialization import Encoding, PrivateFormat, NoEncryption
+from cryptography.hazmat.primitives.asymmetric import rsa
+
+# Générer une clé privée RSA
+private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+
+# Sauvegarder la clé privée sans mot de passe
+pem = private_key.private_bytes(
+    encoding=Encoding.PEM,
+    format=PrivateFormat.PKCS8,
+    encryption_algorithm=NoEncryption()
+)
+
+with open("private_key.pem", "wb") as f:
+    f.write(pem)
+
+# Charger la clé privée
+from cryptography.hazmat.primitives.serialization import load_pem_private_key
+
+with open("private_key.pem", "rb") as f:
+    loaded_private_key = load_pem_private_key(f.read(), password=None)
+```
+
+---
+
+#### **2.2 Gestion des clés avec services externes**
+- **HashiCorp Vault** ou **AWS KMS** : Gèrent les clés et effectuent les opérations cryptographiques sur des environnements sécurisés.
+- **HSM (Hardware Security Module)** : Stocke et protège les clés sur du matériel dédié.
+
+---
+
+#### **2.3 Protection contre les fuites**
+Utilisez les bonnes pratiques suivantes pour protéger vos clés :
+1. **Ne jamais stocker de clés en clair** dans le code source.
+2. **Limiter les accès** en utilisant des permissions restrictives sur les fichiers contenant les clés.
+3. **Appliquer des rotations régulières** pour réduire les impacts en cas de compromission.
+
+---
+
+### **3. Avantages des courbes elliptiques et de la gestion sécurisée des clés**
+
+#### **Courbes elliptiques :**
+- **Efficacité** : Clés plus courtes pour une sécurité équivalente (par exemple, une clé ECC de 256 bits offre une sécurité similaire à une clé RSA de 3072 bits).
+- **Rapidité** : Moins d'opérations coûteuses comparées à RSA.
+
+#### **Gestion sécurisée des clés :**
+- Réduction des risques d’exfiltration grâce à un stockage sécurisé.
+- Conformité avec les réglementations comme **GDPR** ou **PCI DSS**.
+
+---
+
+### **Résumé**
+
+| **Aspect**                 | **Description**                                                          |
+|----------------------------|--------------------------------------------------------------------------|
+| **ECC (courbes elliptiques)** | Utilisées pour les signatures numériques (ECDSA) et l’échange de clés (ECDH). |
+| **Gestion des clés**        | Inclut la sérialisation, la protection et l’utilisation sécurisée.      |
+| **Modules Python**          | Utilisation de `cryptography` pour des opérations simples et efficaces. |
+
+Ces techniques permettent de sécuriser les communications et les données dans des applications modernes, tout en respectant les contraintes de performance et de mémoire.

@@ -1,3 +1,5 @@
+Niveau Intermédiaire 
+
 ### Chap 1 **Compréhension de liste (List Comprehension)**
 
 La **compréhension de liste** est une technique puissante et concise pour créer de nouvelles listes en appliquant des expressions et des conditions de manière déclarative. Elle permet de générer des listes rapidement tout en améliorant la lisibilité du code et en réduisant le nombre de lignes nécessaires par rapport à l'utilisation de boucles `for` classiques.
@@ -4481,4 +4483,1297 @@ docker-compose up
 - **Ansible** est idéal pour automatiser les déploiements, gérer les configurations, et maintenir des infrastructures cohérentes.
 - **Docker** simplifie la conteneurisation des applications, en garantissant leur portabilité entre différents environnements.
 
-En combinant les deux, vous pouvez orchestrer des conteneurs Docker avec Ansible pour une gestion centralisée de vos infrastructures et applications.
+### Chap 28 **Introduction aux Expressions Régulières avec le Module `re`**
+
+Les expressions régulières (regex) sont des outils puissants pour rechercher, valider ou manipuler des chaînes de caractères en Python. Le module `re` de la bibliothèque standard fournit les fonctions nécessaires pour travailler avec ces patterns.
+
+---
+
+### **1. Concepts de base**
+
+- **Expression régulière** : Une séquence de caractères décrivant un modèle (pattern) de recherche.
+- **Utilisation courante** : 
+  - Recherche de sous-chaînes.
+  - Validation de formats (e-mails, numéros de téléphone, etc.).
+  - Remplacement ou modification de contenu.
+
+---
+
+### **2. Fonctions principales du module `re`**
+
+#### **a. Recherche avec `re.search`**
+
+Recherche le premier endroit où le pattern correspond dans une chaîne.
+
+```python
+import re
+
+texte = "Mon numéro est 123-456-7890."
+match = re.search(r"\d{3}-\d{3}-\d{4}", texte)
+if match:
+    print(f"Numéro trouvé : {match.group()}")
+```
+
+#### **b. Validation avec `re.match`**
+
+Vérifie si une chaîne entière correspond à un pattern.
+
+```python
+pattern = r"^\d{3}-\d{3}-\d{4}$"
+chaine = "123-456-7890"
+if re.match(pattern, chaine):
+    print("Format valide")
+else:
+    print("Format invalide")
+```
+
+#### **c. Recherche multiple avec `re.findall`**
+
+Renvoie toutes les correspondances sous forme de liste.
+
+```python
+texte = "Voici deux numéros : 123-456-7890 et 987-654-3210."
+matches = re.findall(r"\d{3}-\d{3}-\d{4}", texte)
+print("Numéros trouvés :", matches)
+```
+
+#### **d. Substitution avec `re.sub`**
+
+Remplace toutes les correspondances d'un pattern par une autre chaîne.
+
+```python
+texte = "Mon numéro est 123-456-7890."
+texte_modifie = re.sub(r"\d{3}-\d{3}-\d{4}", "XXX-XXX-XXXX", texte)
+print(texte_modifie)
+```
+
+---
+
+### **3. Cas pratiques**
+
+#### **a. Validation d'adresses e-mail**
+
+```python
+email = "exemple@test.com"
+pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+if re.match(pattern, email):
+    print("Adresse e-mail valide")
+else:
+    print("Adresse e-mail invalide")
+```
+
+#### **b. Extraction d'informations (dates)**
+
+```python
+texte = "Les événements ont lieu le 10/01/2025 et le 15/02/2025."
+dates = re.findall(r"\d{2}/\d{2}/\d{4}", texte)
+print("Dates extraites :", dates)
+```
+
+#### **c. Transformation de texte (formatage de numéros de téléphone)**
+
+```python
+texte = "1234567890 et 9876543210 sont mes numéros."
+formatted = re.sub(r"(\d{3})(\d{3})(\d{4})", r"\1-\2-\3", texte)
+print("Numéros formatés :", formatted)
+```
+
+---
+
+### **4. Options et Modificateurs**
+
+- **`re.IGNORECASE` (`re.I`)** : Ignore la casse lors de la recherche.
+- **`re.MULTILINE` (`re.M`)** : Permet de rechercher sur plusieurs lignes.
+- **`re.DOTALL` (`re.S`)** : Permet au point (`.`) de correspondre aux sauts de ligne.
+  
+Exemple :
+```python
+texte = "Bonjour\nMONDE"
+match = re.search(r"monde", texte, re.IGNORECASE)
+if match:
+    print("Correspondance trouvée :", match.group())
+```
+
+---
+
+### **5. Structure des Patterns**
+
+| **Pattern**       | **Description**                          |
+|--------------------|------------------------------------------|
+| `.`               | N'importe quel caractère sauf un saut de ligne. |
+| `\d`              | Un chiffre (`0-9`).                     |
+| `\w`              | Un caractère alphanumérique ou `_`.      |
+| `\s`              | Un espace, tabulation ou saut de ligne.  |
+| `*`               | Répète 0 ou plusieurs fois.             |
+| `+`               | Répète 1 ou plusieurs fois.             |
+| `{n}`             | Exactement `n` occurrences.             |
+| `[abc]`           | Un des caractères dans `abc`.           |
+| `[^abc]`          | Aucun des caractères dans `abc`.        |
+
+---
+
+### **6. Optimisation et Bonnes Pratiques**
+
+- **Compilations préalables avec `re.compile`** :
+  Permet de réutiliser un pattern compilé pour optimiser les performances.
+  ```python
+  pattern = re.compile(r"\d{3}-\d{3}-\d{4}")
+  print(pattern.search("Numéro : 123-456-7890"))
+  ```
+
+- **Tester vos regex** :
+  Utilisez des outils comme [regex101](https://regex101.com) pour tester vos patterns.
+
+- **Éviter les patterns trop complexes** :
+  Décomposez les regex compliquées pour les rendre plus lisibles.
+
+---
+
+### **Résumé**
+
+Les expressions régulières sont indispensables pour traiter et analyser les chaînes de caractères en Python. Grâce au module `re`, vous pouvez rechercher, valider, et transformer facilement du texte. Toutefois, leur puissance nécessite de bien comprendre les patterns et d'utiliser des pratiques optimisées.
+
+### Chap 29 **Gestion des Fichiers Avancée avec les Modules `os` et `shutil`**
+
+La gestion avancée des fichiers en Python repose sur les modules `os` et `shutil`, qui offrent une multitude de fonctionnalités pour manipuler, copier, déplacer, et gérer les fichiers et répertoires.
+
+---
+
+### **1. Module `os` : Manipulation de Chemins et Fichiers**
+
+#### **a. Gestion des chemins**
+Le module `os` fournit des fonctions pour manipuler les chemins de fichiers, détecter leur existence, ou créer des répertoires.
+
+- **Vérification de l'existence d'un fichier ou dossier** :
+
+  ```python
+  import os
+
+  chemin = "mon_fichier.txt"
+  if os.path.exists(chemin):
+      print("Le fichier existe.")
+  else:
+      print("Le fichier n'existe pas.")
+  ```
+
+- **Joindre des chemins de manière portable** :
+
+  ```python
+  chemin_complet = os.path.join("dossier", "sous_dossier", "fichier.txt")
+  print(chemin_complet)
+  ```
+
+- **Récupérer le nom du fichier ou du répertoire parent** :
+
+  ```python
+  chemin = "/chemin/vers/fichier.txt"
+  print("Nom du fichier :", os.path.basename(chemin))
+  print("Répertoire parent :", os.path.dirname(chemin))
+  ```
+
+#### **b. Création et suppression**
+
+- **Créer un répertoire** :
+
+  ```python
+  os.makedirs("nouveau_dossier/sous_dossier", exist_ok=True)
+  print("Dossier créé.")
+  ```
+
+- **Supprimer un fichier ou répertoire vide** :
+
+  ```python
+  os.remove("fichier_a_supprimer.txt")  # Supprime un fichier
+  os.rmdir("dossier_vide")             # Supprime un répertoire vide
+  ```
+
+---
+
+### **2. Module `shutil` : Opérations Avancées sur les Fichiers**
+
+Le module `shutil` est idéal pour des opérations complexes comme la copie, le déplacement ou la compression de fichiers.
+
+#### **a. Copier des fichiers**
+
+- **Copier un fichier** :
+
+  ```python
+  import shutil
+
+  shutil.copy("source.txt", "destination.txt")
+  print("Fichier copié.")
+  ```
+
+- **Copier un fichier avec ses métadonnées** :
+
+  ```python
+  shutil.copy2("source.txt", "destination.txt")
+  ```
+
+#### **b. Déplacement et renommage**
+
+- **Déplacer un fichier ou un dossier** :
+
+  ```python
+  shutil.move("source.txt", "nouveau_dossier/")
+  ```
+
+#### **c. Suppression de dossiers entiers**
+
+- **Supprimer un répertoire et tout son contenu** :
+
+  ```python
+  shutil.rmtree("dossier_a_supprimer")
+  print("Dossier supprimé.")
+  ```
+
+#### **d. Création d'archives**
+
+- **Créer une archive ZIP ou TAR** :
+
+  ```python
+  shutil.make_archive("mon_archive", "zip", "dossier_a_compresser")
+  print("Archive créée.")
+  ```
+
+---
+
+### **3. Cas Pratiques**
+
+#### **a. Liste des fichiers dans un répertoire**
+
+```python
+chemin = "mon_dossier"
+fichiers = os.listdir(chemin)
+print("Fichiers et dossiers :", fichiers)
+```
+
+#### **b. Rechercher des fichiers avec une extension spécifique**
+
+```python
+chemin = "mon_dossier"
+for fichier in os.listdir(chemin):
+    if fichier.endswith(".txt"):
+        print("Fichier texte trouvé :", fichier)
+```
+
+#### **c. Vérifier la taille d'un fichier**
+
+```python
+chemin = "mon_fichier.txt"
+taille = os.path.getsize(chemin)
+print(f"Taille du fichier : {taille} octets")
+```
+
+---
+
+### **4. Bonnes Pratiques**
+
+- **Vérification préalable** :
+  Toujours vérifier l'existence d'un fichier ou répertoire avant d'y accéder ou de le supprimer.
+  
+- **Utilisation de chemins absolus ou relatifs portables** :
+  Utilisez `os.path.join` pour garantir la compatibilité multiplateforme.
+
+- **Gestion des exceptions** :
+
+  Manipuler les fichiers peut entraîner des erreurs (fichiers non trouvés, permissions insuffisantes). Utilisez `try/except` pour une gestion sécurisée.
+
+  ```python
+  try:
+      os.remove("fichier_inexistant.txt")
+  except FileNotFoundError:
+      print("Fichier introuvable.")
+  ```
+
+- **Nettoyage des ressources** :
+  Pour garantir une bonne gestion des ressources, utilisez des contextes (`with`) lorsque vous ouvrez ou manipulez des fichiers.
+
+---
+
+### **Résumé**
+
+- Le module `os` gère principalement les chemins, la création/suppression de fichiers et dossiers.
+- Le module `shutil` offre des fonctionnalités avancées comme la copie, le déplacement, et la compression.
+- Ces outils combinés permettent une gestion fine et puissante des fichiers dans des projets Python.
+
+### Chap 30 **Concepts de Classe Avancée en Python**
+
+La programmation orientée objet (POO) en Python permet de structurer et de gérer des programmes complexes en utilisant des classes et des objets. Les concepts avancés incluent l'utilisation de méthodes spéciales, l'héritage approfondi et d'autres mécanismes qui enrichissent les fonctionnalités des classes.
+
+---
+
+### **1. Méthodes Spéciales**
+Les méthodes spéciales, ou "méthodes magiques", permettent de personnaliser le comportement des objets dans certains contextes spécifiques. Elles sont reconnaissables par leur double underscore (`__`).
+
+#### **a. `__str__` et `__repr__` : Représentation des objets**
+- **`__str__`** : Retourne une représentation lisible pour les utilisateurs (souvent utilisée dans `print`).
+- **`__repr__`** : Retourne une représentation officielle destinée aux développeurs (idéalement exécutable).
+
+```python
+class Personne:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age = age
+
+    def __str__(self):
+        return f"{self.nom}, {self.age} ans"
+
+    def __repr__(self):
+        return f"Personne(nom='{self.nom}', age={self.age})"
+
+personne = Personne("Alice", 30)
+print(str(personne))   # Alice, 30 ans
+print(repr(personne))  # Personne(nom='Alice', age=30)
+```
+
+---
+
+#### **b. `__eq__` : Comparaison d'objets**
+Permet de définir le comportement de l'opérateur `==`.
+
+```python
+class Personne:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age = age
+
+    def __eq__(self, autre):
+        return self.nom == autre.nom and self.age == autre.age
+
+personne1 = Personne("Alice", 30)
+personne2 = Personne("Alice", 30)
+print(personne1 == personne2)  # True
+```
+
+---
+
+#### **c. Autres méthodes utiles**
+- **`__lt__`, `__le__`, `__gt__`, `__ge__`** : Comparaisons `<`, `<=`, `>`, `>=`.
+- **`__add__`, `__sub__`, `__mul__`, etc.** : Surcharge des opérateurs arithmétiques.
+- **`__len__`** : Définir le comportement de `len()` pour un objet.
+- **`__call__`** : Rendre un objet "appelable" comme une fonction.
+
+```python
+class Addition:
+    def __init__(self, valeur):
+        self.valeur = valeur
+
+    def __call__(self, autre):
+        return self.valeur + autre
+
+add = Addition(5)
+print(add(10))  # 15
+```
+
+---
+
+### **2. Héritage Avancé**
+L'héritage permet à une classe d'hériter des attributs et des méthodes d'une autre classe.
+
+#### **a. Héritage simple**
+Une classe dérive d'une seule classe parente.
+
+```python
+class Animal:
+    def parler(self):
+        print("L'animal fait un bruit.")
+
+class Chien(Animal):
+    def parler(self):
+        print("Le chien aboie.")
+
+chien = Chien()
+chien.parler()  # Le chien aboie.
+```
+
+---
+
+#### **b. Héritage multiple**
+Une classe peut hériter de plusieurs classes parentes. Cela nécessite de gérer les conflits éventuels via l'ordre de résolution des méthodes (MRO, Method Resolution Order).
+
+```python
+class A:
+    def dire(self):
+        print("Classe A")
+
+class B:
+    def dire(self):
+        print("Classe B")
+
+class C(A, B):
+    pass
+
+c = C()
+c.dire()  # Classe A (ordre de MRO : C -> A -> B)
+```
+
+Pour voir l'ordre de résolution des méthodes :
+```python
+print(C.mro())  # [<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>]
+```
+
+---
+
+### **3. Concepts Avancés**
+#### **a. Héritage avec super()**
+La fonction `super()` permet d'accéder aux méthodes ou attributs des classes parentes, même dans le cas d'un héritage multiple.
+
+```python
+class Parent:
+    def __init__(self, nom):
+        self.nom = nom
+
+class Enfant(Parent):
+    def __init__(self, nom, age):
+        super().__init__(nom)
+        self.age = age
+
+enfant = Enfant("Alice", 10)
+print(enfant.nom, enfant.age)  # Alice 10
+```
+
+---
+
+#### **b. Classes abstraites**
+Les classes abstraites servent de modèles et ne peuvent pas être instanciées. Elles utilisent le module `abc`.
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def parler(self):
+        pass
+
+class Chat(Animal):
+    def parler(self):
+        print("Le chat miaule.")
+
+chat = Chat()
+chat.parler()  # Le chat miaule.
+```
+
+---
+
+### **4. Cas Pratique : Polymorphisme**
+Le polymorphisme permet d'utiliser un même nom de méthode pour différents comportements.
+
+```python
+class Chien:
+    def parler(self):
+        print("Le chien aboie.")
+
+class Chat:
+    def parler(self):
+        print("Le chat miaule.")
+
+animaux = [Chien(), Chat()]
+for animal in animaux:
+    animal.parler()
+# Le chien aboie.
+# Le chat miaule.
+```
+
+---
+
+### **Résumé**
+- Les **méthodes spéciales** enrichissent le comportement des objets.
+- L'**héritage simple** est utile pour organiser le code, et l'**héritage multiple** doit être utilisé avec précaution.
+- Le **polymorphisme** et les **classes abstraites** facilitent l'évolutivité et la flexibilité du code.
+
+### Chap 31 **Threading de Base en Python**
+
+Le **multithreading** permet d'exécuter plusieurs tâches simultanément au sein d'un programme. Il est particulièrement utile pour les tâches d'I/O (lecture/écriture de fichiers, requêtes réseau) où les threads peuvent s'exécuter en parallèle pour améliorer les performances. Python fournit le module **`threading`** pour gérer les threads.
+
+---
+
+### **1. Concepts de Base**
+Un **thread** est une unité d'exécution indépendante qui partage les ressources (comme la mémoire) avec les autres threads du même processus.
+
+#### **Avantages :**
+- Permet des exécutions simultanées.
+- Idéal pour les tâches d'I/O.
+
+#### **Limites :**
+- En Python, le **GIL (Global Interpreter Lock)** limite l'exécution simultanée de threads pour le code Python pur. Cela impacte les tâches intensives en calcul.
+
+---
+
+### **2. Création d'un Thread**
+#### **Méthode 1 : Utilisation de `threading.Thread`**
+Créer un thread en définissant une fonction à exécuter.
+
+```python
+import threading
+import time
+
+def dire_bonjour():
+    for i in range(5):
+        print("Bonjour!")
+        time.sleep(1)
+
+# Créer un thread
+thread = threading.Thread(target=dire_bonjour)
+
+# Démarrer le thread
+thread.start()
+
+# Continuer l'exécution principale
+print("Tâche principale continue.")
+```
+
+---
+
+#### **Méthode 2 : Hériter de `threading.Thread`**
+Créer une classe personnalisée pour plus de contrôle.
+
+```python
+class MonThread(threading.Thread):
+    def __init__(self, nom):
+        super().__init__()
+        self.nom = nom
+
+    def run(self):
+        for i in range(5):
+            print(f"Thread {self.nom} en cours d'exécution.")
+            time.sleep(1)
+
+# Créer et démarrer un thread
+mon_thread = MonThread("A")
+mon_thread.start()
+```
+
+---
+
+### **3. Cas d'Utilisation Pratique**
+#### **Exemple : Téléchargement de fichiers en parallèle**
+Imaginons une tâche où plusieurs fichiers doivent être téléchargés simultanément.
+
+```python
+import threading
+import time
+
+def telecharger_fichier(nom_fichier, duree):
+    print(f"Téléchargement de {nom_fichier} commencé.")
+    time.sleep(duree)
+    print(f"Téléchargement de {nom_fichier} terminé.")
+
+fichiers = [("Fichier1", 3), ("Fichier2", 5), ("Fichier3", 2)]
+
+threads = []
+for nom, duree in fichiers:
+    thread = threading.Thread(target=telecharger_fichier, args=(nom, duree))
+    threads.append(thread)
+    thread.start()
+
+# Attendre la fin de tous les threads
+for thread in threads:
+    thread.join()
+
+print("Tous les téléchargements sont terminés.")
+```
+
+---
+
+### **4. Synchronisation avec `Lock`**
+Lorsque plusieurs threads accèdent aux mêmes ressources, des **verrous (`Lock`)** permettent d'éviter des conflits.
+
+#### **Exemple : Incrémentation sécurisée**
+Sans verrou, plusieurs threads pourraient modifier la même variable simultanément, entraînant des résultats imprévisibles.
+
+```python
+import threading
+
+compteur = 0
+lock = threading.Lock()
+
+def incrementer():
+    global compteur
+    for _ in range(1000):
+        with lock:  # Section critique
+            compteur += 1
+
+threads = [threading.Thread(target=incrementer) for _ in range(10)]
+
+for thread in threads:
+    thread.start()
+
+for thread in threads:
+    thread.join()
+
+print(f"Valeur finale du compteur : {compteur}")
+```
+
+---
+
+### **5. Limitations du GIL**
+Pour des tâches intensives en calcul (comme le traitement de données), le GIL empêche l'exécution parallèle des threads Python. Dans ce cas, **`multiprocessing`** ou des bibliothèques comme **Numba** ou **Cython** sont préférables.
+
+---
+
+### **Résumé**
+- **`threading.Thread`** permet de créer des threads pour exécuter des tâches simultanées.
+- Utilisez **`Lock`** pour synchroniser les accès à des ressources partagées.
+- Le threading est particulièrement utile pour les tâches I/O, mais pour les tâches intensives en calcul, privilégiez le **multiprocessing**.
+
+### Chap 32 **Fonctions Anonymes et Programmation Fonctionnelle de Base en Python**
+
+Python propose des outils puissants pour la **programmation fonctionnelle**, un paradigme qui se concentre sur l’utilisation de fonctions comme blocs de construction du programme. Les fonctions **anonymes (`lambda`)** et des outils comme **`map()`**, **`filter()`**, et **`reduce()`** permettent de manipuler efficacement des données sans écrire de boucles explicites.
+
+---
+
+### **1. Fonctions Anonymes (`lambda`)**
+Une **fonction lambda** est une fonction anonyme définie en une seule ligne. Elle est souvent utilisée pour des fonctions simples ou temporaires.
+
+#### **Syntaxe :**
+
+```python
+lambda arguments: expression
+```
+
+#### **Exemple :**
+
+Additionner deux nombres :
+
+```python
+addition = lambda x, y: x + y
+print(addition(3, 5))  # Sortie : 8
+```
+
+#### **Cas d'utilisation :**
+Les fonctions lambda sont souvent utilisées avec d'autres fonctions comme `map()`, `filter()`, ou des fonctions de tri.
+
+---
+
+### **2. La fonction `map()`**
+**`map()`** applique une fonction donnée à chaque élément d'une séquence (liste, tuple, etc.) et retourne un **itérable**.
+
+#### **Syntaxe :**
+
+```python
+map(function, iterable)
+```
+
+#### **Exemple : Conversion de températures Celsius en Fahrenheit**
+
+```python
+celsius = [0, 20, 30, 40]
+fahrenheit = list(map(lambda x: (x * 9/5) + 32, celsius))
+print(fahrenheit)  # Sortie : [32.0, 68.0, 86.0, 104.0]
+```
+
+---
+
+### **3. La fonction `filter()`**
+**`filter()`** retourne les éléments d'un itérable qui satisfont une condition (fonction renvoyant `True`).
+
+#### **Syntaxe :**
+
+```python
+filter(function, iterable)
+```
+
+#### **Exemple : Filtrer les nombres pairs**
+
+```python
+nombres = [1, 2, 3, 4, 5, 6]
+pairs = list(filter(lambda x: x % 2 == 0, nombres))
+print(pairs)  # Sortie : [2, 4, 6]
+```
+
+---
+
+### **4. La fonction `reduce()`**
+**`reduce()`** (dans le module `functools`) applique une fonction cumulativement à une séquence pour réduire cette dernière à une seule valeur.
+
+#### **Syntaxe :**
+
+```python
+from functools import reduce
+reduce(function, iterable)
+```
+
+#### **Exemple : Calcul du produit de tous les nombres**
+
+```python
+from functools import reduce
+
+nombres = [1, 2, 3, 4]
+produit = reduce(lambda x, y: x * y, nombres)
+print(produit)  # Sortie : 24
+```
+
+---
+
+### **5. Cas Pratiques**
+
+#### **Exemple 1 : Trier une liste de dictionnaires par une clé**
+
+Trier des étudiants par leurs notes :
+
+```python
+etudiants = [{'nom': 'Alice', 'note': 85}, {'nom': 'Bob', 'note': 92}, {'nom': 'Charlie', 'note': 78}]
+tri = sorted(etudiants, key=lambda x: x['note'], reverse=True)
+print(tri)
+# Sortie : [{'nom': 'Bob', 'note': 92}, {'nom': 'Alice', 'note': 85}, {'nom': 'Charlie', 'note': 78}]
+```
+
+#### **Exemple 2 : Calculer la somme des carrés des nombres pairs**
+
+```python
+nombres = [1, 2, 3, 4, 5, 6]
+somme_carre_pairs = reduce(lambda x, y: x + y, map(lambda x: x**2, filter(lambda x: x % 2 == 0, nombres)))
+print(somme_carre_pairs)  # Sortie : 56 (2² + 4² + 6²)
+```
+
+#### **Exemple 3 : Trouver le mot le plus long dans une liste**
+
+```python
+mots = ["chat", "éléphant", "chien", "oiseau"]
+mot_plus_long = reduce(lambda x, y: x if len(x) > len(y) else y, mots)
+print(mot_plus_long)  # Sortie : "éléphant"
+```
+
+---
+
+### **6. Comparaison avec des Boucles**
+
+Les fonctions comme `map()` et `filter()` rendent le code plus concis et lisible, mais elles ne remplacent pas toujours les boucles, surtout pour des logiques complexes. Comparez :
+
+#### **Avec `map()` :**
+
+```python
+nombres = [1, 2, 3, 4]
+carres = list(map(lambda x: x**2, nombres))
+print(carres)  # Sortie : [1, 4, 9, 16]
+```
+
+#### **Avec une boucle :**
+
+```python
+nombres = [1, 2, 3, 4]
+carres = [x**2 for x in nombres]
+print(carres)  # Sortie : [1, 4, 9, 16]
+```
+
+---
+
+### **Résumé**
+- Les **fonctions anonymes (`lambda`)** sont pratiques pour des opérations simples et temporaires.
+- **`map()`** et **`filter()`** offrent une manière concise de transformer ou filtrer des itérables.
+- **`reduce()`** est utile pour combiner tous les éléments d'une séquence en une seule valeur.
+- Ces outils conviennent particulièrement aux tâches fonctionnelles et aux pipelines de traitement de données.
+
+### Chap 33 **Itérateurs et Générateurs en Python**
+
+Les **itérateurs** et **générateurs** permettent de manipuler des séquences de données efficacement. Ils sont particulièrement utiles pour gérer de grandes quantités de données ou pour créer des flux de données en temps réel, tout en réduisant l'utilisation de la mémoire.
+
+---
+
+### **1. Itérateurs**
+
+Un **itérateur** est un objet qui implémente les méthodes spéciales **`__iter__()`** et **`__next__()`**, permettant de parcourir une séquence un élément à la fois.
+
+#### **Création d'un itérateur personnalisé**
+
+Voici un exemple simple pour créer un itérateur qui génère les nombres d'une séquence jusqu'à une limite donnée.
+
+```python
+class Compteur:
+    def __init__(self, limite):
+        self.limite = limite
+        self.courant = 0
+
+    def __iter__(self):
+        return self  # Un itérateur doit retourner lui-même.
+
+    def __next__(self):
+        if self.courant < self.limite:
+            valeur = self.courant
+            self.courant += 1
+            return valeur
+        else:
+            raise StopIteration  # Indique que l'itération est terminée.
+
+# Utilisation
+compteur = Compteur(5)
+for nombre in compteur:
+    print(nombre)  # Sortie : 0, 1, 2, 3, 4
+```
+
+---
+
+### **2. Générateurs**
+
+Un **générateur** est une fonction spéciale qui produit un itérateur sans avoir besoin d'implémenter manuellement les méthodes `__iter__()` et `__next__()`. Au lieu d'utiliser `return`, un générateur utilise **`yield`**, ce qui permet de suspendre et reprendre son exécution.
+
+#### **Création d'un générateur**
+
+Un générateur pour produire une séquence de Fibonacci :
+
+```python
+def fibonacci(limite):
+    a, b = 0, 1
+    while a < limite:
+        yield a  # Génère la valeur actuelle et suspend l'exécution.
+        a, b = b, a + b
+
+# Utilisation
+for nombre in fibonacci(10):
+    print(nombre)  # Sortie : 0, 1, 1, 2, 3, 5, 8
+```
+
+---
+
+### **3. Différences entre itérateurs et générateurs**
+
+| **Aspect**         | **Itérateur**                                                  | **Générateur**                     |
+|---------------------|---------------------------------------------------------------|-------------------------------------|
+| **Création**        | Implémentation manuelle avec `__iter__()` et `__next__()`.     | Utilisation d'une fonction avec `yield`. |
+| **Mémoire**         | Les données peuvent être stockées en mémoire.                 | Génère les valeurs à la demande (lazy evaluation). |
+| **Complexité**      | Peut être plus complexe à implémenter.                        | Plus simple et concis.              |
+
+---
+
+### **4. Générateurs vs Listes**
+
+Un générateur **ne stocke pas tous les éléments en mémoire**, contrairement à une liste. Cela permet de gérer des flux de données infinis ou de très grandes séquences.
+
+#### **Exemple : Liste vs Générateur**
+
+Avec une liste :
+
+```python
+nombres = [x**2 for x in range(10)]
+print(nombres)  # Sortie : [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+Avec un générateur :
+
+```python
+nombres = (x**2 for x in range(10))
+print(list(nombres))  # Sortie : [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+Le générateur ne calcule les valeurs qu'au moment où elles sont demandées.
+
+---
+
+### **5. Utilisation Avancée : Générateurs Infinis**
+
+Un générateur infini qui génère des nombres pairs :
+
+```python
+def nombres_pairs():
+    n = 0
+    while True:
+        yield n
+        n += 2
+
+# Utilisation
+pairs = nombres_pairs()
+for _ in range(5):
+    print(next(pairs))  # Sortie : 0, 2, 4, 6, 8
+```
+
+---
+
+### **6. Cas Pratiques**
+
+#### **Exemple 1 : Lecture de fichiers ligne par ligne**
+
+Les générateurs sont très utiles pour traiter de grands fichiers sans les charger entièrement en mémoire.
+
+```python
+def lire_fichier_en_lignes(nom_fichier):
+    with open(nom_fichier, 'r') as fichier:
+        for ligne in fichier:
+            yield ligne.strip()
+
+# Utilisation
+for ligne in lire_fichier_en_lignes("example.txt"):
+    print(ligne)
+```
+
+#### **Exemple 2 : Pipeline de traitement de données**
+				
+Créer des générateurs pour chaque étape d'un pipeline de traitement.
+
+```python
+def charger_donnees():
+    for i in range(10):
+        yield i
+
+def transformer_donnees(donnees):
+    for valeur in donnees:
+        yield valeur**2
+
+def filtrer_donnees(donnees):
+    for valeur in donnees:
+        if valeur % 2 == 0:
+            yield valeur
+
+# Chaînage des générateurs
+pipeline = filtrer_donnees(transformer_donnees(charger_donnees()))
+print(list(pipeline))  # Sortie : [0, 4, 16, 36, 64]
+```
+
+---
+
+### **Résumé**
+- Les **itérateurs** offrent un contrôle manuel sur l'itération.
+- Les **générateurs**, grâce à `yield`, fournissent une alternative simple pour créer des séquences paresseuses.
+- Ces outils sont essentiels pour **gérer efficacement la mémoire** et **traiter des flux de données** en temps réel.
+
+### Chap 34 **Manipulation des fichiers avancée en Python**
+
+La manipulation avancée des fichiers implique le travail avec différents formats de données courants (CSV, JSON, etc.) et des opérations sur le système de fichiers (par exemple, gestion des répertoires, copie de fichiers). Python offre des modules puissants comme **os**, **shutil**, **csv**, et **json** pour accomplir ces tâches.
+
+---
+
+### **1. Travail avec des fichiers CSV**
+
+Le module **`csv`** facilite la lecture et l'écriture de fichiers au format CSV (Comma-Separated Values).
+
+#### **Lecture d'un fichier CSV**
+
+```python
+import csv
+
+# Lecture d'un fichier CSV
+with open('exemple.csv', mode='r') as fichier:
+    lecteur_csv = csv.reader(fichier)
+    for ligne in lecteur_csv:
+        print(ligne)
+```
+
+#### **Écriture dans un fichier CSV**
+
+```python
+# Écriture dans un fichier CSV
+with open('sortie.csv', mode='w', newline='') as fichier:
+    ecrivain_csv = csv.writer(fichier)
+    ecrivain_csv.writerow(['Nom', 'Âge', 'Ville'])
+    ecrivain_csv.writerow(['Alice', 30, 'Paris'])
+    ecrivain_csv.writerow(['Bob', 25, 'Lyon'])
+```
+
+#### **Utilisation de `DictReader` et `DictWriter`**
+
+```python
+# Lecture avec DictReader
+with open('exemple.csv', mode='r') as fichier:
+    lecteur_csv = csv.DictReader(fichier)
+    for ligne in lecteur_csv:
+        print(ligne)
+
+# Écriture avec DictWriter
+with open('sortie.csv', mode='w', newline='') as fichier:
+    colonnes = ['Nom', 'Âge', 'Ville']
+    ecrivain_csv = csv.DictWriter(fichier, fieldnames=colonnes)
+    ecrivain_csv.writeheader()
+    ecrivain_csv.writerow({'Nom': 'Alice', 'Âge': 30, 'Ville': 'Paris'})
+    ecrivain_csv.writerow({'Nom': 'Bob', 'Âge': 25, 'Ville': 'Lyon'})
+```
+
+---
+
+### **2. Travail avec des fichiers JSON**
+
+Le module **`json`** permet de travailler avec des données au format JSON (JavaScript Object Notation).
+
+#### **Lecture d'un fichier JSON**
+
+```python
+import json
+
+# Lecture d'un fichier JSON
+with open('exemple.json', mode='r') as fichier:
+    donnees = json.load(fichier)
+    print(donnees)
+```
+
+#### **Écriture dans un fichier JSON**
+
+```python
+# Écriture dans un fichier JSON
+donnees = {
+    "Nom": "Alice",
+    "Âge": 30,
+    "Ville": "Paris"
+}
+
+with open('sortie.json', mode='w') as fichier:
+    json.dump(donnees, fichier, indent=4)  # `indent=4` pour une écriture lisible
+```
+
+---
+
+### **3. Utilisation des modules `os` et `shutil`**
+
+Ces modules permettent de manipuler le système de fichiers : création de répertoires, copie, déplacement, suppression de fichiers, etc.
+
+#### **Module `os`**
+
+- **Liste des fichiers dans un répertoire**
+```python
+import os
+
+# Liste des fichiers
+repertoire = './'
+fichiers = os.listdir(repertoire)
+print(fichiers)
+```
+
+- **Création et suppression de répertoires**
+
+```python
+# Création
+os.mkdir('nouveau_dossier')
+
+# Suppression
+os.rmdir('nouveau_dossier')
+```
+
+- **Manipulation des chemins**
+
+```python
+chemin = os.path.join('dossier', 'fichier.txt')
+print(chemin)  # Sortie : 'dossier/fichier.txt' (ou adapté selon l'OS)
+
+# Vérification si un fichier ou un répertoire existe
+print(os.path.exists(chemin))
+```
+
+#### **Module `shutil`**
+
+- **Copie et déplacement de fichiers**
+
+```python
+import shutil
+
+# Copie de fichier
+shutil.copy('source.txt', 'destination.txt')
+
+# Déplacement de fichier
+shutil.move('fichier.txt', 'nouveau_repertoire/')
+```
+
+- **Suppression de fichiers ou répertoires**
+
+```python
+# Suppression d'un fichier
+os.remove('fichier.txt')
+
+# Suppression d'un répertoire non vide
+shutil.rmtree('dossier_non_vide')
+```
+
+---
+
+### **4. Travail avec d'autres formats de fichiers**
+
+#### **Manipulation de fichiers texte**
+
+```python
+# Lecture
+with open('exemple.txt', mode='r') as fichier:
+    contenu = fichier.read()
+    print(contenu)
+
+# Écriture
+with open('exemple.txt', mode='w') as fichier:
+    fichier.write('Bonjour, monde!')
+```
+
+#### **Manipulation de fichiers XML**
+
+Pour les fichiers XML, utilisez le module **`xml.etree.ElementTree`**.
+
+```python
+import xml.etree.ElementTree as ET
+
+# Lecture d'un fichier XML
+arbre = ET.parse('exemple.xml')
+racine = arbre.getroot()
+print(racine.tag)
+
+# Écriture d'un fichier XML
+nouvel_element = ET.Element('note')
+nouvel_element.text = 'Ceci est un test'
+ET.ElementTree(nouvel_element).write('nouveau.xml')
+```
+
+---
+
+### **5. Conseils pratiques**
+1. Toujours utiliser `with` pour ouvrir des fichiers afin de s'assurer qu'ils sont correctement fermés.
+2. Vérifier l'existence des fichiers avant d'y accéder pour éviter des erreurs (`os.path.exists`).
+3. Utiliser des modules spécifiques comme **`pandas`** pour des manipulations complexes de données CSV ou JSON.
+
+---
+
+### **Résumé**
+- Le module **`csv`** facilite le travail avec des fichiers tabulaires.
+- Le module **`json`** permet de manipuler des structures complexes de données au format JSON.
+- Les modules **`os`** et **`shutil`** permettent une gestion avancée des fichiers et répertoires.
+- Python prend en charge de nombreux formats courants et offre une API intuitive pour leur manipulation.
+
+### Chap 35 **Expressions régulières (module `re`)**
+
+Les **expressions régulières (regex)** permettent de rechercher, valider, et manipuler des chaînes de caractères grâce à des motifs complexes. Python fournit le module **`re`** pour exploiter ces fonctionnalités.
+
+---
+
+### **1. Concepts de base des expressions régulières**
+
+- **Recherche** : Identifier des motifs spécifiques dans une chaîne.
+- **Substitution** : Remplacer des motifs par d'autres valeurs.
+- **Validation** : Vérifier si une chaîne correspond à un motif donné.
+
+---
+
+### **2. Fonctions principales du module `re`**
+
+#### **`re.search()`**
+
+Recherche le **premier** motif correspondant dans une chaîne.
+
+```python
+import re
+
+texte = "Bonjour, mon numéro est 123-456-7890."
+resultat = re.search(r'\d{3}-\d{3}-\d{4}', texte)  # Motif : numéro de téléphone
+if resultat:
+    print("Numéro trouvé :", resultat.group())
+```
+
+#### **`re.findall()`**
+
+Renvoie **toutes les occurrences** du motif sous forme de liste.
+
+```python
+texte = "Voici deux dates : 12/05/2023 et 14/06/2024."
+resultats = re.findall(r'\d{2}/\d{2}/\d{4}', texte)  # Motif : dates au format DD/MM/YYYY
+print("Dates trouvées :", resultats)
+```
+
+#### **`re.sub()`**
+
+Remplace toutes les occurrences d'un motif par une autre chaîne.
+
+```python
+texte = "Prix : 10$, 20$, 30$"
+nouveau_texte = re.sub(r'\$\d+', 'XX€', texte)  # Remplace les prix en dollars par "XX€"
+print(nouveau_texte)
+```
+
+#### **`re.match()`**
+
+Teste si un motif correspond au **début** d'une chaîne.
+
+```python
+texte = "abc123"
+if re.match(r'abc', texte):
+    print("Motif trouvé au début de la chaîne !")
+```
+
+#### **`re.split()`**
+
+Divise une chaîne en fonction d'un motif.
+
+```python
+texte = "Nom: Alice; Âge: 30; Ville: Paris"
+resultats = re.split(r';\s*', texte)  # Séparateurs : point-virgule suivi d'espaces
+print(resultats)
+```
+
+---
+
+### **3. Métacaractères courants et leurs significations**
+
+| Métacaractère | Signification                              | Exemple                       |
+|---------------|--------------------------------------------|-------------------------------|
+| `.`           | N'importe quel caractère sauf une nouvelle ligne | `a.b` correspond à "acb", "a0b" |
+| `^`           | Début de la chaîne                        | `^Bonjour` correspond à "Bonjour, monde" |
+| `$`           | Fin de la chaîne                          | `monde$` correspond à "Bonjour, monde" |
+| `*`           | 0 ou plusieurs occurrences                | `ab*` correspond à "a", "ab", "abb" |
+| `+`           | 1 ou plusieurs occurrences                | `ab+` correspond à "ab", "abb" |
+| `?`           | 0 ou 1 occurrence                         | `ab?` correspond à "a", "ab" |
+| `{n}`         | Exactement `n` occurrences                | `a{3}` correspond à "aaa" |
+| `{n,}`        | Au moins `n` occurrences                  | `a{2,}` correspond à "aa", "aaa" |
+| `{n,m}`       | Entre `n` et `m` occurrences              | `a{2,4}` correspond à "aa", "aaa", "aaaa" |
+| `[]`          | Classe de caractères                      | `[abc]` correspond à "a", "b", "c" |
+| `|`           | OU logique                                | `a|b` correspond à "a" ou "b" |
+| `\`           | Échappement des caractères spéciaux       | `\.` correspond à un point littéral |
+
+---
+
+### **4. Cas pratiques**
+
+#### **Validation d'une adresse e-mail**
+
+```python
+email = "exemple@mail.com"
+motif = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+if re.match(motif, email):
+    print("Adresse e-mail valide !")
+else:
+    print("Adresse e-mail invalide.")
+```
+
+#### **Recherche de mots commençant par une lettre spécifique**
+
+```python
+texte = "Python est puissant, précis, et performant."
+mots = re.findall(r'\bp\w*', texte, re.IGNORECASE)  # Mots commençant par "p" (non sensible à la casse)
+print("Mots trouvés :", mots)
+```
+
+#### **Extraire les numéros de téléphone**
+
+```python
+texte = "Contacts : +33-6-12345678, +33-7-98765432."
+motif = r'\+33-\d{1}-\d{8}'
+numeros = re.findall(motif, texte)
+print("Numéros extraits :", numeros)
+```
+
+#### **Remplacement de mots spécifiques**
+
+```python
+texte = "Le chat dort. Le chat mange. Le chat joue."
+nouveau_texte = re.sub(r'\bchat\b', 'chien', texte)
+print(nouveau_texte)
+```
+
+---
+
+### **5. Flags utiles dans `re`**
+
+- **`re.IGNORECASE` ou `re.I`** : Rend la recherche insensible à la casse.
+- **`re.DOTALL` ou `re.S`** : Permet à `.` de correspondre aux nouvelles lignes.
+- **`re.MULTILINE` ou `re.M`** : Permet à `^` et `$` de fonctionner sur chaque ligne.
+
+```python
+texte = """Bonjour.
+Bienvenue au tutoriel regex."""
+resultats = re.findall(r'^.+$', texte, re.MULTILINE)
+print(resultats)  # Chaque ligne est traitée individuellement
+```
+
+---
+
+### **6. Conseils pratiques**
+1. **Tester les motifs** : Utilisez des outils en ligne comme [regex101](https://regex101.com/) pour construire et tester vos expressions régulières.
+2. **Documenter vos motifs** : Les regex complexes deviennent rapidement difficiles à lire. Ajoutez des commentaires ou utilisez des motifs lisibles.
+3. **Éviter les cas d'utilisation abusifs** : Les regex ne sont pas adaptées pour tout (ex. : analyse syntaxique de HTML/XML).
+
+---
+
+### **Résumé**
+- Les expressions régulières sont puissantes pour manipuler et analyser des chaînes.
+- Les fonctions principales incluent `search`, `findall`, `sub`, `match`, et `split`.
+- Bien comprendre les métacaractères et utiliser les flags selon le besoin.
+- Les regex bien écrites permettent d'automatiser des tâches complexes avec efficacité.

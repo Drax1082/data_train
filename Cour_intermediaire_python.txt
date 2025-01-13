@@ -1,6 +1,6 @@
 Niveau Intermédiaire 
 
-### Chap 1 **Compréhension de liste (List Comprehension)**
+### Chapitre 1 **Compréhension de liste (List Comprehension)**
 
 La **compréhension de liste** est une technique puissante et concise pour créer de nouvelles listes en appliquant des expressions et des conditions de manière déclarative. Elle permet de générer des listes rapidement tout en améliorant la lisibilité du code et en réduisant le nombre de lignes nécessaires par rapport à l'utilisation de boucles `for` classiques.
 
@@ -166,7 +166,7 @@ En règle générale, la compréhension de liste est plus rapide en raison de so
 
 La compréhension de liste est un outil puissant en Python pour générer des listes de manière concise et élégante. Elle permet d'écrire des expressions complexes de manière lisible tout en améliorant les performances du code. L'utilisation de conditions et de structures imbriquées rend cette technique encore plus flexible et polyvalente.
 
-### Chap 2 **Fonctions Lambda en Python**
+### Chapitre 2 **Fonctions Lambda en Python**
 
 Les **fonctions lambda** sont des fonctions anonymes en Python, créées avec le mot-clé `lambda`. Elles permettent de définir des fonctions simples de manière concise et généralement en une seule ligne. Contrairement aux fonctions classiques définies avec `def`, les fonctions lambda ne nécessitent pas de nom et sont souvent utilisées pour des opérations simples ou comme arguments dans des fonctions de traitement.
 
@@ -313,7 +313,7 @@ Les fonctions définies avec `def` sont plus lisibles, peuvent être documentée
 
 Les fonctions lambda sont un outil pratique dans le langage Python pour définir rapidement des fonctions simples et concises. Elles sont particulièrement utiles dans les cas où une fonction est nécessaire pour une tâche rapide, comme dans les appels aux fonctions de traitement fonctionnel (`map()`, `filter()`, etc.). Cependant, elles sont limitées à des expressions simples et ne conviennent pas aux opérations plus complexes.
 
-### Chap 3 **Fonctions Génératrices en Python**
+### Chapitre 3 **Fonctions Génératrices en Python**
 
 Les **fonctions génératrices** sont des fonctions spéciales en Python qui permettent de produire des éléments de manière **paresseuse** (lazy evaluation), un élément à la fois, au lieu de retourner une liste entière. Elles utilisent le mot-clé `yield` pour produire des valeurs, ce qui permet de gérer efficacement la mémoire, surtout lorsqu'on travaille avec de grands ensembles de données.
 
@@ -504,7 +504,7 @@ Les **fonctions génératrices** offrent une approche efficace pour traiter de g
 
  applications traitant de grandes séquences ou des flux de données continus.
 
-### Chap 4 **Décorateurs en Python**
+### Chapitre 4 **Décorateurs en Python**
 
 Les **décorateurs** sont un mécanisme puissant en Python permettant de modifier ou d’étendre le comportement de fonctions ou de méthodes, sans avoir besoin de modifier leur code interne. Ils permettent d'ajouter des fonctionnalités supplémentaires de manière élégante, notamment pour la gestion des comportements transversaux, comme la gestion des logs, la validation des entrées, ou encore l'optimisation des performances.
 
@@ -684,7 +684,7 @@ Les décorateurs sont un moyen puissant d’étendre ou de modifier le comportem
 
 Les **décorateurs** en Python sont un outil puissant permettant de modifier ou d'étendre le comportement d'autres fonctions ou méthodes sans modifier leur code interne. Ils sont très utilisés pour ajouter des comportements transversaux comme la gestion des erreurs, la validation des données, ou l'optimisation des performances. Ils permettent de rendre le code plus modulaire, réutilisable et lisible.
 
-### Chap 5 **Gestion des exceptions en Python (Try/Except/Finally)**
+### Chapitre 5 **Gestion des exceptions en Python (Try/Except/Finally)**
 
 La **gestion des exceptions** en Python permet de capturer et de traiter les erreurs qui peuvent survenir pendant l'exécution d'un programme. Au lieu de laisser l'erreur interrompre l'exécution du programme, on peut l'intercepter, la traiter de manière appropriée, et ainsi rendre le programme plus robuste et moins susceptible de planter en cas de problème. Python fournit plusieurs mécanismes pour gérer ces erreurs, principalement à travers les blocs `try`, `except` et `finally`.
 
@@ -871,7 +871,7 @@ Erreur capturée : C'est une erreur personnalisée.
 
 La **gestion des exceptions** avec `try`, `except`, et `finally` est essentielle pour rendre un programme Python plus robuste et tolérant aux erreurs. En capturant et en gérant les erreurs de manière appropriée, on peut éviter que le programme ne plante brutalement et assurer un nettoyage ou une fermeture appropriée des ressources. Les décorateurs, les exceptions personnalisées, et l’utilisation des blocs `finally` permettent de rendre la gestion des erreurs encore plus flexible et puissante.
 
-### Chap 6 **Modules et Paquets en Python**
+### Chapitre 6 **Modules et Paquets en Python**
 
 En Python, l’organisation et la structuration du code sont facilitées par l’utilisation des **modules** et des **paquets**. Ces concepts permettent de mieux gérer les projets en séparant le code en fichiers plus petits et réutilisables, ce qui améliore la lisibilité, la maintenance et la modularité du code.
 
@@ -1035,7 +1035,7 @@ arr = np.array([1, 2, 3])
 
 L’utilisation des **modules et paquets** est essentielle pour organiser le code Python de manière efficace et modulaire. Cela permet de rendre les projets plus lisibles, plus maintenables, et facilite leur réutilisation dans d’autres projets. Grâce aux outils comme l’importation, les paquets, et le gestionnaire de dépendances `pip`, Python permet de créer des projets bien structurés et faciles à gérer, même à grande échelle.
 
-### Chap 7 **Manipulation des fichiers (Lecture/Écriture) en Python**
+### Chapitre 7 **Manipulation des fichiers (Lecture/Écriture) en Python**
 
 La manipulation des fichiers en Python permet de lire, écrire et gérer les fichiers stockés sur le disque. Python offre des outils puissants et simples pour interagir avec différents types de fichiers (textes, binaires, CSV, JSON, etc.) à l’aide des modes appropriés. Cela inclut la lecture, l’écriture, l’ajout de données, ainsi que la gestion des erreurs liées aux fichiers.
 
@@ -1211,7 +1211,7 @@ Le module **`json`** permet de lire et écrire des fichiers JSON, qui sont utili
 
 La manipulation des fichiers en Python est un aspect essentiel pour gérer des données persistantes, qu'il s'agisse de fichiers texte, binaires, CSV, ou JSON. Python offre des outils puissants et simples pour effectuer toutes les opérations nécessaires, tout en garantissant une gestion efficace des erreurs et des ressources.
 
-### Chap 8 **Listes, tuples et dictionnaires avancés**
+### Chapitre 8 **Listes, tuples et dictionnaires avancés**
 
 Les **listes**, **tuples**, et **dictionnaires** sont des structures de données de collection fondamentales en Python. Elles permettent de stocker, d'organiser et de manipuler des ensembles de données. Cette section explore des techniques avancées pour la gestion de ces structures, y compris l'itération, la modification, ainsi que l'application de fonctions spécifiques pour transformer et manipuler ces collections.
 
@@ -1399,7 +1399,7 @@ Les listes, tuples et dictionnaires peuvent être triés en utilisant des foncti
 ### Conclusion
 Ces concepts permettent une gestion avancée et performante des structures de données en Python, et peuvent être combinés pour résoudre des problèmes plus complexes de manière élégante et efficace.
 
-### Chap 9 **Compréhension de dictionnaire**
+### Chapitre 9 **Compréhension de dictionnaire**
 
 La **compréhension de dictionnaire** est une technique puissante en Python permettant de créer des dictionnaires de manière concise et efficace. Elle repose sur une syntaxe similaire à celle des **compréhensions de liste**, mais elle inclut des paires clé-valeur. Cette méthode permet d’appliquer des transformations ou des filtres tout en créant des dictionnaires.
 
@@ -1518,7 +1518,7 @@ Les compréhensions de dictionnaire sont non seulement plus concises que les bou
 ### Conclusion
 La compréhension de dictionnaire est un outil puissant pour créer des dictionnaires de manière élégante et efficace, tout en optimisant la lisibilité et la performance de votre code Python.
 
-### Chap 10 **Méthodes de classe et objets**
+### Chapitre 10 **Méthodes de classe et objets**
 
 En Python, les **méthodes de classe** sont des fonctions qui appartiennent à une classe et qui peuvent être appelées sur des instances de cette classe. Elles sont utilisées pour définir les comportements des objets créés à partir de la classe. Le langage Python permet aussi d’utiliser des **méthodes spéciales** qui sont des fonctions intégrées permettant de personnaliser le comportement des objets, comme `__init__`, `__str__`, `__repr__`, etc. La gestion des **attributs d'instance** permet de manipuler et de gérer les données propres à chaque objet.
 
@@ -1681,7 +1681,7 @@ Dans cet exemple, la méthode statique `additionner` effectue une simple additio
 ### Conclusion
 Ces mécanismes de classes et d'objets permettent d’encapsuler le comportement et les caractéristiques des objets de manière modulaire et réutilisable. Ils facilitent la création d'applications plus structurées et compréhensibles.
 
-### Chap 11 **Héritage et polymorphisme**
+### Chapitre 11 **Héritage et polymorphisme**
 
 L'**héritage** et le **polymorphisme** sont des concepts fondamentaux de la **programmation orientée objet** (POO) qui permettent de créer des relations entre classes, de réutiliser du code et de modifier le comportement des objets de manière flexible. L'héritage permet à une classe dérivée (ou sous-classe) de recevoir les caractéristiques (attributs et méthodes) d'une classe de base (ou super-classe). Le polymorphisme, quant à lui, permet à différentes classes d'utiliser la même interface ou méthode, mais avec des comportements spécifiques à chaque classe.
 
@@ -1857,7 +1857,7 @@ Dans cet exemple, la méthode `parler` est une méthode abstraite, ce qui signif
 ### Conclusion
 Ces concepts permettent de créer des systèmes complexes et modulaires en **réutilisant le code** et en favorisant la **flexibilité** du comportement des objets.
 
-### Chap 12 **Méthodes statiques et de classe**
+### Chapitre 12 **Méthodes statiques et de classe**
 
 Les **méthodes statiques** et les **méthodes de classe** sont des concepts qui permettent de définir des méthodes liées à la classe elle-même, plutôt qu'à une instance d'objet. Ces méthodes peuvent être utilisées pour encapsuler des fonctionnalités spécifiques à la classe sans avoir besoin d'une instance de celle-ci. Les deux types de méthodes sont définis à l'aide de décorateurs spécifiques : `@staticmethod` pour les méthodes statiques et `@classmethod` pour les méthodes de classe.
 
@@ -1969,7 +1969,7 @@ Dans cet exemple, `from_string` est une méthode de classe utilisée pour créer
 ### Conclusion
 Ces deux types de méthodes offrent des moyens puissants et flexibles de gérer les fonctionnalités au niveau de la classe, en fonction de l'état de l'objet ou de la classe.
 
-### Chap 13 **Modules tiers (bibliothèques externes)**
+### Chapitre 13 **Modules tiers (bibliothèques externes)**
 
 Les **modules tiers** ou **bibliothèques externes** sont des ensembles de fonctions et d'outils créés par des développeurs extérieurs à la bibliothèque standard de Python. Ils permettent d'étendre les fonctionnalités de Python en offrant des solutions prêtes à l'emploi pour des tâches spécifiques. Ces modules peuvent être utilisés pour simplifier des processus complexes, améliorer la performance, ou intégrer des fonctionnalités avancées, telles que le calcul scientifique, la manipulation de données, ou la communication réseau.
 
@@ -2160,7 +2160,7 @@ pip install -r requirements.txt
 ### Conclusion
 Les modules tiers sont essentiels pour travailler efficacement dans des domaines spécialisés et offrir des solutions rapides et fiables à des problèmes courants en Python.
 
-### Chap 14 **Commutateurs (Match/Case)**
+### Chapitre 14 **Commutateurs (Match/Case)**
 
 La structure **`match`** introduite dans **Python 3.10** permet de réaliser des évaluations conditionnelles de manière plus lisible et plus structurée que les classiques blocs `if/elif/else`. Elle fonctionne de manière similaire aux commutateurs (`switch/case`) dans d'autres langages de programmation, mais avec plus de flexibilité, notamment grâce à l'utilisation de **pattern matching** (correspondance de motifs).
 
@@ -2304,7 +2304,7 @@ Dans cet exemple, le `match` est utilisé avec une expression régulière pour v
 ### Conclusion
 Cette fonctionnalité améliore la lisibilité du code et permet de gérer des cas complexes de manière plus élégante et concise.
 
-### Chap 15 **Type hints et annotations**
+### Chapitre 15 **Type hints et annotations**
 
 Les **annotations de type** sont une fonctionnalité de Python introduite dans la version 3.5, qui permet aux développeurs de spécifier explicitement les types de variables, de paramètres de fonction et de valeurs de retour. Bien que Python soit un langage dynamiquement typé, les annotations de type offrent plusieurs avantages, notamment une meilleure lisibilité du code, un support accru des outils d'analyse statique (comme **mypy**) et une meilleure intégration dans les IDE pour la suggestion de types et la vérification des erreurs.
 
@@ -2487,7 +2487,7 @@ mypy mon_script.py
 ### Conclusion
 Les annotations de type ne changent pas le comportement du code à l'exécution, mais offrent un meilleur outillage pour le développement, l'optimisation du code et la détection des erreurs.
 
-### Chap 16 **Gestion de la mémoire et des ressources**
+### Chapitre 16 **Gestion de la mémoire et des ressources**
 
 La gestion de la mémoire et des ressources est un aspect fondamental du développement en Python, bien que le langage repose principalement sur un **ramasse-miettes** (garbage collector) pour automatiser la gestion de la mémoire. Cependant, Python offre aussi des mécanismes permettant aux développeurs de mieux contrôler l'utilisation des ressources, en particulier pour les ressources limitées ou coûteuses, telles que les fichiers ou les connexions réseau.
 
@@ -2627,7 +2627,7 @@ Bien que Python gère automatiquement la mémoire, il existe certaines stratégi
 - Le bloc `finally` dans les instructions `try/except/finally` peut également être utilisé pour garantir la libération des ressources, même en cas d'exception.
 - Des outils comme `gc` et `tracemalloc` permettent de surveiller et de gérer l'utilisation de la mémoire dans les programmes Python.
 
-### Chap 17 **Multithreading et Multiprocessing**
+### Chapitre 17 **Multithreading et Multiprocessing**
 
 Python offre plusieurs mécanismes permettant d'exécuter des tâches en parallèle, notamment à travers le **multithreading** et le **multiprocessing**. Ces techniques permettent d'optimiser l'utilisation des ressources du système, d'améliorer la réactivité des applications et de paralléliser des tâches lourdes. Cependant, elles possèdent des caractéristiques et des usages différents, que l'on explore ci-dessous.
 
@@ -2784,7 +2784,7 @@ thread2.join()
 - Le **module `threading`** est utilisé pour le multithreading, et le **module `multiprocessing`** est utilisé pour gérer plusieurs processus parallèles.
 - La synchronisation est essentielle dans les deux cas pour garantir une exécution correcte des programmes.
 
-### Chap 18 **Tests unitaires**
+### Chapitre 18 **Tests unitaires**
 
 Les **tests unitaires** sont un aspect fondamental du développement logiciel moderne, permettant de vérifier qu'une unité de code (souvent une fonction ou une méthode) fonctionne comme prévu. Cela garantit que le programme fonctionne correctement et facilite la détection rapide des régressions lors des modifications ou évolutions du code. Python propose plusieurs outils pour l'écriture et l'exécution de tests unitaires, parmi lesquels les plus populaires sont `unittest` et `pytest`.
 
@@ -2941,7 +2941,7 @@ def test_api_call(mock_get_data):
 
 Les tests unitaires jouent un rôle crucial dans la qualité et la stabilité du code, en permettant de détecter des bugs tôt dans le processus de développement.
 
-### Chap 19 **Fonctions récursives**
+### Chapitre 19 **Fonctions récursives**
 
 Les **fonctions récursives** sont des fonctions qui s’appellent elles-mêmes afin de résoudre un problème. Elles sont particulièrement efficaces pour résoudre des problèmes qui peuvent être divisés en sous-problèmes similaires ou qui présentent une structure de type « diviser pour régner ».
 
@@ -3064,7 +3064,7 @@ def fibonacci(n):
 
 En résumé, les fonctions récursives sont un outil puissant pour résoudre des problèmes complexes de manière élégante, mais il est crucial de s'assurer que les conditions d'arrêt sont bien définies pour éviter les dépassements de pile et d'autres problèmes de performance.
 
-### Chap 20 **Gestion des dépendances (pip, virtualenv)**
+### Chapitre 20 **Gestion des dépendances (pip, virtualenv)**
 
 La gestion des dépendances est une partie essentielle du développement en Python, surtout lorsqu'on travaille avec des bibliothèques externes ou lorsque le projet a des besoins spécifiques en termes de versions de ces bibliothèques. Cela garantit que toutes les parties de votre projet fonctionnent correctement ensemble, sans conflit ni incompatibilité.
 
@@ -3233,7 +3233,7 @@ pip freeze > requirements.txt
 
 Ainsi, la gestion des dépendances est essentielle pour le développement de projets Python bien structurés et faciles à maintenir.
 
-### Chap 21 **Mécanismes de concurrence (asyncio)**
+### Chapitre 21 **Mécanismes de concurrence (asyncio)**
 
 Le module `asyncio` de Python permet de créer des programmes asynchrones. Il est principalement utilisé pour gérer la concurrence sans avoir besoin de gérer directement des threads ou des processus. En utilisant des mécanismes non bloquants, `asyncio` permet d'exécuter plusieurs tâches en parallèle dans une seule boucle d'événements, rendant le programme plus efficace, surtout lorsqu'il y a des opérations d'attente longues (comme les requêtes réseau, les lectures de fichiers, etc.).
 
@@ -3376,7 +3376,7 @@ Dans ce cas, une exception est levée et capturée dans la coroutine, et l'exéc
 - Les programmes asynchrones sont gérés par une **boucle d'événements**, et les tâches sont créées avec **`asyncio.create_task()`**.
 - **`asyncio.run()`** est utilisé pour démarrer et exécuter une boucle d'événements.
 
-### Chap 22 **Gestion des versions avec Git**
+### Chapitre 22 **Gestion des versions avec Git**
 
 Git est un système de contrôle de version décentralisé qui permet de suivre l'historique des modifications d'un projet, de gérer des branches et de collaborer avec d'autres développeurs de manière fluide. Il est utilisé pour enregistrer les changements dans les fichiers du projet, et pour permettre à plusieurs personnes de travailler sur un même code sans écraser le travail des autres.
 
@@ -3551,7 +3551,7 @@ Les tags sont utilisés pour marquer des points spécifiques dans l'historique, 
 
 En utilisant **Git** de manière optimale, vous pouvez rendre votre processus de développement plus organisé, cohérent et efficace.
 
-### Chap 23 **Optimisation et Compilateurs JIT**
+### Chapitre 23 **Optimisation et Compilateurs JIT**
 
 L'optimisation du code est essentielle pour améliorer ses performances, en particulier pour les applications exigeantes en calcul. Python, grâce à ses bibliothèques et outils, offre plusieurs moyens d'analyser et d'accélérer le code. Une des solutions avancées inclut les **compilateurs JIT (Just-In-Time)**, comme **Numba**.
 
@@ -3708,7 +3708,7 @@ Comparez les performances avant et après l'utilisation de Numba pour visualiser
   
 En exploitant ces techniques, vous pouvez considérablement accélérer vos programmes Python tout en gardant un code lisible et efficace.
 
-### Chap 24 **Interopérabilité et Extensions : Connecter Python avec C/C++**
+### Chapitre 24 **Interopérabilité et Extensions : Connecter Python avec C/C++**
 
 Python, bien que puissant, peut parfois manquer de performances pour des tâches nécessitant des calculs intensifs. Dans de tels cas, il est possible d'exploiter des bibliothèques écrites en C ou C++ pour améliorer les performances tout en utilisant Python comme interface. **SWIG** et **PyBind11** sont deux outils populaires pour créer cette interopérabilité.
 
@@ -3891,7 +3891,7 @@ print(p.distance_to_origin())  # Affiche 5.0
 2. **PyBind11** offre une solution moderne et intuitive pour intégrer des bibliothèques C++ dans Python, particulièrement adaptée pour les projets C++ récents et les besoins spécifiques.  
 3. Combinez ces outils avec des tests et des optimisations pour tirer le meilleur parti des performances de C/C++ tout en exploitant la simplicité de Python.
 
-### Chap 25 **Programmation à Grande Échelle : Gestion des Workflows et Calcul Distribué**
+### Chapitre 25 **Programmation à Grande Échelle : Gestion des Workflows et Calcul Distribué**
 
 La programmation à grande échelle se concentre sur l'optimisation des workflows complexes et sur la gestion efficace des ressources pour traiter des quantités massives de données ou exécuter des tâches asynchrones en parallèle. **Celery** et **Dask** sont deux outils puissants pour répondre à ces besoins.
 
@@ -4057,7 +4057,7 @@ Dask peut fonctionner sur un cluster distribué :
 2. **Dask** est mieux adapté pour des charges de travail nécessitant un calcul intensif ou des analyses massives de données, avec une scalabilité naturelle sur plusieurs machines.
 3. Ces outils peuvent être combinés pour des pipelines complexes, par exemple, en utilisant Celery pour l'orchestration et Dask pour le traitement des données.
 
-### Chap 26 **Gestion des Bases de Données en Python**
+### Chapitre 26 **Gestion des Bases de Données en Python**
 
 La gestion des bases de données est essentielle dans le développement d'applications modernes. Python offre plusieurs outils pour interagir avec des bases relationnelles (SQL) ou non relationnelles (NoSQL). Voici un aperçu des techniques courantes :
 
@@ -4299,7 +4299,7 @@ for user in User.select().where(User.age > 20):
 
 Ces outils peuvent être combinés dans une application : par exemple, Redis pour le cache, MongoDB pour stocker des données non relationnelles, et SQLAlchemy pour les relations complexes.
 
-### Chap 27 **Automatisation et DevOps avec Python**
+### Chapitre 27 **Automatisation et DevOps avec Python**
 
 L'automatisation et les pratiques DevOps permettent de simplifier les déploiements, de gérer les infrastructures de manière efficace, et de maintenir la cohérence des environnements. Python est un langage clé dans cet écosystème grâce à sa polyvalence et ses bibliothèques.
 
@@ -4483,7 +4483,7 @@ docker-compose up
 - **Ansible** est idéal pour automatiser les déploiements, gérer les configurations, et maintenir des infrastructures cohérentes.
 - **Docker** simplifie la conteneurisation des applications, en garantissant leur portabilité entre différents environnements.
 
-### Chap 28 **Introduction aux Expressions Régulières avec le Module `re`**
+### Chapitre 28 **Introduction aux Expressions Régulières avec le Module `re`**
 
 Les expressions régulières (regex) sont des outils puissants pour rechercher, valider ou manipuler des chaînes de caractères en Python. Le module `re` de la bibliothèque standard fournit les fonctions nécessaires pour travailler avec ces patterns.
 
@@ -4633,7 +4633,7 @@ if match:
 
 Les expressions régulières sont indispensables pour traiter et analyser les chaînes de caractères en Python. Grâce au module `re`, vous pouvez rechercher, valider, et transformer facilement du texte. Toutefois, leur puissance nécessite de bien comprendre les patterns et d'utiliser des pratiques optimisées.
 
-### Chap 29 **Gestion des Fichiers Avancée avec les Modules `os` et `shutil`**
+### Chapitre 29 **Gestion des Fichiers Avancée avec les Modules `os` et `shutil`**
 
 La gestion avancée des fichiers en Python repose sur les modules `os` et `shutil`, qui offrent une multitude de fonctionnalités pour manipuler, copier, déplacer, et gérer les fichiers et répertoires.
 
@@ -4797,7 +4797,7 @@ print(f"Taille du fichier : {taille} octets")
 - Le module `shutil` offre des fonctionnalités avancées comme la copie, le déplacement, et la compression.
 - Ces outils combinés permettent une gestion fine et puissante des fichiers dans des projets Python.
 
-### Chap 30 **Concepts de Classe Avancée en Python**
+### Chapitre 30 **Concepts de Classe Avancée en Python**
 
 La programmation orientée objet (POO) en Python permet de structurer et de gérer des programmes complexes en utilisant des classes et des objets. Les concepts avancés incluent l'utilisation de méthodes spéciales, l'héritage approfondi et d'autres mécanismes qui enrichissent les fonctionnalités des classes.
 
@@ -4982,7 +4982,7 @@ for animal in animaux:
 - L'**héritage simple** est utile pour organiser le code, et l'**héritage multiple** doit être utilisé avec précaution.
 - Le **polymorphisme** et les **classes abstraites** facilitent l'évolutivité et la flexibilité du code.
 
-### Chap 31 **Threading de Base en Python**
+### Chapitre 31 **Threading de Base en Python**
 
 Le **multithreading** permet d'exécuter plusieurs tâches simultanément au sein d'un programme. Il est particulièrement utile pour les tâches d'I/O (lecture/écriture de fichiers, requêtes réseau) où les threads peuvent s'exécuter en parallèle pour améliorer les performances. Python fournit le module **`threading`** pour gérer les threads.
 
@@ -5117,7 +5117,7 @@ Pour des tâches intensives en calcul (comme le traitement de données), le GIL 
 - Utilisez **`Lock`** pour synchroniser les accès à des ressources partagées.
 - Le threading est particulièrement utile pour les tâches I/O, mais pour les tâches intensives en calcul, privilégiez le **multiprocessing**.
 
-### Chap 32 **Fonctions Anonymes et Programmation Fonctionnelle de Base en Python**
+### Chapitre 32 **Fonctions Anonymes et Programmation Fonctionnelle de Base en Python**
 
 Python propose des outils puissants pour la **programmation fonctionnelle**, un paradigme qui se concentre sur l’utilisation de fonctions comme blocs de construction du programme. Les fonctions **anonymes (`lambda`)** et des outils comme **`map()`**, **`filter()`**, et **`reduce()`** permettent de manipuler efficacement des données sans écrire de boucles explicites.
 
@@ -5265,7 +5265,7 @@ print(carres)  # Sortie : [1, 4, 9, 16]
 - **`reduce()`** est utile pour combiner tous les éléments d'une séquence en une seule valeur.
 - Ces outils conviennent particulièrement aux tâches fonctionnelles et aux pipelines de traitement de données.
 
-### Chap 33 **Itérateurs et Générateurs en Python**
+### Chapitre 33 **Itérateurs et Générateurs en Python**
 
 Les **itérateurs** et **générateurs** permettent de manipuler des séquences de données efficacement. Ils sont particulièrement utiles pour gérer de grandes quantités de données ou pour créer des flux de données en temps réel, tout en réduisant l'utilisation de la mémoire.
 
@@ -5426,7 +5426,7 @@ print(list(pipeline))  # Sortie : [0, 4, 16, 36, 64]
 - Les **générateurs**, grâce à `yield`, fournissent une alternative simple pour créer des séquences paresseuses.
 - Ces outils sont essentiels pour **gérer efficacement la mémoire** et **traiter des flux de données** en temps réel.
 
-### Chap 34 **Manipulation des fichiers avancée en Python**
+### Chapitre 34 **Manipulation des fichiers avancée en Python**
 
 La manipulation avancée des fichiers implique le travail avec différents formats de données courants (CSV, JSON, etc.) et des opérations sur le système de fichiers (par exemple, gestion des répertoires, copie de fichiers). Python offre des modules puissants comme **os**, **shutil**, **csv**, et **json** pour accomplir ces tâches.
 
@@ -5620,7 +5620,7 @@ ET.ElementTree(nouvel_element).write('nouveau.xml')
 - Les modules **`os`** et **`shutil`** permettent une gestion avancée des fichiers et répertoires.
 - Python prend en charge de nombreux formats courants et offre une API intuitive pour leur manipulation.
 
-### Chap 35 **Expressions régulières (module `re`)**
+### Chapitre 35 **Expressions régulières (module `re`)**
 
 Les **expressions régulières (regex)** permettent de rechercher, valider, et manipuler des chaînes de caractères grâce à des motifs complexes. Python fournit le module **`re`** pour exploiter ces fonctionnalités.
 
@@ -5706,7 +5706,7 @@ print(resultats)
 | `{n,m}`       | Entre `n` et `m` occurrences              | `a{2,4}` correspond à "aa", "aaa", "aaaa" |
 | `[]`          | Classe de caractères                      | `[abc]` correspond à "a", "b", "c" |
 | `|`           | OU logique                                | `a|b` correspond à "a" ou "b" |
-| `\`           | Échappement des caractères spéciaux       | `\.` correspond à un point littéral |
+| `\`           | ÉChapitrepement des caractères spéciaux       | `\.` correspond à un point littéral |
 
 ---
 

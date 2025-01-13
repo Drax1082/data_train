@@ -1,6 +1,6 @@
 Niveau debuant
 
-Chap 1. Introduction à Python
+Chapitre 1. Introduction à Python
 Qu'est-ce que Python ?
 Python est un langage de programmation de haut niveau, ce qui signifie qu'il est conçu pour être proche du langage humain et de l'abstraction des systèmes matériels sous-jacents. Cela le rend relativement facile à lire et à comprendre, surtout par rapport à des langages plus complexes, comme le C ou le C++.
 
@@ -174,7 +174,7 @@ print(prediction)  # Affiche la prédiction
 Conclusion
 Python est un langage extrêmement versatile, utilisé dans de nombreux domaines allant du développement web à l'analyse de données, en passant par l'automatisation et l'intelligence artificielle. Sa simplicité, sa large communauté et ses bibliothèques puissantes en font un choix idéal tant pour les débutants que pour les experts. Grâce à sa facilité d'apprentissage et son adaptabilité, Python est un excellent point de départ pour toute personne désireuse de se lancer dans la programmation ou de travailler sur des projets complexes.
 
-### Chap 2. **Syntaxe de base**
+### Chapitre 2. **Syntaxe de base**
 
 La **syntaxe** en Python désigne les règles qui régissent la structure d'un programme, c'est-à-dire la manière dont vous devez organiser le code pour que Python puisse l'interpréter correctement. Deux aspects fondamentaux de la syntaxe de Python sont les **commentaires** et l'**indentation**.
 
@@ -296,7 +296,7 @@ Cela permet d'éviter des éléments syntaxiques supplémentaires et force une m
 
 La syntaxe de base en Python est relativement simple, mais elle nécessite une attention particulière à l'indentation et à l'utilisation des commentaires. Les **commentaires** facilitent la compréhension du code, tandis que l'**indentation** définit la structure et la hiérarchie des instructions dans un programme. Une indentation correcte est donc essentielle pour que le code soit exécuté correctement.
 
-Chap 3. Variables et types de données
+Chapitre 3. Variables et types de données
 Les variables en Python
 Une variable est un nom qui est associé à une valeur dans la mémoire de l'ordinateur. Vous pouvez utiliser ce nom pour faire référence à la valeur stockée. Les variables en Python sont dynamiques, c'est-à-dire qu'elles peuvent contenir n'importe quel type de données, et leur type peut changer pendant l'exécution du programme. L'attribution d'une valeur à une variable se fait simplement en utilisant le signe égal (=).
 
@@ -468,7 +468,7 @@ print(not a)    # Affiche False
 Conclusion
 Les variables et les types de données sont les fondamentaux de tout programme Python. Comprendre comment utiliser les différents types (int, float, str, bool) et comment les convertir entre eux vous permettra de manipuler efficacement des données et d'écrire des programmes robustes. Python étant un langage dynamique, il est facile d'expérimenter avec différents types et de laisser Python s'occuper de la gestion de la mémoire et des types. Ce système simplifié favorise une programmation plus rapide et plus intuitive.
 
-### Chap 4. **Opérateurs**
+### Chapitre 4. **Opérateurs**
 
 Les **opérateurs** en Python sont des symboles utilisés pour effectuer des opérations sur des valeurs ou des variables. Ils permettent de manipuler les données de manière variée, que ce soit pour des calculs mathématiques, des comparaisons ou la combinaison de conditions logiques. Les opérateurs sont essentiels pour tout programme et peuvent être regroupés en plusieurs catégories : opérateurs arithmétiques, de comparaison, et logiques.
 
@@ -701,7 +701,7 @@ Bien qu'ils ne soient pas strictement logiques ou arithmétiques, les **opérate
 
 Les opérateurs en Python jouent un rôle fondamental dans les calculs, les comparaisons et la gestion des conditions logiques. Que vous effectuiez des calculs mathématiques, que vous compariez des valeurs ou que vous combiniez des conditions, comprendre et utiliser les opérateurs de manière appropriée est essentiel pour écrire des programmes efficaces. Les opérateurs arithmétiques, de comparaison et logiques sont les outils de base pour toute programmation Python et sont utilisés dans une grande variété de situations.
 
-### Chap 5. **Structures conditionnelles**
+### Chapitre 5. **Structures conditionnelles**
 
 Les **structures conditionnelles** sont des éléments fondamentaux de la programmation qui permettent de tester des conditions et d'exécuter différentes actions en fonction de ces conditions. En Python, les principales structures conditionnelles sont `if`, `elif`, et `else`. Ces instructions permettent de contrôler le flux du programme en fonction des valeurs des conditions.
 
@@ -864,7 +864,7 @@ Les conditions peuvent être imbriquées, c'est-à-dire que vous pouvez placer u
 
 Les structures conditionnelles (`if`, `elif`, et `else`) sont essentielles pour contrôler le flux d'exécution d'un programme Python. Elles permettent de tester des conditions et d'exécuter différentes actions en fonction des résultats de ces tests. Vous pouvez utiliser ces structures pour créer des programmes plus dynamiques et réactifs, en ajustant leur comportement selon les données ou les entrées utilisateurs.
 
-### Chap 6. **Boucles**
+### Chapitre 6. **Boucles**
 
 Les **boucles** sont des structures de contrôle qui permettent de répéter une action plusieurs fois sans avoir à dupliquer le même code. Elles sont essentielles dans la programmation pour automatiser les tâches répétitives. En Python, il existe principalement deux types de boucles : la boucle `for` et la boucle `while`. Ces boucles permettent de parcourir des séquences d'éléments ou de répéter une action tant qu'une condition est vraie.
 
@@ -1064,7 +1064,7 @@ Les **boucles imbriquées** sont des boucles placées à l'intérieur d'une autr
 
 Les boucles en Python, `for` et `while`, sont des outils puissants pour répéter des actions automatiquement. Elles permettent d'itérer sur des séquences d'éléments ou de répéter des actions tant qu'une condition est vraie. Vous pouvez combiner les boucles avec des commandes comme `break` et `continue` pour contrôler le flux de votre programme de manière plus précise, et utiliser des boucles imbriquées pour parcourir des structures de données complexes.
 
-### Chap 7. **Fonctions**
+### Chapitre 7. **Fonctions**
 
 Les **fonctions** sont des blocs de code qui accomplissent une tâche spécifique. Elles sont l'un des concepts les plus importants dans tout langage de programmation, y compris Python, car elles permettent de structurer un programme de manière modulaire et réutilisable. Une fonction prend des **arguments** en entrée et peut renvoyer une **valeur** en sortie.
 
@@ -1210,7 +1210,7 @@ Une fonction peut aussi ne pas renvoyer de valeur. Dans ce cas, `return` est omi
 
 Les **fonctions** sont essentielles pour organiser et structurer un programme en Python. Elles permettent de découper le code en morceaux réutilisables, facilitant ainsi la gestion du programme et sa maintenance. Une fonction peut prendre des **arguments** pour personnaliser son comportement et renvoyer des **valeurs** via `return`. L'utilisation des fonctions rend votre code plus propre, plus lisible et plus modulable.
 
-### Chap 8. **Listes et autres collections**
+### Chapitre 8. **Listes et autres collections**
 
 Python propose plusieurs structures de données permettant de stocker des collections d'éléments. Ces structures incluent des **listes**, des **tuples**, des **dictionnaires** et des **sets**. Chacune de ces collections a des caractéristiques uniques qui les rendent utiles pour différents types d'opérations et de cas d'utilisation.
 
@@ -1406,7 +1406,7 @@ Les collections en Python offrent une grande flexibilité pour stocker et manipu
 
 Bien comprendre et maîtriser ces structures vous aidera à écrire des programmes plus efficaces et modulaires.
 
-### Chap 9. **Gestion des erreurs**
+### Chapitre 9. **Gestion des erreurs**
 
 La gestion des erreurs dans un programme est essentielle pour garantir son bon fonctionnement, même lorsque des imprévus se produisent. En Python, ce mécanisme est principalement basé sur les **exceptions**. Une exception est un événement qui se produit pendant l'exécution d'un programme et qui interrompt son flux normal. Python offre une structure pour capturer ces erreurs et définir des actions à prendre lorsqu'une erreur se produit, ce qui permet de gérer les erreurs de manière élégante et de maintenir la stabilité de l'application.
 
@@ -1549,7 +1549,7 @@ La gestion des erreurs avec les exceptions permet à un programme de rester robu
 - Lever des exceptions personnalisées avec `raise`.
 - Capturer plusieurs exceptions à la fois avec des blocs `except` multiples.
 
-### Chap 10. **Modules et bibliothèques**
+### Chapitre 10. **Modules et bibliothèques**
 
 L'un des grands avantages de Python est son écosystème riche en **modules** et **bibliothèques**. Ces modules sont des fichiers Python qui contiennent des définitions et des implémentations de fonctions, de classes, et d'autres éléments qui vous permettent de réutiliser du code et d'étendre les capacités de Python. Les bibliothèques, quant à elles, sont des collections de modules regroupés pour faciliter un domaine d'application spécifique, comme les calculs mathématiques, le traitement des données, ou la création d'interfaces graphiques.
 
@@ -1659,7 +1659,7 @@ Les points clés à retenir sont :
 - Les modules externes peuvent être installés via `pip` et étendre les fonctionnalités de Python.
 - La documentation est essentielle pour comprendre et exploiter pleinement un module.
 
-### Chap 11. **Entrées et sorties**
+### Chapitre 11. **Entrées et sorties**
 
 En Python, les entrées et sorties (E/S) sont des éléments essentiels permettant à un programme d'interagir avec l'utilisateur. Vous pouvez demander à l'utilisateur de saisir des données (entrées) et afficher des résultats (sorties). Ces interactions sont fondamentales dans la plupart des applications, qu'il s'agisse de simples programmes ou d'applications plus complexes.
 
@@ -1791,7 +1791,7 @@ Les entrées et sorties en Python permettent d'interagir de manière dynamique a
 - **Gestion des erreurs** : Utilisez `try...except` pour gérer les erreurs lors de la conversion des entrées.
 - **Redirection** : Vous pouvez rediriger les sorties vers des fichiers pour enregistrer des résultats.
 
-### Chap 12. **Manipulation des chaînes de caractères**
+### Chapitre 12. **Manipulation des chaînes de caractères**
 
 Les chaînes de caractères (ou `str` en Python) sont l'un des types de données les plus utilisés. Elles permettent de stocker et de manipuler du texte dans un programme. Python propose une riche palette de méthodes et d'opérations pour manipuler ces chaînes de manière efficace.
 
@@ -1989,7 +1989,7 @@ La manipulation des chaînes de caractères est une compétence clé pour travai
 - **Suppression des espaces** : `strip()`, `lstrip()`, et `rstrip()` pour manipuler les espaces.
 - **Vérification** : Méthodes comme `startswith()`, `endswith()`, `isalnum()`, et `isdigit()` pour tester des propriétés de la chaîne.
 
-### Chap 13 **Développement de Jeux et Graphique 3D**
+### Chapitre 13 **Développement de Jeux et Graphique 3D**
 
 Python est une excellente plateforme pour se lancer dans le développement de jeux, qu'il s'agisse de projets simples en 2D ou de bases pour des interfaces graphiques et applications interactives. Deux bibliothèques populaires pour ces tâches sont **Pygame** et **Kivy**.
 
@@ -2122,7 +2122,7 @@ if __name__ == '__main__':
 - **Pygame** est parfait pour créer des jeux 2D simples ou des projets interactifs éducatifs.
 - **Kivy** est un outil polyvalent pour concevoir des interfaces graphiques modernes et des applications tactiles.
 
-### Chap 14 ** Outils de Développement et Pratiques**
+### Chapitre 14 ** Outils de Développement et Pratiques**
 
 Python offre un écosystème riche en outils pour améliorer la productivité et la qualité du code. Voici un aperçu des outils de développement essentiels et des pratiques importantes pour les débutants.
 
@@ -2403,7 +2403,7 @@ Tâche : Envoyer le rapport - Status : Terminé
 ### **Conclusion**
 La manipulation de JSON avec Python est simple grâce au module `json`. Cette compétence est indispensable pour interagir avec des APIs, gérer des fichiers de configuration, ou structurer des données de manière portable et lisible.
 
-### Chap 16 **Modules Intégrés Importants en Python**
+### Chapitre 16 **Modules Intégrés Importants en Python**
 
 Python est livré avec une bibliothèque standard riche, qui contient des modules pour effectuer des tâches courantes. Voici une présentation rapide de quatre modules clés : **os**, **sys**, **random**, et **math**. Chacun joue un rôle essentiel dans différents domaines de la programmation.
 
@@ -2535,7 +2535,7 @@ Ces modules intégrés couvrent des besoins essentiels pour :
 - **`random`** : Introduire des éléments aléatoires dans vos programmes.
 - **`math`** : Effectuer des calculs mathématiques avancés.
 
-### Chap 18 **Erreurs et Exceptions en Python**
+### Chapitre 18 **Erreurs et Exceptions en Python**
 
 En Python, les erreurs se produisent lorsqu'une opération ou une instruction n'est pas exécutée correctement. Les **exceptions** sont un mécanisme qui permet de gérer ces erreurs de manière contrôlée, évitant que le programme ne se termine brutalement.
 
@@ -2673,7 +2673,7 @@ except ValueError as e:
 
 La gestion des erreurs et des exceptions est essentielle pour écrire des programmes robustes. En anticipant les erreurs possibles et en les gérant avec soin, vous pouvez éviter des comportements inattendus et offrir une meilleure expérience utilisateur.
 
-### Chap 19 **Approfondissement sur les Listes en Python**
+### Chapitre 19 **Approfondissement sur les Listes en Python**
 
 Les **listes** sont une structure de données essentielle en Python. Elles permettent de stocker une collection d'éléments ordonnés, qui peuvent être modifiés à tout moment. Voici un aperçu détaillé de leurs fonctionnalités, avec des méthodes courantes et des concepts avancés comme les compréhensions de liste.
 
@@ -2859,7 +2859,7 @@ nouvelle_liste = [expression for élément in iterable if condition]
 
 Les listes sont une structure de données puissante et polyvalente en Python. Grâce à leurs nombreuses méthodes et à la possibilité d'utiliser les compréhensions, elles permettent de manipuler les données de manière efficace. Apprendre à maîtriser les listes est un pas essentiel pour progresser en Python.
 
-### Chap 20 **Introduction aux Types de Collections Avancées en Python**
+### Chapitre 20 **Introduction aux Types de Collections Avancées en Python**
 
 Le module **`collections`** de Python propose plusieurs types de collections avancées qui étendent les fonctionnalités des structures de données de base comme les listes et les dictionnaires. Parmi ces outils, les **`deque`**, **`Counter`**, et **`defaultdict`** sont particulièrement utiles pour résoudre des problèmes spécifiques de manière efficace.
 
@@ -2982,7 +2982,7 @@ print(d)
 
 Les types de collections avancées du module **`collections`** offrent des solutions élégantes et performantes pour des problèmes spécifiques. En intégrant ces outils dans vos programmes Python, vous pouvez simplifier votre code tout en améliorant son efficacité. Ces structures sont particulièrement utiles dans le traitement des données, les algorithmes, et la manipulation de grandes collections.
 
-### Chap 21 **Chaînes de Caractères Avancées en Python**
+### Chapitre 21 **Chaînes de Caractères Avancées en Python**
 
 Les chaînes de caractères (**`str`**) en Python offrent de nombreuses fonctionnalités avancées pour manipuler, rechercher, et formater du texte. Ces outils permettent de travailler de manière efficace avec des données textuelles.
 
@@ -3135,7 +3135,7 @@ print(chaine)  # Langage: Python, Version: 3.10
 
 Les chaînes de caractères en Python sont extrêmement puissantes et flexibles grâce à leurs nombreuses méthodes intégrées. En combinant des techniques comme la recherche, le formatage, et la manipulation, vous pouvez gérer efficacement des données textuelles pour une large gamme d'applications, du traitement de texte simple à l'analyse de données avancée.
 
-### Chap 22 **Modules Standards Courants en Python**
+### Chapitre 22 **Modules Standards Courants en Python**
 
 Python propose une vaste bibliothèque standard contenant des modules qui simplifient le développement de nombreuses tâches courantes. Voici une présentation des modules **`math`**, **`random`**, et **`os`**, accompagnée de leurs principales fonctionnalités.
 
@@ -3245,7 +3245,7 @@ print(f"Contenu du répertoire : {os.listdir()}")
 
 Ces modules standard sont essentiels pour résoudre des problèmes courants en Python. En maîtrisant des modules comme **`math`**, **`random`**, et **`os`**, vous pouvez effectuer des calculs avancés, manipuler des données aléatoires, et interagir avec le système d'exploitation de manière simple et efficace.
 
-### Chap 23 **Gestion des Erreurs Simples en Python**
+### Chapitre 23 **Gestion des Erreurs Simples en Python**
 
 La gestion des erreurs est une compétence essentielle en programmation. Elle permet de capturer des situations imprévues, d'éviter des interruptions brusques du programme et de fournir des messages d'erreur informatifs.
 

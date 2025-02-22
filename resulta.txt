@@ -1,398 +1,130 @@
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:1111:2: erreur : #error Must define a target architecture.
- #error Must define a target architecture.
-  ^~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:1493:1: erreur : « EXCEPTION_DISPOSITION » does not name a type
- EXCEPTION_DISPOSITION
- ^~~~~~~~~~~~~~~~~~~~~
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:1502:9: erreur : « EXCEPTION_ROUTINE » does not name a type
- typedef EXCEPTION_ROUTINE *PEXCEPTION_ROUTINE;
-         ^~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:7136:5: erreur : « PEXCEPTION_ROUTINE » does not name a type
-     PEXCEPTION_ROUTINE LanguageHandler;
-     ^~~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadUCharAcquire(const volatile BYTE*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9140:45: erreur : « ReadAcquire8 » was not declared in this scope
-     return (BYTE )ReadAcquire8((PCHAR)Source);
-                                             ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadUCharNoFence(const volatile BYTE*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9151:45: erreur : « ReadNoFence8 » was not declared in this scope
-     return (BYTE )ReadNoFence8((PCHAR)Source);
-                                             ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadBooleanAcquire(const volatile BOOLEAN*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9162:47: erreur : « ReadAcquire8 » was not declared in this scope
-     return (BOOLEAN)ReadAcquire8((PCHAR)Source);
-                                               ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « BYTE ReadBooleanNoFence(const volatile BOOLEAN*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9173:47: erreur : « ReadNoFence8 » was not declared in this scope
-     return (BOOLEAN)ReadNoFence8((PCHAR)Source);
-                                               ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUCharRelease(volatile BYTE*, BYTE) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9206:50: erreur : « WriteRelease8 » was not declared in this scope
-     WriteRelease8((PCHAR)Destination, (CHAR)Value);
-                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUCharNoFence(volatile BYTE*, BYTE) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9219:50: erreur : « WriteNoFence8 » was not declared in this scope
-     WriteNoFence8((PCHAR)Destination, (CHAR)Value);
-                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteBooleanRelease(volatile BOOLEAN*, BOOLEAN) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9232:50: erreur : « WriteRelease8 » was not declared in this scope
-     WriteRelease8((PCHAR)Destination, (CHAR)Value);
-                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteBooleanNoFence(volatile BOOLEAN*, BOOLEAN) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9245:50: erreur : « WriteNoFence8 » was not declared in this scope
-     WriteNoFence8((PCHAR)Destination, (CHAR)Value);
-                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « WORD ReadUShortAcquire(const volatile WORD*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9270:48: erreur : « ReadAcquire16 » was not declared in this scope
-     return (WORD  )ReadAcquire16((PSHORT)Source);
-                                                ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « WORD ReadUShortNoFence(const volatile WORD*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9281:48: erreur : « ReadNoFence16 » was not declared in this scope
-     return (WORD  )ReadNoFence16((PSHORT)Source);
-                                                ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUShortRelease(volatile WORD*, WORD) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9304:53: erreur : « WriteRelease16 » was not declared in this scope
-     WriteRelease16((PSHORT)Destination, (SHORT)Value);
-                                                     ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUShortNoFence(volatile WORD*, WORD) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9317:53: erreur : « WriteNoFence16 » was not declared in this scope
-     WriteNoFence16((PSHORT)Destination, (SHORT)Value);
-                                                     ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD ReadULongAcquire(const volatile DWORD*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9342:44: erreur : « ReadAcquire » was not declared in this scope
-     return (DWORD)ReadAcquire((PLONG)Source);
-                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD ReadULongNoFence(const volatile DWORD*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9353:44: erreur : « ReadNoFence » was not declared in this scope
-     return (DWORD)ReadNoFence((PLONG)Source);
-                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULongRelease(volatile DWORD*, DWORD) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9376:49: erreur : « WriteRelease » was not declared in this scope
-     WriteRelease((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULongNoFence(volatile DWORD*, DWORD) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9389:49: erreur : « WriteNoFence » was not declared in this scope
-     WriteNoFence((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « INT32 ReadInt32Acquire(const volatile INT32*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9414:44: erreur : « ReadAcquire » was not declared in this scope
-     return (INT32)ReadAcquire((PLONG)Source);
-                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « INT32 ReadInt32NoFence(const volatile INT32*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9425:44: erreur : « ReadNoFence » was not declared in this scope
-     return (INT32)ReadNoFence((PLONG)Source);
-                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteInt32Release(volatile INT32*, INT32) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9448:49: erreur : « WriteRelease » was not declared in this scope
-     WriteRelease((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteInt32NoFence(volatile INT32*, INT32) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9461:49: erreur : « WriteNoFence » was not declared in this scope
-     WriteNoFence((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « UINT32 ReadUInt32Acquire(const volatile UINT32*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9486:45: erreur : « ReadAcquire » was not declared in this scope
-     return (UINT32)ReadAcquire((PLONG)Source);
-                                             ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « UINT32 ReadUInt32NoFence(const volatile UINT32*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9497:45: erreur : « ReadNoFence » was not declared in this scope
-     return (UINT32)ReadNoFence((PLONG)Source);
-                                             ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUInt32Release(volatile UINT32*, UINT32) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9520:49: erreur : « WriteRelease » was not declared in this scope
-     WriteRelease((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteUInt32NoFence(volatile UINT32*, UINT32) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9533:49: erreur : « WriteNoFence » was not declared in this scope
-     WriteNoFence((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD64 ReadULong64Acquire(const volatile DWORD64*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9558:50: erreur : « ReadAcquire64 » was not declared in this scope
-     return (DWORD64)ReadAcquire64((PLONG64)Source);
-                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « DWORD64 ReadULong64NoFence(const volatile DWORD64*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9569:50: erreur : « ReadNoFence64 » was not declared in this scope
-     return (DWORD64)ReadNoFence64((PLONG64)Source);
-                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULong64Release(volatile DWORD64*, DWORD64) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9592:55: erreur : « WriteRelease64 » was not declared in this scope
-     WriteRelease64((PLONG64)Destination, (LONG64)Value);
-                                                       ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WriteULong64NoFence(volatile DWORD64*, DWORD64) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9605:55: erreur : « WriteNoFence64 » was not declared in this scope
-     WriteNoFence64((PLONG64)Destination, (LONG64)Value);
-                                                       ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void* ReadPointerAcquire(void* const volatile*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9692:44: erreur : « ReadAcquire » was not declared in this scope
-     return (PVOID)ReadAcquire((PLONG)Source);
-                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void* ReadPointerNoFence(void* const volatile*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9703:44: erreur : « ReadNoFence » was not declared in this scope
-     return (PVOID)ReadNoFence((PLONG)Source);
-                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WritePointerRelease(void* volatile*, PVOID) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9726:49: erreur : « WriteRelease » was not declared in this scope
-     WriteRelease((PLONG)Destination, (LONG)Value);
-                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void WritePointerNoFence(void* volatile*, PVOID) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:9739:49: erreur : « WriteNoFence » was not declared in this scope
-     WriteNoFence((PLONG)Destination, (LONG)Value);
-                                                 ^
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Au niveau global:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:12759:5: erreur : « PEXCEPTION_ROUTINE » does not name a type
-     PEXCEPTION_ROUTINE Handler;
-     ^~~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:11: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-           ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:14395:33: erreur : unable to find numeric literal operator « operator""ui64 »
- C_ASSERT((XSTATE_MASK_ALLOWED & XSTATE_MASK_LARGE_FEATURES) == 0);
-                                 ^
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h: Dans la fonction « void TpInitializeCallbackEnviron(PTP_CALLBACK_ENVIRON) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25478:33: erreur : expected primary-expression before « ; » token
-     CallbackEnviron->Pool = NULL;
-                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25479:41: erreur : expected primary-expression before « ; » token
-     CallbackEnviron->CleanupGroup = NULL;
-                                         ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25480:55: erreur : expected primary-expression before « ; » token
-     CallbackEnviron->CleanupGroupCancelCallback = NULL;
-                                                       ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25481:36: erreur : expected primary-expression before « ; » token
-     CallbackEnviron->RaceDll = NULL;
-                                    ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25482:46: erreur : expected primary-expression before « ; » token
-     CallbackEnviron->ActivationContext = NULL;
-                                              ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:25483:49: erreur : expected primary-expression before « ; » token
-     CallbackEnviron->FinalizationCallback = NULL;
-                                                 ^
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-c:\mingw\include\excpt.h: Au niveau global:
-c:\mingw\include\excpt.h:100:32: erreur : conflicting declaration « typedef EXCEPTION_REGISTRATION EXCEPTION_REGISTRATION_RECORD »
- typedef EXCEPTION_REGISTRATION EXCEPTION_REGISTRATION_RECORD;
-                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:12760:3: note : previous declaration as « typedef struct _EXCEPTION_REGISTRATION_RECORD EXCEPTION_REGISTRATION_RECORD »
- } EXCEPTION_REGISTRATION_RECORD;
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-c:\mingw\include\excpt.h:101:33: erreur : conflicting declaration « typedef struct _EXCEPTION_REGISTRATION* PEXCEPTION_REGISTRATION_RECORD »
- typedef PEXCEPTION_REGISTRATION PEXCEPTION_REGISTRATION_RECORD;
-                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/minwindef.h:182:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/windef.h:24,
-                 from c:\mingw\include\excpt.h:54,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:171,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winnt.h:12762:40: note : previous declaration as « typedef EXCEPTION_REGISTRATION_RECORD* PEXCEPTION_REGISTRATION_RECORD »
- typedef EXCEPTION_REGISTRATION_RECORD *PEXCEPTION_REGISTRATION_RECORD;
-                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:176:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedIncrement(volatile unsigned int*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9855:68: erreur : « _InterlockedIncrement » was not declared in this scope
-     return (unsigned) _InterlockedIncrement((volatile long*) Addend);
-                                                                    ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedIncrement(volatile long unsigned int*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9864:73: erreur : « _InterlockedIncrement » was not declared in this scope
-     return (unsigned long) _InterlockedIncrement((volatile long*) Addend);
-                                                                         ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedIncrement(volatile long long unsigned int*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9876:32: erreur : « InterlockedIncrement64 » was not declared in this scope
-     return (unsigned __int64) (InterlockedIncrement64)((volatile __int64*) Addend);
-                                ^~~~~~~~~~~~~~~~~~~~~~
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedDecrement(volatile unsigned int*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9887:73: erreur : « _InterlockedDecrement » was not declared in this scope
-     return (unsigned long) _InterlockedDecrement((volatile long*) Addend);
-                                                                         ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedDecrement(volatile long unsigned int*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9896:73: erreur : « _InterlockedDecrement » was not declared in this scope
-     return (unsigned long) _InterlockedDecrement((volatile long*) Addend);
-                                                                         ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedDecrement(volatile long long unsigned int*) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9908:32: erreur : « InterlockedDecrement64 » was not declared in this scope
-     return (unsigned __int64) (InterlockedDecrement64)((volatile __int64*) Addend);
-                                ^~~~~~~~~~~~~~~~~~~~~~
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedExchange(volatile unsigned int*, unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9922:81: erreur : « _InterlockedExchange » was not declared in this scope
-     return (unsigned) _InterlockedExchange((volatile long*) Target, (long) Value);
-                                                                                 ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedExchange(volatile long unsigned int*, long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9932:86: erreur : « _InterlockedExchange » was not declared in this scope
-     return (unsigned long) _InterlockedExchange((volatile long*) Target, (long) Value);
-                                                                                      ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedExchange(volatile long long unsigned int*, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9944:96: erreur : « InterlockedExchange64 » was not declared in this scope
-     return (unsigned __int64) InterlockedExchange64((volatile __int64*) Target, (__int64) Value);
-                                                                                                ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedExchangeAdd(volatile unsigned int*, unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9956:84: erreur : « _InterlockedExchangeAdd » was not declared in this scope
-     return (unsigned) _InterlockedExchangeAdd((volatile long*) Addend, (long) Value);
-                                                                                    ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedExchangeSubtract(volatile unsigned int*, unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9966:87: erreur : « _InterlockedExchangeAdd » was not declared in this scope
-     return (unsigned) _InterlockedExchangeAdd((volatile long*) Addend,  - (long) Value);
-                                                                                       ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedExchangeAdd(volatile long unsigned int*, long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9976:89: erreur : « _InterlockedExchangeAdd » was not declared in this scope
-     return (unsigned long) _InterlockedExchangeAdd((volatile long*) Addend, (long) Value);
-                                                                                         ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedExchangeSubtract(volatile long unsigned int*, long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9986:92: erreur : « _InterlockedExchangeAdd » was not declared in this scope
-     return (unsigned long) _InterlockedExchangeAdd((volatile long*) Addend,  - (long) Value);
-                                                                                            ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedExchangeAdd(volatile long long unsigned int*, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:9998:100: erreur : « InterlockedExchangeAdd64 » was not declared in this scope
-     return (unsigned __int64) InterlockedExchangeAdd64((volatile __int64*) Addend,  (__int64) Value);
-                                                                                                    ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedExchangeSubtract(volatile long long unsigned int*, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10008:102: erreur : « InterlockedExchangeAdd64 » was not declared in this scope
-     return (unsigned __int64) InterlockedExchangeAdd64((volatile __int64*) Addend,  - (__int64) Value);
-                                                                                                      ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « unsigned int InterlockedCompareExchange(volatile unsigned int*, unsigned int, unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10021:114: erreur : « _InterlockedCompareExchange » was not declared in this scope
-     return (unsigned) _InterlockedCompareExchange((volatile long*) Destination, (long) Exchange, (long) Comperand);
-                                                                                                                  ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long unsigned int InterlockedCompareExchange(volatile long unsigned int*, long unsigned int, long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10032:119: erreur : « _InterlockedCompareExchange » was not declared in this scope
-     return (unsigned long) _InterlockedCompareExchange((volatile long*) Destination, (long) Exchange, (long) Comperand);
-                                                                                                                       ^
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:176:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedCompareExchange(volatile long long unsigned int*, long long unsigned int, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10045:133: erreur : « _InterlockedCompareExchange64 » was not declared in this scope
-     return (unsigned __int64) _InterlockedCompareExchange64((volatile __int64*) Destination, (__int64) Exchange, (__int64) Comperand);
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
 
-             ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedAnd(volatile long long unsigned int*, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10055:96: erreur : « InterlockedAnd64 » was not declared in this scope
-     return (unsigned __int64) InterlockedAnd64((volatile __int64*) Destination, (__int64) Value);
-                                                                                                ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedOr(volatile long long unsigned int*, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10065:95: erreur : « InterlockedOr64 » was not declared in this scope
-     return (unsigned __int64) InterlockedOr64((volatile __int64*) Destination, (__int64) Value);
-                                                                                               ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h: Dans la fonction « long long unsigned int InterlockedXor(volatile long long unsigned int*, long long unsigned int) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winbase.h:10075:96: erreur : « InterlockedXor64 » was not declared in this scope
-     return (unsigned __int64) InterlockedXor64((volatile __int64*) Destination, (__int64) Value);
-                                                                                                ^
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winscard.h:31:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:212,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winioctl.h: Dans la fonction « BOOLEAN DeviceDsmAddDataSetRange(PDEVICE_DSM_INPUT, DWORD, LONGLONG, DWORDLONG) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/winioctl.h:5036:36: erreur : expected primary-expression before « ; » token
-     PDEVICE_DSM_RANGE Ranges = NULL;
-                                    ^
-In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/combaseapi.h:364:0,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objbase.h:27,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/ole2.h:37,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/windows.h:221,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared/rpc.h:20,
-                 from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/d3d11.h:26,
-                 from test.cpp:2:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h: Dans la fonction membre « HRESULT IAgileReference::Resolve(Q**) »:
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h:8116:42: erreur : expected primary-expression before « ) » token
-                 return Resolve(__uuidof(Q), (void **)pp);
-                                          ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h:8116:42: erreur : there are no arguments to « __uuidof » that depend on a template parameter, so a declaration of « __uuidof » must be available [-fpermissive]
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um/objidlbase.h:8116:42: note : (if you use « -fpermissive », G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/enzo/IA_trading/IA.py", line 16, in <module>
+    from tensorflow.keras.models import Sequential, load_model
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/__init__.py", line 41, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/__init__.py", line 41, in <module>
+    from tensorflow.python.eager import context
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/eager/context.py", line 38, in <module>
+    from tensorflow.python.client import pywrap_tf_session
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/client/pywrap_tf_session.py", line 23, in <module>
+    from tensorflow.python.client._pywrap_tf_session import *
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/enzo/IA_trading/IA.py", line 16, in <module>
+    from tensorflow.keras.models import Sequential, load_model
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/__init__.py", line 41, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/__init__.py", line 46, in <module>
+    from tensorflow.python import data
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/__init__.py", line 25, in <module>
+    from tensorflow.python.data import experimental
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/__init__.py", line 98, in <module>
+    from tensorflow.python.data.experimental import service
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/service/__init__.py", line 374, in <module>
+    from tensorflow.python.data.experimental.ops.data_service_ops import distribute
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/ops/data_service_ops.py", line 27, in <module>
+    from tensorflow.python.data.experimental.ops import compression_ops
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/ops/compression_ops.py", line 20, in <module>
+    from tensorflow.python.data.util import structure
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/util/structure.py", line 26, in <module>
+    from tensorflow.python.data.util import nest
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/util/nest.py", line 40, in <module>
+    from tensorflow.python.framework import sparse_tensor as _sparse_tensor
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/sparse_tensor.py", line 28, in <module>
+    from tensorflow.python.framework import constant_op
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/constant_op.py", line 29, in <module>
+    from tensorflow.python.eager import execute
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/eager/execute.py", line 27, in <module>
+    from tensorflow.python.framework import dtypes
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/dtypes.py", line 30, in <module>
+    from tensorflow.python.lib.core import _pywrap_bfloat16
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/enzo/IA_trading/IA.py", line 16, in <module>
+    from tensorflow.keras.models import Sequential, load_model
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/__init__.py", line 41, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/__init__.py", line 46, in <module>
+    from tensorflow.python import data
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/__init__.py", line 25, in <module>
+    from tensorflow.python.data import experimental
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/__init__.py", line 98, in <module>
+    from tensorflow.python.data.experimental import service
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/service/__init__.py", line 374, in <module>
+    from tensorflow.python.data.experimental.ops.data_service_ops import distribute
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/ops/data_service_ops.py", line 27, in <module>
+    from tensorflow.python.data.experimental.ops import compression_ops
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/ops/compression_ops.py", line 20, in <module>
+    from tensorflow.python.data.util import structure
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/util/structure.py", line 26, in <module>
+    from tensorflow.python.data.util import nest
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/util/nest.py", line 40, in <module>
+    from tensorflow.python.framework import sparse_tensor as _sparse_tensor
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/sparse_tensor.py", line 28, in <module>
+    from tensorflow.python.framework import constant_op
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/constant_op.py", line 29, in <module>
+    from tensorflow.python.eager import execute
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/eager/execute.py", line 27, in <module>
+    from tensorflow.python.framework import dtypes
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/dtypes.py", line 30, in <module>
+    from tensorflow.python.lib.core import _pywrap_bfloat16
+AttributeError: _UFUNC_API not found
+ImportError: numpy.core.umath failed to import
+Traceback (most recent call last):
+  File "/Users/enzo/IA_trading/IA.py", line 16, in <module>
+    from tensorflow.keras.models import Sequential, load_model
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/__init__.py", line 41, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/__init__.py", line 46, in <module>
+    from tensorflow.python import data
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/__init__.py", line 25, in <module>
+    from tensorflow.python.data import experimental
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/__init__.py", line 98, in <module>
+    from tensorflow.python.data.experimental import service
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/service/__init__.py", line 374, in <module>
+    from tensorflow.python.data.experimental.ops.data_service_ops import distribute
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/ops/data_service_ops.py", line 27, in <module>
+    from tensorflow.python.data.experimental.ops import compression_ops
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/experimental/ops/compression_ops.py", line 20, in <module>
+    from tensorflow.python.data.util import structure
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/util/structure.py", line 26, in <module>
+    from tensorflow.python.data.util import nest
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/data/util/nest.py", line 40, in <module>
+    from tensorflow.python.framework import sparse_tensor as _sparse_tensor
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/sparse_tensor.py", line 28, in <module>
+    from tensorflow.python.framework import constant_op
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/constant_op.py", line 29, in <module>
+    from tensorflow.python.eager import execute
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/eager/execute.py", line 27, in <module>
+    from tensorflow.python.framework import dtypes
+  File "/Users/enzo/Library/Python/3.9/lib/python/site-packages/tensorflow/python/framework/dtypes.py", line 33, in <module>
+    _np_bfloat16 = _pywrap_bfloat16.TF_bfloat16_type()
+TypeError: Unable to convert function return value to a Python type! The signature was
+        () -> handle

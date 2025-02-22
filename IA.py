@@ -6,7 +6,10 @@ import numpy as np
 import pandas as pd
 import logging
 import os
-import gymnasium as gym
+import cv2
+import dateutil
+import gymnasium
+from gymnasium import Env
 from scipy.signal import find_peaks
 from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import Sequential, load_model
@@ -17,26 +20,26 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 from ta.momentum import RSIIndicator, StochasticOscillator
 from ta.trend import MACD
 from ta.volatility import BollingerBands
-import gym
-from gym import spaces
+from gymnasium import spaces
+import  gymnasium as Discrete 
 import yfinance as yf
 import threading
 from collections import deque
 import ssl
 import certifi
 
-class TradingEnv(gym.Env):
-    metadata = {'render.modes': []}  # Gymnasium requires this
+class TradingEnv(gymnasium.Env):
+    metadata = {'render.modes': []}
 
-    def __init__(self, data, initial_balance=250):
+    def __init__(self, data, initial_balance=100000):
         super().__init__()
         self.data = data
-        self.action_space = gym.spaces.Discrete(3)  # 0: Sell, 1: Hold, 2: Buy
-        self.observation_space = gym.spaces.Box(low=-np.inf, high=np.inf, shape=(data.shape[1],), dtype=np.float32)
+        self.action_space = gymnasium.spaces.Discrete(3)  # 0: Sell, 1: Hold, 2: Buy
+        self.observation_space = gymnasium.spaces.Box(low=-np.inf, high=np.inf, shape=(data.shape[1],), dtype=np.float32)
         self.current_step = 0
         self.position = 0  # 0: No position, 1: Long, -1: Short
         self.balance = initial_balance
-        self.trades = []  # Pour garder une trace des trades
+        self.trades = []
         self.entry_price = 0
         self.tp = 0
         self.sl = 0
@@ -76,31 +79,33 @@ class TradingEnv(gym.Env):
         elif action == 0 and self.position == 0:  # Open short position
             self.position = -1
             self.entry_price = price
-            self.tp = price * 1.03  # Exemple de TP pour short
-            self.sl = price * 0.97  # Exemple de SL pour short
+            self.tp = price * 1.03
+            self.sl = price * 0.97
         elif action == 2 and self.position == 0:  # Open long position
             self.position = 1
             self.entry_price = price
-            self.tp = price * 1.03  # Exemple de TP pour long
-            self.sl = price * 0.97  # Exemple de SL pour long
+            self.tp = price * 1.03
+            self.sl = price * 0.97
 
         self.current_step += 1
         done = self.current_step >= len(self.data) - 1
         
-        # Retourner selon le format de Gymnasium
-        return (self.data.iloc[self.current_step].values if not done else self.data.iloc[-1].values, 
-                reward, done, False, {})  # 'False' pour 'truncated', et '{}' pour 'info'
+        # Convertir les observations en float32
+        observation = self.data.iloc[self.current_step].values.astype(np.float32) if not done else self.data.iloc[-1].values.astype(np.float32)
+        return (observation, reward, done, False, {})
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         self.current_step = 0
         self.position = 0
-        self.balance = 250
+        self.balance = 100000
         self.trades = []
         self.entry_price = 0
         self.tp = 0
         self.sl = 0
-        return self.data.iloc[self.current_step].values, {}  # Retourne aussi un dictionnaire 'info'
+        # Convertir l'observation initiale en float32
+        observation = self.data.iloc[self.current_step].values.astype(np.float32)
+        return observation, {}  # Retourne aussi un dictionnaire 'info'
 
     def get_trades(self):
         return self.trades
